@@ -1,0 +1,66 @@
+{
+    "accounts": "Рахунки",
+    "payments": "Платежі",
+    "locations": "Відділення",
+    "contacts": "Контакти",
+
+    "cardDetails": "Подробиці рахунку",
+
+    "cardSettings": "Налаштування картки",
+    "changeCreditLimit": "Змінити кредитний ліміт",
+    "blockUnblockCard": "Розблокувати/заблокувати картку",
+    "alertStolenCard": "Заявити про зникнення карти",
+    "changePIN": "Змініти ПІН-код",
+    "changeCVV": "Змінити CVV-код",
+    "orderAdditionalCard": "Замовити додаткову картку",
+    
+    "paymentMobile": "Поповнити мобільний рахунок",
+    "paymentAccounts": "Переказ між рахунками",
+    "paymentCards": "Переказ на картку",
+    "paymentsMobileInstruction": "телефон у форматі +38*** *** ** **",
+    "chooseCard": "Выберіть карту",
+
+    "paymentFrom": "звідки переводити",
+    "paymentTo": "куди переводити",
+
+    "confirm": "Підтвердити",
+    "cardNumber": "номер картки",
+
+    "confirmation": "Підтверждення",
+    "enterSMSCode": "Введіть код з СМС",
+
+    "messageHasSended": "На ваш телефон було відправлено СМС у форматі ХХХХ",
+    "send": "Відправити",
+    "resendSmsInstruction": "Якщо протягом 2 хвилин СМС не було доставлено, нажміть, аби повторити відправлення.",
+    "smsHasResended": "Смс було надіслано повторно. Зазвичай воно приходить через 2-3 хвилини.",
+
+    "success": "Успішно",
+    "successPaymentMsg" : "Оплата зроблена успішно. На протязі декількох хвилин кошти будуть зараховані. Чек ви зможете роздрукувати в будь-якому відділенні банку або через наш веб сайт.",
+    "returnToPayments" : "Повернутися до платежів",
+
+    "hotlineWLBank": "Гаряча лінія WLBank",
+    "mobileBank": "Мобільний банк",
+    "creditCards": "Кредитні карти",
+    "depositsAndAccounts": "Вклади и рахунки",
+
+    "loginText": "Для входу в додаток використовуйте Ваші Логін / Пароль для входу в Інтернет-банк",
+    "remember": "Запам'ятати?",
+    "logIn": "Увійти",
+    "username": "им'я користувача",
+    "password": "пароль",
+
+    "onMap": "На мапі",
+    "onList": "Списком",
+    "currencyExchange": "Курси валют",
+    "currency": "Валюта",
+    "currencyBuy": "Покупка",
+    "currencySale": "Продаж",
+
+    "newsTitle": "Новини WLBank",
+    "licenceTitle": "Ліцензія WLBank",
+    "privacyTitle": "Політика конфіденційності WLBank",
+    "settingsTitle": "Налаштування",
+
+    "language": "Мова"
+
+}

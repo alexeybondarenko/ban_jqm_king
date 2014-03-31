@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- jQM -->
+    <script src="lib/jquery.mobile/jquery-1.8.3.min.js"></script>
+
+    <!-- Configuration jQM -->
+    <script src="app/jquery.mobile.config.js"></script>
+
+    <script src="lib/jquery.mobile/jquery.mobile-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="lib/jquery.mobile/jquery.mobile-1.4.2.min.css"/>
+
+    <!-- Google map API -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="lib/jquery.ui.map/jquery.ui.map.js"></script>
+    <script src="lib/jquery.ui.map/jquery.ui.map.extensions.js"></script>
+
+    <!-- Knockout js -->
+    <script src="lib/knockout/knockout-3.1.0.js"></script>
+    <script src="lib/knockout/knockout.localStorage.js"></script>
+
+    <script src="app/knockout.bind.js"></script>
+
+    <!-- Application scripts -->
+
+    <script src="app/Language.js"></script>
+
+    <script src="app/model/Card.js"></script>
+    <script src="app/model/Transaction.js"></script>
+    <script src="app/model/User.js"></script>
+    <script src="app/model/Location.js"></script>
+    <script src="app/model/Currency.js"></script>
+    <script src="app/model/News.js"></script>
+
+    <script src="app/controller/Controller.js"></script>
+    <script src="app/controller/Login.js"></script>
+    <script src="app/controller/Cards.js"></script>
+    <script src="app/controller/CardDetails.js"></script>
+    <script src="app/controller/Payments.js"></script>
+    <script src="app/controller/Locations.js"></script>
+    <script src="app/controller/Contacts.js"></script>
+    <script src="app/controller/Settings.js"></script>
+    <script src="app/controller/CurrencyExchange.js"></script>
+
+    <script src="app/store/TransactionsStore.js"></script>
+    <script src="app/store/CardsStore.js"></script>
+    <script src="app/store/LocationsStore.js"></script>
+    <script src="app/store/CurrencyStore.js"></script>
+    <script src="app/store/NewsStore.js"></script>
+
+    <script src="app/App.js"></script>
+
+    <link rel="stylesheet" href="resources/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+    </head>
+
+<body>
+
+<div data-role="panel" id="sidemenu" data-position="left" data-display="push" data-theme="b">
+    <ul data-role="listview" data-inset="false">
+        <li><a href="#cards" data-bind="text: language().accounts">Cчета</a></li>
+        <li><a href="#payments" data-bind="text: language().payments">Платежи</a></li>
+        <li><a href="#locations" data-bind="text: language().locations">Отделения</a></li>
+        <li><a href="#contacts" data-bind="text: language().contacts">Контакты</a></li>
+        <li data-role="divider"></li>
+        <li><a href="#currencyExchange" data-bind="text: language().currencyExchange">Курсы валют</a></li>
+        <li><a href="#news"><span data-bind="text: language().newsTitle">Новости</span> <span class="count">12</span></a></li>
+        <li data-role="divider"></li>
+        <li><a href="#licence" data-bind="text: language().licenceTitle">Лицензии</a></li>
+        <li><a href="#privacy" data-bind="text: language().privacyTitle">Политика конфиденциальности</a></li>
+        <li data-role="divider"></li>
+        <li><a href="#settings" data-bind="text: language().settingsTitle">Настройки</a></li>
+    </ul>
+</div>
+
+<header data-role="header" id="mainHeader" data-position="fixed" data-theme="b">
+    <a href="#sidemenu" data-swipe="true" class="ui-btn-left ui-nodisc-icon ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
+    <h1 data-bind="text: title()">
+         <!--Заголовок header -->
+    </h1>
+    <a data-bind="visible: isAuth(), click: $root.logout" class="ui-btn ui-btn-icon-right ui-corner-all ui-nodisc-icon ui-icon-power ui-btn-icon-notext"></a>
+</header>
+<footer data-role="footer" id="mainFooter" data-position="fixed" data-theme="b">
+    <div data-role="navbar" id="mainNavBar">
+        <ul>
+            <li><a href="#cards" data-icon="home" data-bind="text: language().accounts">Счета</a></li>
+            <li><a href="#payments" data-icon="info" data-bind="text: language().payments">Платежи</a></li>
+            <li><a href="#locations" data-icon="bars" data-bind="text: language().locations">Отделения</a></li>
+            <li><a href="#contacts" data-icon="info" data-bind="text: language().contacts">Контакты</a></li>
+        </ul>
+    </div>
+</footer>
+<!-- Login page -->
+<div data-role="page" id="login" data-title="WLBank">
+    <main data-role="main" class="ui-content" data-bind="">
+        <p data-bind="text: language().loginText">
+            <!--Для входа в приложение используйте Ваги Логин/Пароль для входа в Интернет-банк-->
+        </p>
+        <span data-bind="text: language().login"></span>
+        <form action="">
+            <fieldset>
+                <input type="text" placeholder="username" data-bind="attr: {'placeholder': language().username}"/>
+                <input type="text" placeholder="password" data-bind="attr: {'placeholder': language().password}"/>
+            </fieldset>
+            <fieldset data-role="controlgroup">
+                <input type="checkbox" name="remember" id="remember" checked="">
+                <label for="remember" data-bind="text: language().remember">Запомнить?</label>
+            </fieldset>
+            <button data-theme="b" data-bind="click: $root.auth, text: language().logIn">Войти</button>
+        </form>
+    </main>
+</div>
+
+<!-- Cards page -->
+<div data-role="page" id="cards" data-title="Счета" data-bind="attr: {'data-title': language().accounts}">
+    <main data-role="main" class="ui-content" data-bind="">
+        <div class="cardsList">
+            <ul data-role="listview" data-inset="true" data-theme="a" data-bind="foreach: cards()">
+                <li><a data-bind="text: info(), click: $root.showCardsDetails"></a></li>
+            </ul>
+        </div>
+    </main>
+
+</div>
+
+<!-- Cards Details page -->
+<div data-role="page" id="cardDetails" data-title="Подробности счета" data-bind="attr: {'data-title': language().cardDetails}">
+    <header data-role="header" data-theme="a" class="cardDetailsHeader">
+        <a href="#cards" data-direction="reverse" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+        <div class="content">
+            <div data-bind="text: card().title" class="name uppercase"></div>
+            <div data-bind="text:card().number" class="number"></div>
+            <div class="money uppercase">
+            <span data-bind="text: card().amount"></span> <span data-bind="text: card().currency"></span>
+            </div>
+        </div>
+        <a href="#cardSettings" data-transition="fade" class="ui-btn-right ui-alt-icon ui-nodisc-icon ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all"></a>
+    </header>
+    <main data-role="main" class="ui-content">
+        <div class="transactionsList">
+            <ul data-role="listview" data-inset="true" data-bind="foreach: transactions(),jqmRender">
+                <li class="ui-li-static ui-body-inherit">
+                    <span class="price" style="float:right" data-bind="css: {'minus': price < 0, 'plus': price >= 0}">
+                        <span class="amount" data-bind="text: price"></span> <span class="currency" data-bind="text: $root.card().currencySymbol()"></span>
+                    </span>
+                    <b data-bind="text:text"></b><br/><span data-bind="text: timestamp"></span>
+                </li>
+            </ul>
+        </div>
+    </main>
+</div>
+
+<!-- Card Settings page -->
+<div data-role="page" id="cardSettings" data-title="Настройки карты" data-bind="attr: {'data-title': language().cardSettings}">
+    <header data-role="header" class="secondToolbar">
+        <a href="#cards" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+        <h1><span data-bind="text: language().cardSettings">Настройки карты</span>: <br/><span data-bind="text: card().title"></span></h1>
+        <a href="#cardDetails" data-transition="fade" data-direction="reverse" class="ui-btn-right ui-alt-icon ui-nodisc-icon ui-btn ui-icon-bullets ui-btn-icon-notext ui-corner-all"></a>
+    </header>
+    <main data-role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true">
+            <li data-bind="text: language().changeCreditLimit">Изменить кредитный лимит</li>
+            <li data-bind="text: language().blockUnblockCard">Разблокировать/заблокировать карту</li>
+            <li data-bind="text: language().alertStolenCard">Сообщить о пропаже карты</li>
+            <li data-bind="text: language().changePIN">Сменить ПИН-код</li>
+            <li data-bind="text: language().changeCVV">Изменить CVV-код</li>
+            <li data-bind="text: language().orderAdditionalCard">Заказать дополнительную карту</li>
+        </ul>
+    </main>
+</div>
+
+<div data-role="page" id="payments" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
+    <main data-role="main" class="ui-content">
+        <div class="paymentsList" >
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#paymentsMobile" data-bind="text: language().paymentMobile">Пополнение мобильного</a></li>
+                <li><a href="#paymentsAccount" data-bind="text: language().paymentAccounts">Перевод между счетами</a></li>
+                <li><a href="#paymentsCards" data-bind="text: language().paymentCards">Перевод на карту</a></li>
+            </ul>
+        </div>
+    </main>
+</div>
+
+<!-- Payments Mobile page -->
+<div data-role="page" id="paymentsMobile" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
+    <header data-role="header" class="secondToolbar" data-theme="c">
+        <a data-rel="back" data-direction="reverse" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+        <h1 data-bind="text: language().paymentMobile">
+            Пополнение мобильного
+        </h1>
+    </header>
+    <main data-role="main" class="ui-content">
+        <form class="paymentsMobileForm">
+            <fieldset>
+                <legend class="text-center" data-bind="text: language().paymentsMobileInstruction">телефон в формате +38*** *** ** **</legend>
+                <input type="tel" placeholder="380932685446" data-bind="value: phoneNumber()"/>
+            </fieldset>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <input type="number"/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <select data-bind="options: cards,
+                                   optionsText: 'info',
+                                   optionsCaption: language().chooseCard,
+                                   selectedOptions: paymentCard"></select>
+            </fieldset>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <input type="submit" value="Потвердить" data-bind="click: $root.openVerifyPage, value: language().confirm"/>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</div>
+
+<!-- Payments Account page -->
+<div data-role="page" id="paymentsAccount" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
+    <header data-role="header"  class="secondToolbar" data-theme="c">
+        <a data-rel="back" data-direction="reverse" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+        <h1 data-bind="text: language().paymentAccounts">
+            Перевод между счетами
+        </h1>
+    </header>
+    <main data-role="main" class="ui-content">
+        <form class="paymentsMobileForm">
+            <fieldset>
+                <legend class="text-center" data-bind="text: language().paymentFrom">откуда переводить</legend>
+                <select data-bind="options: cards,
+                                   optionsText: 'info',
+                                   optionsCaption: language().chooseCard,
+                                   selectedOptions: paymentCard"></select>
+            </fieldset>
+            <fieldset>
+                <legend class="text-center" data-bind="text: language().paymentTo">куда переводить</legend>
+                <select data-bind="options: cards,
+                                   optionsText: 'info',
+                                   optionsCaption: language().chooseCard,
+                                   selectedOptions: receiveCard"></select>
+            </fieldset>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <input type="number" />
+                </div>
+            </fieldset>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <input type="submit" value="Потвердить" data-bind="click: $root.openVerifyPage, value: language().confirm"/>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</div>
+
+<!-- Payments cards page -->
+<div data-role="page" id="paymentsCards" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
+    <header data-role="header" class="secondToolbar" data-theme="c">
+        <a data-rel="back" data-direction="reverse" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+        <h1 data-bind="text: language().paymentCards">
+            Перевод на карту
+        </h1>
+    </header>
+    <main data-role="main" class="ui-content">
+        <form class="paymentsMobileForm">
+            <fieldset>
+                <legend class="text-center" data-bind="text: language().cardNumber">номер карты</legend>
+                <input type="tel" max="16" min="16"/>
+            </fieldset>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <input type="number" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <select data-bind="options: cards,
+                                   optionsText: 'info',
+                                   optionsCaption: language().chooseCard,
+                                   selectedOptions: paymentCard"></select>
+            </fieldset>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <input type="submit" name="" id="" value="Потвердить" data-bind="click: $root.openVerifyPage, value: language().confirm"/>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</div>
+
+
+<!-- Payments Verify page -->
+<div data-role="page" id="paymentsVerify" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
+    <header data-role="header" class="secondToolbar" data-theme="c">
+        <a href="#cards" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+        <h1 data-bind="text: language().confirmation">
+            Подтверждение
+        </h1>
+    </header>
+    <main data-role="main" class="ui-content">
+       <div class="text">
+           <h3 class="uppercase" data-bind="text: language().enterSMSCode">
+               <!--Введите код из смс-->
+           </h3>
+           <p data-bind="text: language().messageHasSended">
+               <!--На ваш телефон было отправлено СМС в формате ХХХХ-->
+           </p>
+           <form class="paymentsVerify-form">
+               <fieldset class="ui-grid-c">
+                   <div class="ui-block-a"><input type="number" name="digit1" id="digit1" tabindex="1" data-bind="value: digit1(), event:{ keypress: inputChainHandler}"/></div>
+                   <div class="ui-block-b"><input type="number" name="digit2" id="digit2" tabindex="2" data-bind="value: digit2(), event:{ keypress: inputChainHandler}"/></div>
+                   <div class="ui-block-c"><input type="number" name="digit3" id="digit3" tabindex="3" data-bind="value: digit3(), event:{ keypress: inputChainHandler}"/></div>
+                   <div class="ui-block-d"><input type="number" name="digit4" id="digit4" tabindex="4" data-bind="value: digit4(), event:{ keypress: inputChainHandler}"/></div>
+               </fieldset>
+               <div class="form-spacer"></div>
+               <button class="uppercase" data-bind="click: $root.verifyPayment, text: language().send">Оплатить</button>
+               <div class="form-spacer"></div>
+               <div class="screenMsg" data-bind="text: language().smsHasResended, visible: showResendMsg()">
+                   <!--Смс было отправлено повторно. Обычно оно приходит через 2-3 минуты.-->
+               </div>
+               <div class="form-spacer"></div>
+               <button class="ui-btn ui-icon-refresh ui-btn-icon-left ui-btn-corner-all ui-alt-icon ui-nodisc-icon"
+                       data-bind="click: $root.resendSms, enable: resendActive(), text: language().resendSmsInstruction">
+                   <!--Если в течении 2 минут СМС не было доставлено, нажмите, чтобы повторить отправку.-->
+               </button>
+           </form>
+       </div>
+    </main>
+</div>
+
+
+<!-- Payments Success page -->
+<div data-role="page" id="paymentsSuccess" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
+    <header data-role="header" class="secondToolbar" data-theme="c">
+        <a href="#cards" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+        <h1 data-bind="text: language().success">
+            <!--Успешно-->
+        </h1>
+    </header>
+    <main data-role="main" class="ui-content">
+        <div class="text">
+            <h3 class="uppercase"><span data-bind="text: language().success">
+                <!--Успешно-->
+            </span>!</h3>
+            <p data-bind="text: language().successPaymentMsg">Оплата произведена успашно. В течении нескольких минут средства будут зачислины. Чек вы сможете распечатать в любом отделении банка или через наш веб сайт.</p>
+            <a href="#payments" data-direction="reverse" class="uppercase ui-btn"
+               data-bind="text: language().returnToPayments">
+                <!--Вернуться к платежам-->
+            </a>
+        </div>
+    </main>
+</div>
+
+
+<!-- Locations page -->
+<div data-role="page" id="locations" data-title="Отделения" data-bind="attr: {'data-title': language().locations}">
+    <header data-role="header" class="secondToolbar"  data-theme="c">
+        <h1 data-bind="text: language().onMap">
+            <!--На карте-->
+        </h1>
+        <a href="#locationsList" class="ui-btn-right ui-alt-icon ui-nodisc-icon ui-btn ui-icon-bullets ui-btn-icon-notext ui-corner-all"></a>
+    </header>
+    <main data-role="main" class="ui-content" id="locationsMap">
+    </main>
+</div>
+
+<!-- Locations List page -->
+<div data-role="page" id="locationsList" data-title="Отделения" data-bind="attr: {'data-title': language().locations}">
+    <header data-role="header" class="secondToolbar"  data-theme="c">
+        <h1 data-bind="text: language().onList">
+            <!--Списком-->
+        </h1>
+        <a href="#locations" class="ui-btn-right ui-alt-icon ui-nodisc-icon ui-btn ui-icon-location ui-btn-icon-notext ui-corner-all"></a>
+    </header>
+    <main data-role="main" class="ui-content">
+        <ul data-role="listview" data-bind="foreach: locations()">
+            <li><b data-bind="text: title"></b><br/><em data-bind="text: city"></em> <em data-bind="text: adress"></em></li>
+        </ul>
+    </main>
+</div>
+
+<!-- Contacts page -->
+<div data-role="page" id="contacts" data-title="Контакты" data-bind="attr: {'data-title': language().contacts}">
+    <main data-role="main" class="ui-content">
+        <h3 data-bind="text: language().hotlineWLBank">
+            <!--Горячая линия WLBank-->
+        </h3>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+            <tr>
+                <td data-bind="text: language().mobileBank">
+                    <!--Мобильный банк-->
+                </td>
+                <td>0 800 832 34 12</td>
+            </tr>
+            <tr>
+                <td data-bind="text: language().creditCards">
+                    <!--Кредитные карты-->
+                </td>
+                <td>0 800 465 72 34</td>
+            </tr>
+            <tr>
+                <td data-bind="text: language().depositsAndAccounts">
+                    <!--Вклады и счета-->
+                </td>
+                <td>0 800 231 23 12</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </main>
+</div>
+
+<!-- Currency Exchange -->
+<div data-role="page" id="currencyExchange" data-title="Курсы валют"
+     data-bind="attr: {'data-title': language().currencyExchange}">
+    <main data-role="main" class="ui-content">
+        <table width="100%">
+            <tr>
+                <th data-bind="text: language().currency" class="text-left" width="50">
+                    <!--Валюта-->
+                </th>
+                <th data-bind="text: language().currencyBuy">
+                    <!--Покупка-->
+                </th>
+                <th data-bind="text: language().currencySale">
+                    <!--Продажа-->
+                </th>
+            </tr>
+            <tbody align="center" data-bind="foreach: currency()">
+            <tr>
+                <td data-bind="text:from" class="uppercase text-left">USD</td>
+                <td data-bind="text:buy">10.900</td>
+                <td data-bind="text:sale">11.400</td>
+            </tr>
+            </tbody>
+        </table>
+    </main>
+</div>
+
+<!-- News-->
+<div data-role="page" id="news" data-bind="attr: {'data-title': language().newsTitle}">
+    <main data-role="main" class="ui-content">
+        <ul data-role="listview">
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 1</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 2</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 3</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 4</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 5</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 6</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 7</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 8</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 9</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 10</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 11</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 12</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 13</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 14</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 15</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 16</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 17</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 18</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 19</a></li>
+            <li><a href="#newsPage">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                скидках 20</a></li>
+        </ul>
+    </main>
+</div>
+
+<div data-role="page" id="newsPage" data-bind="attr: {'data-title': 'Current News Title'}">
+    <main data-role="main" class="ui-content">
+        <div data-iscroll>
+                <h3>Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
+                    скидках</h3>
+                <h4>The standard Lorem Ipsum passage, used since the 1500s</h4>
+                <img src="http://lorempixel.com/400/200/" alt="" align="left" style="margin:0 20px 10px 0;" style="max-width:100% !improtant"/>
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+                <h4>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h4>
+                <p>
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                </p>
+                <h4>1914 translation by H. Rackham</h4>
+                <p>
+                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+                </p>
+                <h4>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h4>
+                <p>
+                    "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                </p>
+                <h4>1914 translation by H. Rackham</h4>
+                <p>
+                    "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</p>
+                </p>
+        </div>
+    </main>
+</div>
+
+<!-- Licences -->
+<div data-role="page" id="licence" data-title="Лицензии WLBank" data-bind="attr: {'data-title': language().licenceTitle}">
+    <main data-role="main" class="ui-content">
+        <h3>Лицензии WLBank</h3>
+    </main>
+</div>
+
+<!-- Privacy -->
+<div data-role="page" id="privacy" data-title="Политика конфиденциальности WLBank" data-bind="attr: {'data-title': language().privacyTitle}">
+    <main data-role="main" class="ui-content">
+        <h3 data-bind="text: language().privacyTitle">Политика конфиденциальности WLBank</h3>
+    </main>
+</div>
+
+<!-- Settings -->
+<div data-role="page" id="settings" data-title="Настройки" data-bind="attr: {'data-title': language().language().settingsTitle}">
+    <main data-role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true">
+            <li class="ui-field-contain">
+                    <label for="languageSelect" style="float:left; min-width: 60px;" data-bind="text: language().language().language">Язык:</label>
+                    <select data-mini="true" id="languageSelect" name="languageSelect"
+                            data-bind="value: language().lang,
+                    options: language().availableLanguages,
+                    optionsText: 'title',
+                    optionsValue: 'code'"></select>
+            </li>
+        </ul>
+    </main>
+</div>
+
+
+</body>
+</html>

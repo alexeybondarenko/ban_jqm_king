@@ -1,0 +1,66 @@
+{
+    "accounts": "Счета",
+    "payments": "Платежи",
+    "locations": "Отделения",
+    "contacts": "Контакты",
+
+    "cardDetails": "Подробности счета",
+
+    "cardSettings": "Настройки карты",
+    "changeCreditLimit": "Изменить кредитный лимит",
+    "blockUnblockCard": "Разблокировать/заблокировать карту",
+    "alertStolenCard": "Сообщить о пропаже карты",
+    "changePIN": "Сменить ПИН-код",
+    "changeCVV": "Изменить CVV-код",
+    "orderAdditionalCard": "Заказать дополнительную карту",
+
+    "paymentMobile": "Пополнение мобильного телефона",
+    "paymentAccounts": "Перевод между счетами",
+    "paymentCards": "Перевод на карту",
+    "paymentsMobileInstruction": "телефон в формате +38*** *** ** **",
+    "chooseCard": "Выберите карту",
+
+    "paymentFrom": "откуда переводить",
+    "paymentTo": "куда переводить",
+
+    "confirm": "Подтвердить",
+    "cardNumber": "номер карты",
+
+    "confirmation": "Подтверждение",
+    "enterSMSCode": "Введите код из СМС",
+
+    "messageHasSended": "На ваш телефон было отправлено СМС в формате ХХХХ",
+    "send": "Отправить",
+    "resendSmsInstruction": "Если в течении 2 минут СМС не было доставлено, нажмите, чтобы повторить отправку.",
+    "smsHasResended": "Смс было отправлено повторно. Обычно оно приходит через 2-3 минуты.",
+
+    "success": "Успешно",
+    "successPaymentMsg" : "Оплата произведена успашно. В течении нескольких минут средства будут зачислины. Чек вы сможете распечатать в любом отделении банка или через наш веб сайт.",
+    "returnToPayments" : "Вернуться к платежам",
+
+    "hotlineWLBank": "Горячая линия",
+    "mobileBank": "Мобильный банк",
+    "creditCards": "Кредитные карты",
+    "depositsAndAccounts": "Вклады и счета",
+
+    "loginText": "Для входа в приложение используйте Ваши Логин/Пароль для входа в Интернет-банк",
+    "remember": "Запомнить?",
+    "logIn": "Войти",
+    "username": "имя пользователя",
+    "password": "пароль",
+
+    "onMap": "На карте",
+    "onList": "Списком",
+    "currencyExchange": "Курсы валют",
+    "currency": "Валюта",
+    "currencyBuy": "Покупка",
+    "currencySale": "Продажа",
+
+    "newsTitle": "Новости WLBank",
+    "licenceTitle": "Лицензия WLBank",
+    "privacyTitle": "Политика конфиденциальности WLBank",
+    "settingsTitle": "Настройки",
+
+    "language": "Язык"
+
+}

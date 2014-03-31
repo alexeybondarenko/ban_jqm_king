@@ -1,0 +1,61 @@
+{
+    "success": true,
+    "locations": [
+        {
+            "title": "Отделение №1",
+            "type": "branch",
+            "adress": "ул. Владимирская, 12",
+            "city": "Киев",
+            "latitude": 50.456107,
+            "longitude": 30.516821
+        },
+        {
+            "title": "Банкомат №2132",
+            "type": "atm",
+            "adress": "ул. Владимирская, 12",
+            "city": "Киев",
+            "latitude": 50.456107,
+            "longitude": 30.516821
+        },
+        {
+            "title": "Отделение №2",
+            "type": "branch",
+            "adress": "ул. Бассейная, 4",
+            "city": "Киев",
+            "latitude": 50.441391,
+            "longitude": 30.521785
+        },
+        {
+            "title": "Банкомат №1324",
+            "type": "atm",
+            "adress": "ул. Мечникова, 3а",
+            "city": "Киев",
+            "latitude": 50.438003,
+            "longitude": 30.528772
+        },
+        {
+            "title": "Банкомат №3111",
+            "type": "atm",
+            "adress": "ул. Шота Руставели, 18",
+            "city": "Киев",
+            "latitude": 50.438923,
+            "longitude": 30.519136
+        },
+        {
+            "title": "Банкомат №11",
+            "type": "atm",
+            "adress": "ул. Протасов Яр, 2",
+            "city": "Киев",
+            "latitude": 50.426428,
+            "longitude": 30.503911
+        },
+        {
+            "title": "Отделение №21",
+            "type": "branch",
+            "adress": "ул. Протасов Яр, 2",
+            "city": "Киев",
+            "latitude": 50.426428,
+            "longitude": 30.503911
+        }
+    ]
+}

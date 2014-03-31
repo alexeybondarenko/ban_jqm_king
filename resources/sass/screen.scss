@@ -1,0 +1,94 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "compass/reset";
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+.lowercase {
+  text-transform: lowercase !important;
+}
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-justify {
+  text-align: justify !important;
+}
+
+.ui-field-contain .ui-controlgroup,
+.ui-field-contain fieldset.ui-controlgroup {
+  text-align: center;
+}
+
+.ui-field-contain .ui-controlgroup-controls {
+  width: auto;
+}
+
+#locations {
+  height:0;
+  padding:0;
+}
+#locationsMap {
+  height: 100%;
+  padding: 0;
+  text-shadow: none;
+}
+
+.in, .out {
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 30ms !important;
+}
+
+.minus {
+  color:darkred;
+}
+.plus {
+  color:darkgreen;
+}
+
+$cardDetailsHeaderHeight: 80px;
+
+.cardDetailsHeader {
+//  min-height:$cardDetailsHeaderHeight;
+//  max-height: 1.5*$cardDetailsHeaderHeight;
+  .ui-btn {
+    top:50%;
+    margin-top:-14px;
+  }
+  .content {
+
+    padding: 15px 45px;
+  }
+  .number {
+    font-weight: lighter;
+    font-size:.8em;
+  }
+  .money {
+    margin-top:8px;
+    color:cornflowerblue;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+
+.count {
+  float:right;
+  background-color:rgba(255,255,255,.1);
+  padding:3px 10px;
+  font-size:10px;
+  border-radius:10px;
+}
+

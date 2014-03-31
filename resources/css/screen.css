@@ -1,0 +1,109 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 8, ../sass/screen.scss */
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+/* line 11, ../sass/screen.scss */
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+/* line 14, ../sass/screen.scss */
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+/* line 18, ../sass/screen.scss */
+.text-left {
+  text-align: left !important;
+}
+
+/* line 21, ../sass/screen.scss */
+.text-center {
+  text-align: center !important;
+}
+
+/* line 24, ../sass/screen.scss */
+.text-right {
+  text-align: right !important;
+}
+
+/* line 27, ../sass/screen.scss */
+.text-justify {
+  text-align: justify !important;
+}
+
+/* line 32, ../sass/screen.scss */
+.ui-field-contain .ui-controlgroup,
+.ui-field-contain fieldset.ui-controlgroup {
+  text-align: center;
+}
+
+/* line 36, ../sass/screen.scss */
+.ui-field-contain .ui-controlgroup-controls {
+  width: auto;
+}
+
+/* line 40, ../sass/screen.scss */
+#locations {
+  height: 0;
+  padding: 0;
+}
+
+/* line 44, ../sass/screen.scss */
+#locationsMap {
+  height: 100%;
+  padding: 0;
+  text-shadow: none;
+}
+
+/* line 50, ../sass/screen.scss */
+.in, .out {
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 30ms !important;
+}
+
+/* line 55, ../sass/screen.scss */
+.minus {
+  color: darkred;
+}
+
+/* line 58, ../sass/screen.scss */
+.plus {
+  color: darkgreen;
+}
+
+/* line 67, ../sass/screen.scss */
+.cardDetailsHeader .ui-btn {
+  top: 50%;
+  margin-top: -14px;
+}
+/* line 71, ../sass/screen.scss */
+.cardDetailsHeader .content {
+  padding: 15px 45px;
+}
+/* line 75, ../sass/screen.scss */
+.cardDetailsHeader .number {
+  font-weight: lighter;
+  font-size: .8em;
+}
+/* line 79, ../sass/screen.scss */
+.cardDetailsHeader .money {
+  margin-top: 8px;
+  color: cornflowerblue;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* line 87, ../sass/screen.scss */
+.count {
+  float: right;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 3px 10px;
+  font-size: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,112 @@
+{
+    "success": true,
+    "data": {
+        "user": {
+            "id": "1",
+            "firstName": "Иван",
+            "lastName": "Пупкин",
+            "created_at": "2013-03-21T15:28:23",
+            "birthday_date": "1980-08-08T08:28:00"
+
+        },
+        "cards": [
+            {
+                "id": "1",
+                "owner_id": "1",
+                "created_at":"2013-06-11T12:32:31",
+                "title":"Зарплатная карта Company",
+                "number": "4149437743446427",
+                "amount": "167.22",
+                "currency": "UAH",
+                "type": "debit",
+                "transactions": [
+                    {
+                        "text":"Пополнение мобильного +380994118952",
+                        "price": -15.50,
+                        "timestamp":"2014-03-21T15:28:23",
+                        "card_id": 1
+                    },
+                    {
+                        "text":"Ресторан: McDonald's 020",
+                        "price": -14.50,
+                        "timestamp":"2014-03-20T20:05:23",
+                        "card_id": 1
+                    },
+                    {
+                        "text":"ПОКУПКА ТОВАРА/ОПЛАТА ЗА УСЛУГИ EVA-329",
+                        "price": -48.38,
+                        "timestamp":"2014-03-19T14:46:32",
+                        "card_id": 1
+                    },
+                    {
+                        "text":"Ресторан: McDonald's 020",
+                        "price": -14.50,
+                        "timestamp":"2014-03-20T20:05:23",
+                        "card_id": 1
+                    },
+                    {
+                        "text":"ПОКУПКА ТОВАРА/ОПЛАТА ЗА УСЛУГИ EVA-329",
+                        "price": -48.38,
+                        "timestamp":"2014-03-19T14:46:32",
+                        "card_id": 1
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "owner_id": 1,
+                "created_at":"2013-09-11T11:42:51",
+                "title": "Карта Gold",
+                "number": 5223432343126427,
+                "amount": 997.22,
+                "currency": "UAH",
+                "type": "debit",
+                "transactions": [
+                    {
+                        "text":"Пополнение мобильного +380932685446",
+                        "price": -50.50,
+                        "timestamp":"2014-03-20T10:26:23",
+                        "card_id": 2
+                    },
+                    {
+                        "text":"Оплата коммунальных услуг",
+                        "price": -1183.98,
+                        "timestamp":"2014-03-19T17:46:32",
+                        "card_id": 2
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "owner_id": 1,
+                "created_at":"2013-09-11T11:42:51",
+                "title": "Кредитная карта Universal",
+                "number": 5153472123126427,
+                "amount": -100.22,
+                "currency": "UAH",
+                "type": "credit"
+            }
+        ],
+        "currency": [
+            {   "title": "eur/uah",
+                "from": "EUR",
+                "to": "UAH",
+                "buy": 14.9,
+                "sale": 15.9
+            },
+            {   "title": "usd/uah",
+                "from": "USD",
+                "to": "UAH",
+                "buy": 10.9,
+                "sale": 11.4
+            },
+            {
+                "title": "rur/uah",
+                "from": "RUR",
+                "to": "UAH",
+                "buy": 0.280,
+                "sale": 0.320
+            }
+        ]
+    }
+}

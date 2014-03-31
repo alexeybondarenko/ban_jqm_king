@@ -1,0 +1,66 @@
+{
+    "accounts": "Accounts",
+    "payments": "Payments",
+    "locations": "Branches",
+    "contacts": "Contacts",
+
+    "cardDetails": "Account Details",
+
+    "cardSettings": "Map Settings",
+    "changeCreditLimit": "Change credit limit",
+    "blockUnblockCard": "Enable / disable card",
+    "alertStolenCard": "Report missing cards",
+    "changePIN": "Change PIN",
+    "changeCVV": "Change CVV-code",
+    "orderAdditionalCard": "Request an additional card",
+
+    "paymentMobile": "Recharge your mobile phone",
+    "paymentAccounts": "Transfer between accounts",
+    "paymentCards": "Transfer on card",
+    "paymentsMobileInstruction": "phone in a format 38 **********",
+    "chooseCard": "Pick a card",
+
+    "paymentFrom": "transfer from",
+    "paymentTo": "transfer for",
+
+    "confirm": "Confirm",
+    "cardNumber": "card number",
+
+    "confirmation": "Confirm",
+    "enterSMSCode": "Enter the code from SMS",
+
+    "messageHasSended": "Your phone has been sent SMS in the format XXXX",
+    "send": "Send",
+    "resendSmsInstruction": "If in 2 minutes, SMS was not delivered, click to resend it.",
+    "smsHasResended": "Sms was sent again. Usually it comes in 2-3 minutes.",
+
+    "success": "Success",
+    "successPaymentMsg": "Payments made ​​successfully. Within minutes funds will enroll. Check you can print in any bank or via our web site.",
+    "returnToPayments": "Back to the payments",
+
+    "hotlineWLBank": "Hotline",
+    "mobileBank": "Mobile Banking",
+    "creditCards": "Credit Cards",
+    "depositsAndAccounts": "Deposits and balances",
+
+    "loginText": "To access the application using your Username / Password to log in to Internet Banking",
+    "remember": "Remember me ?",
+    "logIn": "Login",
+    "username": "username",
+    "password": "password",
+
+    "onMap": "On the map",
+    "onList": "List",
+    "currencyExchange": "Exchange Rates",
+    "currency": "Currency",
+    "currencyBuy": "Buy",
+    "currencySale": "Sale",
+
+    "newsTitle": "News WLBank",
+    "licenceTitle": "License WLBank",
+    "privacyTitle": "Privacy Policy WLBank",
+    "settingsTitle": "Settings",
+
+    "language": "Language"
+
+}

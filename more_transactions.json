@@ -1,0 +1,60 @@
+// Example of transactions json file for Card with card_id : 1
+{
+    "success": true,
+    "transactions": [
+        {
+            "text":"Пополнение мобильного +380994118952",
+            "price": -15.50,
+            "timestamp":"2014-03-21T15:28:23",
+            "card_id": 1
+        },
+        {
+            "text":"Ресторан: McDonald's 020",
+            "price": -14.50,
+            "timestamp":"2014-03-20T20:05:23",
+            "card_id": 1
+        },
+        {
+            "text":"ПОКУПКА ТОВАРА/ОПЛАТА ЗА УСЛУГИ EVA-329",
+            "price": -48.38,
+            "timestamp":"2014-03-19T14:46:32",
+            "card_id": 1
+        },
+        {
+            "text":"Пополнение мобильного +380994118952",
+            "price": -15.50,
+            "timestamp":"2014-03-21T15:28:23",
+            "card_id": 1
+        },
+        {
+            "text":"Ресторан: McDonald's 020",
+            "price": -14.50,
+            "timestamp":"2014-03-20T20:05:23",
+            "card_id": 1
+        },
+        {
+            "text":"ПОКУПКА ТОВАРА/ОПЛАТА ЗА УСЛУГИ EVA-329",
+            "price": -48.38,
+            "timestamp":"2014-03-19T14:46:32",
+            "card_id": 1
+        },
+        {
+            "text":"Пополнение мобильного +380994118952",
+            "price": -15.50,
+            "timestamp":"2014-03-21T15:28:23",
+            "card_id": 1
+        },
+        {
+            "text":"Ресторан: McDonald's 020",
+            "price": -14.50,
+            "timestamp":"2014-03-20T20:05:23",
+            "card_id": 1
+        },
+        {
+            "text":"ПОКУПКА ТОВАРА/ОПЛАТА ЗА УСЛУГИ EVA-329",
+            "price": -48.38,
+            "timestamp":"2014-03-19T14:46:32",
+            "card_id": 1
+        }
+    ]
+}
