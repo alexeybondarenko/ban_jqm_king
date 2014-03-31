@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="news controller">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/NewsController.js" />
+    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/App.js" afterPath="$PROJECT_DIR$/app/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/NewsStore.js" afterPath="$PROJECT_DIR$/app/store/NewsStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <list id="f96e3015-d101-46dd-9df6-c9eace68cd7b" name="Failed commit: Default" comment="news controller&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="Bank.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,19 +39,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="470" column="54" selection-start="23238" selection-end="23238" vertical-scroll-proportion="-12.916667" vertical-offset="6740" max-vertical-offset="7695">
+            <state line="69" column="101" selection-start="2906" selection-end="2906" vertical-scroll-proportion="2.4526067" vertical-offset="0" max-vertical-offset="7695">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="4" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.33333334" vertical-offset="1542" max-vertical-offset="2400">
+            <state line="130" column="29" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0" vertical-offset="1686" max-vertical-offset="2400">
               <folding />
             </state>
           </provider>
@@ -97,7 +96,7 @@
       <file leaf-file-name="NewsStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/store/NewsStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="33" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="765">
+            <state line="25" column="27" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -180,10 +179,10 @@
         <option value="$PROJECT_DIR$/Readme.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/controller/NewsController.js" />
-        <option value="$PROJECT_DIR$/app/App.js" />
-        <option value="$PROJECT_DIR$/app/store/NewsStore.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/news.json" />
+        <option value="$PROJECT_DIR$/app/store/NewsStore.js" />
+        <option value="$PROJECT_DIR$/app/App.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -417,15 +416,19 @@
       <created>1396287463973</created>
       <updated>1396287463973</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="news controller">
+      <created>1396287641383</created>
+      <updated>1396287641383</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="22" width="1286" height="878" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -459,7 +462,8 @@
     <MESSAGE value="ver 0.6&#10;" />
     <MESSAGE value="adding news controller and dinamic loading news from news.json file" />
     <MESSAGE value="news controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="news controller" />
+    <MESSAGE value="news controller&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="news controller&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -681,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/jquery.mobile.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="31" selection-start="419" selection-end="419" vertical-scroll-proportion="0.15672913" vertical-offset="43" max-vertical-offset="630">
@@ -723,16 +720,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/app/controller/NewsController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="470" column="54" selection-start="23238" selection-end="23238" vertical-scroll-proportion="-12.916667" vertical-offset="6740" max-vertical-offset="7695">
+        <state line="22" column="41" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="29" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0" vertical-offset="1686" max-vertical-offset="2400">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/NewsStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="765">
+        <state line="25" column="27" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
@@ -744,16 +755,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/NewsController.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="41" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="4" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.33333334" vertical-offset="1542" max-vertical-offset="2400">
+        <state line="69" column="101" selection-start="2906" selection-end="2906" vertical-scroll-proportion="2.4526067" vertical-offset="0" max-vertical-offset="7695">
           <folding />
         </state>
       </provider>

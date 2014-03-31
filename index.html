@@ -65,18 +65,18 @@
 
 <div data-role="panel" id="sidemenu" data-position="left" data-display="push" data-theme="b">
     <ul data-role="listview" data-inset="false">
-        <li><a href="#cards" data-bind="text: language().accounts">Cчета</a></li>
-        <li><a href="#payments" data-bind="text: language().payments">Платежи</a></li>
-        <li><a href="#locations" data-bind="text: language().locations">Отделения</a></li>
-        <li><a href="#contacts" data-bind="text: language().contacts">Контакты</a></li>
+        <li><a href="#cards" data-bind="text: language().language().accounts">Cчета</a></li>
+        <li><a href="#payments" data-bind="text: language().language().payments">Платежи</a></li>
+        <li><a href="#locations" data-bind="text: language().language().locations">Отделения</a></li>
+        <li><a href="#contacts" data-bind="text: language().language().contacts">Контакты</a></li>
         <li data-role="divider"></li>
-        <li><a href="#currencyExchange" data-bind="text: language().currencyExchange">Курсы валют</a></li>
-        <li><a href="#news"><span data-bind="text: language().newsTitle">Новости</span> <span class="count">12</span></a></li>
+        <li><a href="#currencyExchange" data-bind="text: language().language().currencyExchange">Курсы валют</a></li>
+        <li><a href="#news"><span data-bind="text: language().language().newsTitle">Новости</span> <span class="count" data-bind="text: stores.news.data().length"></span></a></li>
         <li data-role="divider"></li>
-        <li><a href="#licence" data-bind="text: language().licenceTitle">Лицензии</a></li>
-        <li><a href="#privacy" data-bind="text: language().privacyTitle">Политика конфиденциальности</a></li>
+        <li><a href="#licence" data-bind="text: language().language().licenceTitle">Лицензии</a></li>
+        <li><a href="#privacy" data-bind="text: language().language().privacyTitle">Политика конфиденциальности</a></li>
         <li data-role="divider"></li>
-        <li><a href="#settings" data-bind="text: language().settingsTitle">Настройки</a></li>
+        <li><a href="#settings" data-bind="text: language().language().settingsTitle">Настройки</a></li>
     </ul>
 </div>
 
