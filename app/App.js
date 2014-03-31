@@ -38,8 +38,10 @@ $("div[data-role=\"page\"]").live('pagebeforecreate', function() {
         case 'currencyExchange':
             controller = new CurrencyExchange();
             break;
-//        case 'news':
-//            case
+        case 'news':
+        case 'newsPage':
+            controller = new NewsController();
+            break;
         default :
             controller = new Controller();
             break;
@@ -125,7 +127,8 @@ var App = function() {
         transactions: new TransactionsStore(),
         cards: new CardsStore(),
         locations: new LocationsStore(),
-        currencies: new CurrencyStore()
+        currencies: new CurrencyStore(),
+        news: new NewsStore()
     };
 
     self.title = ko.observable();
@@ -139,3 +142,13 @@ $(function() {
     ko.applyBindings(new Language(), $("#mainNavBar")[0]);
     ko.applyBindings(new Language(), $("#sidemenu")[0]);
 });
+
+function htmlEncode(value){
+    //create a in-memory div, set it's inner text(which jQuery automatically encodes)
+    //then grab the encoded contents back out.  The div never exists on the page.
+    return $('<div/>').text(value).html();
+}
+
+function htmlDecode(value){
+    return $('<div/>').html(value).text();
+}

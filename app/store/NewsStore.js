@@ -37,7 +37,7 @@ var NewsStore = function() {
         });
     }
     self.readModel = function(value) {
-        return new News(value.title, value.created_at, value.html);
+        return new News(value.title, value.created_at, htmlDecode(value.html));
     }
 
     self.init();
