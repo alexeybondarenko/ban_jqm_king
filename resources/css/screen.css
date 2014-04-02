@@ -2,96 +2,224 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 8, ../sass/screen.scss */
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 11, ../sass/components/panel.scss */
+.ui-panel {
+  width: 17em;
+}
+
+/* line 15, ../sass/components/panel.scss */
+.ui-panel.ui-panel-position-right {
+  width: 35em;
+}
+
+/* line 19, ../sass/components/panel.scss */
+.ui-panel.ui-panel-closed {
+  width: 0;
+}
+
+/* line 23, ../sass/components/panel.scss */
+.ui-panel-position-left {
+  left: -17em;
+}
+
+/* line 27, ../sass/components/panel.scss */
+.ui-panel-animate.ui-panel-position-left.ui-panel-display-overlay, .ui-panel-animate.ui-panel-position-left.ui-panel-display-push {
+  -webkit-transform: translate3d(-17em, 0, 0);
+  -moz-transform: translate3d(-17em, 0, 0);
+  transform: translate3d(-17em, 0, 0);
+}
+
+/* line 33, ../sass/components/panel.scss */
+.ui-panel-position-right {
+  right: -35em;
+}
+
+/* line 37, ../sass/components/panel.scss */
+.ui-panel-animate.ui-panel-position-right.ui-panel-display-overlay, .ui-panel-animate.ui-panel-position-right.ui-panel-display-push {
+  -webkit-transform: translate3d(35em, 0, 0);
+  -moz-transform: translate3d(35em, 0, 0);
+  transform: translate3d(35em, 0, 0);
+}
+
+/* line 43, ../sass/components/panel.scss */
+.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open, .ui-panel-content-wrap-position-left.ui-panel-content-wrap-open, .ui-panel-dismiss-position-left.ui-panel-dismiss-open {
+  left: 17em;
+  right: -35em;
+}
+
+/* line 48, ../sass/components/panel.scss */
+.ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal, .ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-push, .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal, .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
+  -webkit-transform: translate3d(17em, 0, 0);
+  -moz-transform: translate3d(17em, 0, 0);
+  transform: translate3d(17em, 0, 0);
+}
+
+/* line 54, ../sass/components/panel.scss */
+.ui-panel-content-fixed-toolbar-position-right.ui-panel-content-fixed-toolbar-open, .ui-panel-content-wrap-position-right.ui-panel-content-wrap-open, .ui-panel-dismiss-position-right.ui-panel-dismiss-open {
+  left: -17em;
+  right: 35em;
+}
+
+/* line 59, ../sass/components/panel.scss */
+.ui-panel-animate.ui-panel-content-fixed-toolbar-position-right.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal, .ui-panel-animate.ui-panel-content-fixed-toolbar-position-right.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-push, .ui-panel-animate.ui-panel-content-wrap-position-right.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal, .ui-panel-animate.ui-panel-content-wrap-position-right.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
+  -webkit-transform: translate3d(-35em, 0, 0);
+  -moz-transform: translate3d(-35em, 0, 0);
+  transform: translate3d(-35em, 0, 0);
+}
+
+@media (min-width: 60em) {
+  /* line 66, ../sass/components/panel.scss */
+  .navpanel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
+    margin-right: 0;
+  }
+
+  /* line 70, ../sass/components/panel.scss */
+  .navpanel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
+    margin-left: 0;
+  }
+
+  /* line 73, ../sass/components/panel.scss */
+  .navpanel.ui-panel-closed {
+    width: 17em;
+    left: 0;
+  }
+
+  /* line 77, ../sass/components/panel.scss */
+  .main, #mainHeader, #mainFooter {
+    margin-left: 17em;
+    width: auto !important;
+  }
+
+  /* line 82, ../sass/components/panel.scss */
+  #mainFooter {
+    visibility: hidden !important;
+  }
+
+  /* line 88, ../sass/components/panel.scss */
+  #sidemenu {
+    background-color: #333;
+  }
+
+  /* line 91, ../sass/components/panel.scss */
+  .navpanel {
+    visibility: visible;
+    position: relative;
+    left: 0;
+    float: left;
+    width: 17em;
+    background: none;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    transition: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    transform: none !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: 100%;
+  }
+
+  /* line 111, ../sass/components/panel.scss */
+  .navpanel-toogle-button {
+    display: none;
+    visibility: hidden;
+  }
+}
+/* line 9, ../sass/screen.scss */
 .uppercase {
   text-transform: uppercase !important;
 }
 
-/* line 11, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
 .lowercase {
   text-transform: lowercase !important;
 }
 
-/* line 14, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 .capitalize {
   text-transform: capitalize !important;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 .text-left {
   text-align: left !important;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 .text-center {
   text-align: center !important;
 }
 
-/* line 24, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 .text-right {
   text-align: right !important;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .text-justify {
   text-align: justify !important;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 .ui-field-contain .ui-controlgroup,
 .ui-field-contain fieldset.ui-controlgroup {
   text-align: center;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 .ui-field-contain .ui-controlgroup-controls {
   width: auto;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 #locations {
   height: 0;
   padding: 0;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 #locationsMap {
   height: 100%;
   padding: 0;
   text-shadow: none;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .in, .out {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-duration: 30ms !important;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .minus {
   color: darkred;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .plus {
   color: darkgreen;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .cardDetailsHeader .ui-btn {
   top: 50%;
   margin-top: -14px;
 }
-/* line 71, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .cardDetailsHeader .content {
   padding: 15px 45px;
 }
-/* line 75, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .cardDetailsHeader .number {
   font-weight: lighter;
   font-size: .8em;
 }
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .cardDetailsHeader .money {
   margin-top: 8px;
   color: cornflowerblue;
@@ -99,11 +227,32 @@
   font-weight: bold;
 }
 
-/* line 87, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .count {
   float: right;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 3px 10px;
   font-size: 10px;
   border-radius: 10px;
+}
+
+/* line 96, ../sass/screen.scss */
+.main {
+  padding: 0;
+  margin: 0;
+  height: 100% !important;
+}
+
+/* line 102, ../sass/screen.scss */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 30em) and (max-width: 60em) {
+  /* line 109, ../sass/screen.scss */
+  .main .ui-content {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 }

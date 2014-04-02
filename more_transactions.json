@@ -1,4 +1,3 @@
-// Example of transactions json file for Card with card_id : 1
 {
     "success": true,
     "transactions": [

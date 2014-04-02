@@ -13,47 +13,35 @@ var TransactionsStore = function() {
     arguments.callee._singletonInstance = this;
     var self = this;
 
-    self.data = [];
+    self.data = ko.observableArray([],{persist: 'transactions'});
     self.lastUpdate = new Date();
-    self.url = new App().dataURL;;
+    self.url = 'more_transactions.json';
 
     self.init = function() {
+        console.log("Init transactions store");
         this.update();
     }
     self.update = function() {
-
-//        $.ajax({
-//            dataType: "json",
-//            url: self.url,
-//            async: false,
-//            success: function(data) {
-//
-//                self.lastUpdate = new Date();
-//                $.each(data.data.transactions, function(index, value){
-//                    self.data[index] = self.readModel(value);
-//                })
-//            }
-//        });
+        $.ajax({
+            dataType: "json",
+            url: self.url,
+            async: false,
+            success: function(data) {
+                var newData = [];
+                self.lastUpdate = new Date();
+                $.each(data.transactions, function(index, value){
+                    newData[index] = self.readModel(value);
+                });
+               self.data(newData);
+            }
+        });
     }
     self.readModel = function(value) {
-//        return new Transaction(value.text, value.price, value.timestamp, value.card_id);
+        return new Transaction(value.text, value.price, value.timestamp, value.card_id);
     }
 
     self.getTransactionsForCard = function(cardID) {
-//        var result = [];
-//
-//        $.ajax({
-//            dataType: "json",
-//            url: self.url,
-//            async: false,
-//            success: function(data) {
-//                $.each(data.data.transactions, function(index, value){
-//                    result[index] = self.readModel(value);
-//                })
-//            }
-//        });
-//
-//        return result;
+
     }
 
     self.init();

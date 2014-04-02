@@ -21,6 +21,8 @@
     <script src="lib/jquery.ui.map/jquery.ui.map.js"></script>
     <script src="lib/jquery.ui.map/jquery.ui.map.extensions.js"></script>
 
+    <!--<link rel="stylesheet" href="lib/jquery.mobile/themes/wlbank/wlbank.min.css" />-->
+
     <!-- Knockout js -->
     <script src="lib/knockout/knockout-3.1.0.js"></script>
     <script src="lib/knockout/knockout.localStorage.js"></script>
@@ -39,6 +41,8 @@
     <script src="app/model/News.js"></script>
 
     <script src="app/controller/Controller.js"></script>
+    <script src="app/controller/Dashboard.js"></script>
+
     <script src="app/controller/Login.js"></script>
     <script src="app/controller/Cards.js"></script>
     <script src="app/controller/CardDetails.js"></script>
@@ -63,25 +67,48 @@
 
 <body>
 
-<div data-role="panel" id="sidemenu" data-position="left" data-display="push" data-theme="b">
+<div class="navpanel" data-role="panel" id="sidemenu" data-position="left" data-display="overlay" data-theme="b">
     <ul data-role="listview" data-inset="false">
-        <li><a href="#cards" data-bind="text: language().language().accounts">Cчета</a></li>
-        <li><a href="#payments" data-bind="text: language().language().payments">Платежи</a></li>
-        <li><a href="#locations" data-bind="text: language().language().locations">Отделения</a></li>
-        <li><a href="#contacts" data-bind="text: language().language().contacts">Контакты</a></li>
+        <li  data-icon="home"><a href="#dashboard">
+               <!--data-bind="text: language().language().accounts"-->
+            Home
+        </a></li>
+        <li><a href="#cards" data-bind="text: language().language().accounts">
+            <!--Cчета-->
+        </a></li>
+        <li><a href="#payments" data-bind="text: language().language().payments">
+            <!--Платежи-->
+        </a></li>
+        <li><a href="#locations" data-bind="text: language().language().locations">
+            <!--Отделения-->
+        </a></li>
+        <li><a href="#contacts" data-bind="text: language().language().contacts">
+            <!--Контакты-->
+        </a></li>
         <li data-role="divider"></li>
-        <li><a href="#currencyExchange" data-bind="text: language().language().currencyExchange">Курсы валют</a></li>
-        <li><a href="#news"><span data-bind="text: language().language().newsTitle">Новости</span> <span class="count" data-bind="text: stores.news.data().length"></span></a></li>
+        <li><a href="#currencyExchange" data-bind="text: language().language().currencyExchange">
+            <!--Курсы валют-->
+        </a></li>
+        <li><a href="#news"><span data-bind="text: language().language().newsTitle">
+            <!--Новости-->
+        </span> <span class="count" data-bind="text: stores.news.data().length"></span></a></li>
         <li data-role="divider"></li>
-        <li><a href="#licence" data-bind="text: language().language().licenceTitle">Лицензии</a></li>
-        <li><a href="#privacy" data-bind="text: language().language().privacyTitle">Политика конфиденциальности</a></li>
+        <li><a href="#licence" data-bind="text: language().language().licenceTitle">
+            <!--Лицензии-->
+        </a></li>
+        <li><a href="#privacy" data-bind="text: language().language().privacyTitle">
+            <!--Политика конфиденциальности-->
+        </a></li>
         <li data-role="divider"></li>
-        <li><a href="#settings" data-bind="text: language().language().settingsTitle">Настройки</a></li>
+        <li><a href="#settings" data-bind="text: language().language().settingsTitle">
+            <!--Настройки-->
+        </a></li>
     </ul>
 </div>
 
+<div class="main">
 <header data-role="header" id="mainHeader" data-position="fixed" data-theme="b">
-    <a href="#sidemenu" data-swipe="true" class="ui-btn-left ui-nodisc-icon ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
+    <a href="#sidemenu" data-swipe="true" class="navpanel-toogle-button ui-btn-left ui-nodisc-icon ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
     <h1 data-bind="text: title()">
          <!--Заголовок header -->
     </h1>
@@ -90,13 +117,68 @@
 <footer data-role="footer" id="mainFooter" data-position="fixed" data-theme="b">
     <div data-role="navbar" id="mainNavBar">
         <ul>
-            <li><a href="#cards" data-icon="home" data-bind="text: language().accounts">Счета</a></li>
-            <li><a href="#payments" data-icon="info" data-bind="text: language().payments">Платежи</a></li>
-            <li><a href="#locations" data-icon="bars" data-bind="text: language().locations">Отделения</a></li>
-            <li><a href="#contacts" data-icon="info" data-bind="text: language().contacts">Контакты</a></li>
+            <li><a href="#cards" data-icon="home" data-bind="text: language().accounts">
+                <!--Счета-->
+            </a></li>
+            <li><a href="#payments" data-icon="info" data-bind="text: language().payments">
+                <!--Платежи-->
+            </a></li>
+            <li><a href="#locations" data-icon="bars" data-bind="text: language().locations">
+                <!--Отделения-->
+            </a></li>
+            <li><a href="#contacts" data-icon="info" data-bind="text: language().contacts">
+                <!--Контакты-->
+            </a></li>
         </ul>
     </div>
 </footer>
+
+<div data-role="page" id="dashboard">
+    <main data-role="main" class="ui-content">
+        <div class="currency" >
+            <div data-bind="foreach: currency()" class="text-center">
+                <span>
+                    <span data-bind="text:from" class="uppercase text-left">
+                        <!--USD-->
+                    </span>
+                    <span data-bind="text:buy">
+                        <!--10.900-->
+                    </span>
+                    <span data-bind="text:sale">
+                        <!--11.400-->
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="cardsList">
+            <ul data-role="listview" data-inset="true" data-theme="a" data-bind="foreach: cards()">
+                <li><a data-bind="text: info()"></a></li>
+            </ul>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <div class="transactionsList">
+                    <ul data-role="listview" data-inset="true" data-bind="foreach: transactions()">
+                        <li class="ui-li-static ui-body-inherit">
+                    <span class="price" style="float:right" data-bind="css: {'minus': price < 0, 'plus': price >= 0}">
+                        <span class="amount" data-bind="text: price"></span>
+                    </span>
+                            <b data-bind="text:text"></b><br/><span data-bind="text: timestamp"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ui-block-b">
+
+                <ul data-role="listview" data-inset="true" data-bind="foreach: news()">
+                    <li><a href="#newsPage" data-bind="text: title">
+                        <!--Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и-->
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>
 <!-- Login page -->
 <div data-role="page" id="login" data-title="WLBank">
     <main data-role="main" class="ui-content" data-bind="">
@@ -111,9 +193,13 @@
             </fieldset>
             <fieldset data-role="controlgroup">
                 <input type="checkbox" name="remember" id="remember" checked="">
-                <label for="remember" data-bind="text: language().remember">Запомнить?</label>
+                <label for="remember" data-bind="text: language().remember">
+                    <!--Запомнить?-->
+                </label>
             </fieldset>
-            <button data-theme="b" data-bind="click: $root.auth, text: language().logIn">Войти</button>
+            <button data-theme="b" data-bind="click: $root.auth, text: language().logIn">
+                <!--Войти-->
+            </button>
         </form>
     </main>
 </div>
@@ -166,12 +252,24 @@
     </header>
     <main data-role="main" class="ui-content">
         <ul data-role="listview" data-inset="true">
-            <li data-bind="text: language().changeCreditLimit">Изменить кредитный лимит</li>
-            <li data-bind="text: language().blockUnblockCard">Разблокировать/заблокировать карту</li>
-            <li data-bind="text: language().alertStolenCard">Сообщить о пропаже карты</li>
-            <li data-bind="text: language().changePIN">Сменить ПИН-код</li>
-            <li data-bind="text: language().changeCVV">Изменить CVV-код</li>
-            <li data-bind="text: language().orderAdditionalCard">Заказать дополнительную карту</li>
+            <li data-bind="text: language().changeCreditLimit">
+                <!--Изменить кредитный лимит-->
+            </li>
+            <li data-bind="text: language().blockUnblockCard">
+                <!--Разблокировать/заблокировать карту-->
+            </li>
+            <li data-bind="text: language().alertStolenCard">
+                <!--Сообщить о пропаже карты-->
+            </li>
+            <li data-bind="text: language().changePIN">
+                <!--Сменить ПИН-код-->
+            </li>
+            <li data-bind="text: language().changeCVV">
+                <!--Изменить CVV-код-->
+            </li>
+            <li data-bind="text: language().orderAdditionalCard">
+                <!--Заказать дополнительную карту-->
+            </li>
         </ul>
     </main>
 </div>
@@ -180,9 +278,15 @@
     <main data-role="main" class="ui-content">
         <div class="paymentsList" >
             <ul data-role="listview" data-inset="true">
-                <li><a href="#paymentsMobile" data-bind="text: language().paymentMobile">Пополнение мобильного</a></li>
-                <li><a href="#paymentsAccount" data-bind="text: language().paymentAccounts">Перевод между счетами</a></li>
-                <li><a href="#paymentsCards" data-bind="text: language().paymentCards">Перевод на карту</a></li>
+                <li><a href="#paymentsMobile" data-bind="text: language().paymentMobile">
+                    <!--Пополнение мобильного-->
+                </a></li>
+                <li><a href="#paymentsAccount" data-bind="text: language().paymentAccounts">
+                    <!--Перевод между счетами-->
+                </a></li>
+                <li><a href="#paymentsCards" data-bind="text: language().paymentCards">
+                    <!--Перевод на карту-->
+                </a></li>
             </ul>
         </div>
     </main>
@@ -193,13 +297,15 @@
     <header data-role="header" class="secondToolbar" data-theme="c">
         <a data-rel="back" data-direction="reverse" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
         <h1 data-bind="text: language().paymentMobile">
-            Пополнение мобильного
+            <!--Пополнение мобильного-->
         </h1>
     </header>
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <legend class="text-center" data-bind="text: language().paymentsMobileInstruction">телефон в формате +38*** *** ** **</legend>
+                <legend class="text-center" data-bind="text: language().paymentsMobileInstruction">
+                    <!--телефон в формате +38*** *** ** **-->
+                </legend>
                 <input type="tel" placeholder="380932685446" data-bind="value: phoneNumber()"/>
             </fieldset>
             <fieldset class="ui-grid-a">
@@ -229,20 +335,24 @@
     <header data-role="header"  class="secondToolbar" data-theme="c">
         <a data-rel="back" data-direction="reverse" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
         <h1 data-bind="text: language().paymentAccounts">
-            Перевод между счетами
+            <!--Перевод между счетами-->
         </h1>
     </header>
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <legend class="text-center" data-bind="text: language().paymentFrom">откуда переводить</legend>
+                <legend class="text-center" data-bind="text: language().paymentFrom">
+                    <!--откуда переводить-->
+                </legend>
                 <select data-bind="options: cards,
                                    optionsText: 'info',
                                    optionsCaption: language().chooseCard,
                                    selectedOptions: paymentCard"></select>
             </fieldset>
             <fieldset>
-                <legend class="text-center" data-bind="text: language().paymentTo">куда переводить</legend>
+                <legend class="text-center" data-bind="text: language().paymentTo">
+                    <!--куда переводить-->
+                </legend>
                 <select data-bind="options: cards,
                                    optionsText: 'info',
                                    optionsCaption: language().chooseCard,
@@ -269,13 +379,15 @@
     <header data-role="header" class="secondToolbar" data-theme="c">
         <a data-rel="back" data-direction="reverse" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
         <h1 data-bind="text: language().paymentCards">
-            Перевод на карту
+            <!--Перевод на карту-->
         </h1>
     </header>
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <legend class="text-center" data-bind="text: language().cardNumber">номер карты</legend>
+                <legend class="text-center" data-bind="text: language().cardNumber">
+                    <!--номер карты-->
+                </legend>
                 <input type="tel" max="16" min="16"/>
             </fieldset>
             <fieldset class="ui-grid-a">
@@ -306,7 +418,7 @@
     <header data-role="header" class="secondToolbar" data-theme="c">
         <a href="#cards" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
         <h1 data-bind="text: language().confirmation">
-            Подтверждение
+            <!--Подтверждение-->
         </h1>
     </header>
     <main data-role="main" class="ui-content">
@@ -325,7 +437,9 @@
                    <div class="ui-block-d"><input type="number" name="digit4" id="digit4" tabindex="4" data-bind="value: digit4(), event:{ keypress: inputChainHandler}"/></div>
                </fieldset>
                <div class="form-spacer"></div>
-               <button class="uppercase" data-bind="click: $root.verifyPayment, text: language().send">Оплатить</button>
+               <button class="uppercase" data-bind="click: $root.verifyPayment, text: language().send">
+                   <!--Оплатить-->
+               </button>
                <div class="form-spacer"></div>
                <div class="screenMsg" data-bind="text: language().smsHasResended, visible: showResendMsg()">
                    <!--Смс было отправлено повторно. Обычно оно приходит через 2-3 минуты.-->
@@ -441,9 +555,15 @@
             </tr>
             <tbody align="center" data-bind="foreach: currency()">
             <tr>
-                <td data-bind="text:from" class="uppercase text-left">USD</td>
-                <td data-bind="text:buy">10.900</td>
-                <td data-bind="text:sale">11.400</td>
+                <td data-bind="text:from" class="uppercase text-left">
+                    <!--USD-->
+                </td>
+                <td data-bind="text:buy">
+                    <!--10.900-->
+                </td>
+                <td data-bind="text:sale">
+                    <!--11.400-->
+                </td>
             </tr>
             </tbody>
         </table>
@@ -456,17 +576,17 @@
         <ul data-role="listview" data-bind="foreach: news()">
             <li><a href="#newsPage" data-bind="text: title, click: $root.onNewsItemClick">
                 <!--Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и-->
-                скидках 1
             </a></li>
         </ul>
     </main>
 </div>
 
-<div data-role="page" id="newsPage" data-bind="attr: {'data-title': 'Current News Title'}">
+<div data-role="page" id="newsPage" data-bind="attr: {'data-title': chosenNews().title || ' '}">
     <main data-role="main" class="ui-content">
         <div data-iscroll data-bind="with: chosenNews()">
-                <h3 data-bind="text: title">Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и
-                    скидках</h3>
+                <h3 data-bind="text: title">
+                    <!--Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и скидках-->
+                </h3>
                 <div class="" data-bind="text: created_at"></div>
                 <div class="news-text" data-bind="html: html"></div>
         </div>
@@ -476,14 +596,18 @@
 <!-- Licences -->
 <div data-role="page" id="licence" data-title="Лицензии WLBank" data-bind="attr: {'data-title': language().licenceTitle}">
     <main data-role="main" class="ui-content">
-        <h3>Лицензии WLBank</h3>
+        <h3 data-bind="text: language().licenceTitle">
+            <!--Лицензии WLBank-->
+        </h3>
     </main>
 </div>
 
 <!-- Privacy -->
 <div data-role="page" id="privacy" data-title="Политика конфиденциальности WLBank" data-bind="attr: {'data-title': language().privacyTitle}">
     <main data-role="main" class="ui-content">
-        <h3 data-bind="text: language().privacyTitle">Политика конфиденциальности WLBank</h3>
+        <h3 data-bind="text: language().privacyTitle">
+            <!--Политика конфиденциальности WLBank-->
+        </h3>
     </main>
 </div>
 
@@ -502,7 +626,7 @@
         </ul>
     </main>
 </div>
-
+</div>
 
 </body>
 </html>

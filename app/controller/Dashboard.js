@@ -4,7 +4,7 @@
  * @constructor
  */
 
-var NewsController = function() {
+var Dashboard = function() {
 
     /**
      * Singleton pattern part
@@ -15,16 +15,19 @@ var NewsController = function() {
 
     var self = this;
 
-    self.language = ko.observable(Language().language());
-    self.chosenNews = ko.observable(new News(' ' ,'',''));
+    self.language = ko.observable(new Language().language());
 
-    self.onNewsItemClick = function(news) {
-        self.chosenNews(news);
-        $.mobile.changePage("#newsPage");
-    }
+    var cardsStore = new App().stores.cards;
+    self.cards = ko.observableArray(cardsStore.data);
 
     var newsStore = new App().stores.news;
     self.news = ko.observableArray(newsStore.data());
+
+    var currencyStore = new App().stores.currencies;
+    self.currency = ko.observableArray(currencyStore.data());
+
+    var transactionsStore = new App().stores.transactions;
+    self.transactions = ko.observableArray(transactionsStore.data());
 
 }
 

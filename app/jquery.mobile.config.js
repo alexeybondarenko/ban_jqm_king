@@ -23,9 +23,9 @@ $(function(){
     $("#sidemenu ul").listview();
     $("#sidemenu").trigger("create");
 
-    $(document).on("swiperight","#sidemenu",function(){
-        $(this).panel("open");
-    });
+//    $(document).on("swiperight","#sidemenu",function(){
+//        $(this).panel("open");
+//    });
 
 //    $("[data-role=\"page\"]").live("pageaftershow", function(data, target, event) {
 //

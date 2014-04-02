@@ -4,6 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 //@import "compass/reset";
+@import "components/panel";
 
 .uppercase {
   text-transform: uppercase !important;
@@ -92,3 +93,21 @@ $cardDetailsHeaderHeight: 80px;
   border-radius:10px;
 }
 
+.main {
+  padding: 0;
+  margin: 0;
+  height:100% !important;
+
+}
+body {
+  padding: 0;
+  margin:0;
+
+}
+
+@media (min-width: 30em) and (max-width: 60em) {
+  .main .ui-content {
+    padding-left:2%;
+    padding-right:2%;
+  }
+}

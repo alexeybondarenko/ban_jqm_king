@@ -5,6 +5,9 @@ $("div[data-role=\"page\"]").live('pagebeforecreate', function() {
     var controller;
 
     switch(id) {
+        case 'dashboard':
+            controller = new Dashboard();
+            break;
         case 'cardDetails':
         case 'cardSettings':
             controller = new App().cardDetails();
@@ -22,9 +25,11 @@ $("div[data-role=\"page\"]").live('pagebeforecreate', function() {
         case 'paymentsSuccess':
             controller = new App().paymentsVerify();
             break;
-        case 'locations':
         case 'locationsList':
             controller = new Locations();
+            break;
+        case 'locations':
+            controller = new App().locationsMap();
             break;
         case 'contacts':
             controller = new Contacts();
@@ -123,6 +128,12 @@ var App = function() {
         return controller;
     }
 
+    self.locationsMap = function() {
+        var controller = new Locations();
+        controller.initMap();
+
+        return controller;
+    }
     self.stores = {
         transactions: new TransactionsStore(),
         cards: new CardsStore(),
