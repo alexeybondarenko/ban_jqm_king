@@ -18,7 +18,7 @@ var Dashboard = function() {
     self.language = ko.observable(new Language().language());
 
     var cardsStore = new App().stores.cards;
-    self.cards = ko.observableArray(cardsStore.data);
+    self.cards = ko.observableArray(cardsStore.data());
 
     var newsStore = new App().stores.news;
     self.news = ko.observableArray(newsStore.data());
@@ -27,7 +27,13 @@ var Dashboard = function() {
     self.currency = ko.observableArray(currencyStore.data());
 
     var transactionsStore = new App().stores.transactions;
-    self.transactions = ko.observableArray(transactionsStore.data());
+    self.transactions = ko.observableArray(transactionsStore.lastData(5));
 
+    self.showCardsDetails = function(card) {
+        var id ="#cardDetails";
+        $.mobile.changePage(id);
+        var cardDetails = new CardDetails();
+        cardDetails.card(card);
+    };
 }
 

@@ -29,7 +29,11 @@
 
     <script src="app/knockout.bind.js"></script>
 
+    <!-- Utils -->
+    <script src="app/utils/Date.js"></script>
     <!-- Application scripts -->
+
+    <script src="app/Config.js"></script>
 
     <script src="app/Language.js"></script>
 
@@ -53,6 +57,7 @@
     <script src="app/controller/CurrencyExchange.js"></script>
     <script src="app/controller/NewsController.js"></script>
 
+    <script src="app/store/Store.js"></script>
     <script src="app/store/TransactionsStore.js"></script>
     <script src="app/store/CardsStore.js"></script>
     <script src="app/store/LocationsStore.js"></script>
@@ -61,10 +66,21 @@
 
     <script src="app/App.js"></script>
 
+
     <link rel="stylesheet" href="resources/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
     </head>
 
+    <script type="text/html" id="transactionsList">
+        <ul data-role="listview" data-inset="true" data-bind="foreach: $data">
+            <li class="ui-li-static ui-body-inherit small">
+                        <span class="price" style="float:right" data-bind="css: {'minus': price < 0, 'plus': price >= 0}">
+                            <span class="amount" data-bind="text: price"></span>
+                        </span>
+                <b data-bind="text:text"></b><br/><span data-bind="text: formatedDate()"></span>
+            </li>
+        </ul>
+    </script>
 <body>
 
 <div class="navpanel" data-role="panel" id="sidemenu" data-position="left" data-display="overlay" data-theme="b">
@@ -136,7 +152,7 @@
 <div data-role="page" id="dashboard">
     <main data-role="main" class="ui-content">
         <div class="currency" >
-            <div data-bind="foreach: currency()" class="text-center">
+            <div data-bind="foreach: currency()" class="text-center small">
                 <span>
                     <span data-bind="text:from" class="uppercase text-left">
                         <!--USD-->
@@ -152,24 +168,16 @@
         </div>
         <div class="cardsList">
             <ul data-role="listview" data-inset="true" data-theme="a" data-bind="foreach: cards()">
-                <li><a data-bind="text: info()"></a></li>
+                <li><a data-bind="text: info(), click: $root.showCardsDetails"></a></li>
             </ul>
         </div>
-        <div class="ui-grid-a">
+        <div class="ui-grid-a breakpoint space-grid">
             <div class="ui-block-a">
-                <div class="transactionsList">
-                    <ul data-role="listview" data-inset="true" data-bind="foreach: transactions()">
-                        <li class="ui-li-static ui-body-inherit">
-                    <span class="price" style="float:right" data-bind="css: {'minus': price < 0, 'plus': price >= 0}">
-                        <span class="amount" data-bind="text: price"></span>
-                    </span>
-                            <b data-bind="text:text"></b><br/><span data-bind="text: timestamp"></span>
-                        </li>
-                    </ul>
-                </div>
+                <h4 class="text-center">Последние операции</h4>
+                <div class="transactionsList" data-bind="template: { name: 'transactionsList', data: transactions() }"></div>
             </div>
             <div class="ui-block-b">
-
+                <h4 class="text-center">Новости банка</h4>
                 <ul data-role="listview" data-inset="true" data-bind="foreach: news()">
                     <li><a href="#newsPage" data-bind="text: title">
                         <!--Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и-->
@@ -219,7 +227,7 @@
 <!-- Cards Details page -->
 <div data-role="page" id="cardDetails" data-title="Подробности счета" data-bind="attr: {'data-title': language().cardDetails}">
     <header data-role="header" data-theme="a" class="cardDetailsHeader">
-        <a href="#cards" data-direction="reverse" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+        <a data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
         <div class="content">
             <div data-bind="text: card().title" class="name uppercase"></div>
             <div data-bind="text:card().number" class="number"></div>

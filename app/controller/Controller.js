@@ -18,6 +18,5 @@ var Controller = function() {
     self.language = ko.observable(Language().language());
 
 
-
 }
 

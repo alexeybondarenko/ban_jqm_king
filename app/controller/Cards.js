@@ -17,7 +17,7 @@ function Cards() {
 
     var cardsStore = new App().stores.cards;
 
-    self.cards = ko.observableArray(cardsStore.data);
+    self.cards = ko.observableArray(cardsStore.data());
 
     /**
      * Выбранная карта.

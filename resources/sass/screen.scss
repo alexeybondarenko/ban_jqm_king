@@ -5,29 +5,66 @@
 
 //@import "compass/reset";
 @import "components/panel";
+@import "components/text";
 
-.uppercase {
-  text-transform: uppercase !important;
-}
-.lowercase {
-  text-transform: lowercase !important;
-}
-.capitalize {
-  text-transform: capitalize !important;
+$width_base: 15em;
+$width1: 2*$width_base;
+$width2: 4*$width_base;
+
+$blocks: a,b,c,d,e;
+
+@media (min-width: $width1) and (max-width: $width2) {
+  .main .ui-content {
+    padding-left:2%;
+    padding-right:2%;
+  }
 }
 
-.text-left {
-  text-align: left !important;
+@media all and (max-width: $width1) {
+  .breakpoint {
+
+    @each $block in $blocks {
+
+      .ui-block-#{$block} {
+        width:100%;
+        float: 0;
+      }
+    }
+  }
 }
-.text-center {
-  text-align: center !important;
+
+$space-grid-padding: 15px;
+
+@media (min-width: $width1) {
+
+  .space-grid {
+
+    &.ui-grid-a {
+      .ui-block-a {
+        padding-right:$space-grid-padding;
+      }
+      .ui-block-b {
+        padding-left:$space-grid-padding;
+      }
+    }
+  }
 }
-.text-right {
-  text-align: right !important;
+
+
+body {
+  padding: 0;
+  margin:0;
+
 }
-.text-justify {
-  text-align: justify !important;
+
+.main {
+  padding: 0;
+  margin: 0;
+  height:100% !important;
+
 }
+
+
 
 .ui-field-contain .ui-controlgroup,
 .ui-field-contain fieldset.ui-controlgroup {
@@ -93,21 +130,3 @@ $cardDetailsHeaderHeight: 80px;
   border-radius:10px;
 }
 
-.main {
-  padding: 0;
-  margin: 0;
-  height:100% !important;
-
-}
-body {
-  padding: 0;
-  margin:0;
-
-}
-
-@media (min-width: 30em) and (max-width: 60em) {
-  .main .ui-content {
-    padding-left:2%;
-    padding-right:2%;
-  }
-}

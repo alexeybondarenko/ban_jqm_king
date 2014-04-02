@@ -38,7 +38,7 @@ var Payments = function() {
      * @type {array}
      */
 
-    self.cards = ko.observableArray(cardsStore.data);
+    self.cards = ko.observableArray(cardsStore.data());
     /**
      * Card - source of payment
      * @type {Card}

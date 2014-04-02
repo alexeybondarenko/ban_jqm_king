@@ -32,4 +32,8 @@ var Transaction = function(text, price, timestamp, card_id) {
     this.info = ko.computed(function(){
         return text+' '+price;
     }, this);
+
+    this.formatedDate = ko.computed(function(){
+         return this.timestamp.format("yyyy-MM-dd h:mm:ss");
+    }, this);
 }

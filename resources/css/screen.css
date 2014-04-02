@@ -130,96 +130,168 @@
     visibility: hidden;
   }
 }
-/* line 9, ../sass/screen.scss */
+/* line 1, ../sass/components/text.scss */
 .uppercase {
   text-transform: uppercase !important;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 4, ../sass/components/text.scss */
 .lowercase {
   text-transform: lowercase !important;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 7, ../sass/components/text.scss */
 .capitalize {
   text-transform: capitalize !important;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 11, ../sass/components/text.scss */
 .text-left {
   text-align: left !important;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 14, ../sass/components/text.scss */
 .text-center {
   text-align: center !important;
 }
 
-/* line 25, ../sass/screen.scss */
+/* line 17, ../sass/components/text.scss */
 .text-right {
   text-align: right !important;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 20, ../sass/components/text.scss */
 .text-justify {
   text-align: justify !important;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 24, ../sass/components/text.scss */
+.small {
+  font-size: 75%;
+}
+
+/* line 27, ../sass/components/text.scss */
+.big {
+  font-size: 150%;
+}
+
+/* line 30, ../sass/components/text.scss */
+.light {
+  font-weight: light;
+}
+
+@media (min-width: 30em) and (max-width: 60em) {
+  /* line 17, ../sass/screen.scss */
+  .main .ui-content {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+@media all and (max-width: 30em) {
+  /* line 28, ../sass/screen.scss */
+  .breakpoint .ui-block-a {
+    width: 100%;
+    float: 0;
+  }
+  /* line 28, ../sass/screen.scss */
+  .breakpoint .ui-block-b {
+    width: 100%;
+    float: 0;
+  }
+  /* line 28, ../sass/screen.scss */
+  .breakpoint .ui-block-c {
+    width: 100%;
+    float: 0;
+  }
+  /* line 28, ../sass/screen.scss */
+  .breakpoint .ui-block-d {
+    width: 100%;
+    float: 0;
+  }
+  /* line 28, ../sass/screen.scss */
+  .breakpoint .ui-block-e {
+    width: 100%;
+    float: 0;
+  }
+}
+@media (min-width: 30em) {
+  /* line 43, ../sass/screen.scss */
+  .space-grid.ui-grid-a .ui-block-a {
+    padding-right: 15px;
+  }
+  /* line 46, ../sass/screen.scss */
+  .space-grid.ui-grid-a .ui-block-b {
+    padding-left: 15px;
+  }
+}
+/* line 54, ../sass/screen.scss */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 60, ../sass/screen.scss */
+.main {
+  padding: 0;
+  margin: 0;
+  height: 100% !important;
+}
+
+/* line 70, ../sass/screen.scss */
 .ui-field-contain .ui-controlgroup,
 .ui-field-contain fieldset.ui-controlgroup {
   text-align: center;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .ui-field-contain .ui-controlgroup-controls {
   width: auto;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 #locations {
   height: 0;
   padding: 0;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 #locationsMap {
   height: 100%;
   padding: 0;
   text-shadow: none;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .in, .out {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-duration: 30ms !important;
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .minus {
   color: darkred;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 .plus {
   color: darkgreen;
 }
 
-/* line 68, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .cardDetailsHeader .ui-btn {
   top: 50%;
   margin-top: -14px;
 }
-/* line 72, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .cardDetailsHeader .content {
   padding: 15px 45px;
 }
-/* line 76, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .cardDetailsHeader .number {
   font-weight: lighter;
   font-size: .8em;
 }
-/* line 80, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .cardDetailsHeader .money {
   margin-top: 8px;
   color: cornflowerblue;
@@ -227,32 +299,11 @@
   font-weight: bold;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .count {
   float: right;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 3px 10px;
   font-size: 10px;
   border-radius: 10px;
-}
-
-/* line 96, ../sass/screen.scss */
-.main {
-  padding: 0;
-  margin: 0;
-  height: 100% !important;
-}
-
-/* line 102, ../sass/screen.scss */
-body {
-  padding: 0;
-  margin: 0;
-}
-
-@media (min-width: 30em) and (max-width: 60em) {
-  /* line 109, ../sass/screen.scss */
-  .main .ui-content {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
 }

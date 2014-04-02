@@ -50,3 +50,4 @@ var Language = function() {
 
     self.init();
 }
+
