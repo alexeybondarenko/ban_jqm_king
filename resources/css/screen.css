@@ -177,121 +177,126 @@
 
 /* line 30, ../sass/components/text.scss */
 .light {
-  font-weight: light;
+  font-weight: lighter;
 }
 
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @media (min-width: 30em) and (max-width: 60em) {
-  /* line 17, ../sass/screen.scss */
+  /* line 18, ../sass/screen.scss */
   .main .ui-content {
     padding-left: 2%;
     padding-right: 2%;
   }
 }
 @media all and (max-width: 30em) {
-  /* line 28, ../sass/screen.scss */
+  /* line 29, ../sass/screen.scss */
   .breakpoint .ui-block-a {
     width: 100%;
     float: 0;
   }
-  /* line 28, ../sass/screen.scss */
+  /* line 29, ../sass/screen.scss */
   .breakpoint .ui-block-b {
     width: 100%;
     float: 0;
   }
-  /* line 28, ../sass/screen.scss */
+  /* line 29, ../sass/screen.scss */
   .breakpoint .ui-block-c {
     width: 100%;
     float: 0;
   }
-  /* line 28, ../sass/screen.scss */
+  /* line 29, ../sass/screen.scss */
   .breakpoint .ui-block-d {
     width: 100%;
     float: 0;
   }
-  /* line 28, ../sass/screen.scss */
+  /* line 29, ../sass/screen.scss */
   .breakpoint .ui-block-e {
     width: 100%;
     float: 0;
   }
 }
 @media (min-width: 30em) {
-  /* line 43, ../sass/screen.scss */
+  /* line 44, ../sass/screen.scss */
   .space-grid.ui-grid-a .ui-block-a {
     padding-right: 15px;
   }
-  /* line 46, ../sass/screen.scss */
+  /* line 47, ../sass/screen.scss */
   .space-grid.ui-grid-a .ui-block-b {
     padding-left: 15px;
   }
 }
-/* line 54, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 body {
   padding: 0;
   margin: 0;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 .main {
   padding: 0;
   margin: 0;
   height: 100% !important;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .ui-field-contain .ui-controlgroup,
 .ui-field-contain fieldset.ui-controlgroup {
   text-align: center;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 .ui-field-contain .ui-controlgroup-controls {
   width: auto;
 }
 
-/* line 78, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 #locations {
   height: 0;
   padding: 0;
 }
 
-/* line 82, ../sass/screen.scss */
-#locationsMap {
+/* line 83, ../sass/screen.scss */
+#locationsMap, #locationsMapWrap {
   height: 100%;
   padding: 0;
+  margin: 0;
   text-shadow: none;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .in, .out {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-duration: 30ms !important;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 .minus {
   color: darkred;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .plus {
   color: darkgreen;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .cardDetailsHeader .ui-btn {
   top: 50%;
   margin-top: -14px;
 }
-/* line 109, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .cardDetailsHeader .content {
   padding: 15px 45px;
 }
-/* line 113, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .cardDetailsHeader .number {
   font-weight: lighter;
   font-size: .8em;
 }
-/* line 117, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .cardDetailsHeader .money {
   margin-top: 8px;
   color: cornflowerblue;
@@ -299,7 +304,7 @@ body {
   font-weight: bold;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .count {
   float: right;
   background-color: rgba(255, 255, 255, 0.1);

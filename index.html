@@ -72,13 +72,27 @@
     </head>
 
     <script type="text/html" id="transactionsList">
-        <ul data-role="listview" data-inset="true" data-bind="foreach: $data">
+        <ul data-role="listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-bind="foreach: $data">
             <li class="ui-li-static ui-body-inherit small">
                         <span class="price" style="float:right" data-bind="css: {'minus': price < 0, 'plus': price >= 0}">
                             <span class="amount" data-bind="text: price"></span>
                         </span>
                 <b data-bind="text:text"></b><br/><span data-bind="text: formatedDate()"></span>
             </li>
+        </ul>
+    </script>
+    <script type="text/html" id="cardsList">
+        <ul data-role="listview" data-inset="true" data-theme="a" data-bind="foreach: $data">
+            <li><a data-bind="text: info(), click: $root.showCardsDetails"></a></li>
+        </ul>
+    </script>
+
+    <!--<div class="newsList" data-bind="template: { name: 'newsList', data: {news: news(), clickFunc:$root.onNewsItemClick} }"></div>-->
+    <script type="text/html" id="newsList">
+        <ul data-role="listview" data-bind="foreach: $data.news, attr: {'data-inset': $data.inset}">
+            <li><a href="#newsPage" data-bind="text: title, click: $root.onNewsItemClick">
+                <!--Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и-->
+            </a></li>
         </ul>
     </script>
 <body>
@@ -166,11 +180,7 @@
                 </span>
             </div>
         </div>
-        <div class="cardsList">
-            <ul data-role="listview" data-inset="true" data-theme="a" data-bind="foreach: cards()">
-                <li><a data-bind="text: info(), click: $root.showCardsDetails"></a></li>
-            </ul>
-        </div>
+        <div class="cardsList" data-bind="template: { name: 'cardsList', data: cards() }"></div>
         <div class="ui-grid-a breakpoint space-grid">
             <div class="ui-block-a">
                 <h4 class="text-center">Последние операции</h4>
@@ -178,11 +188,7 @@
             </div>
             <div class="ui-block-b">
                 <h4 class="text-center">Новости банка</h4>
-                <ul data-role="listview" data-inset="true" data-bind="foreach: news()">
-                    <li><a href="#newsPage" data-bind="text: title">
-                        <!--Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и-->
-                    </a></li>
-                </ul>
+                <div class="newsList" data-bind="template: { name: 'newsList', data: {news:news(), inset: 'true'} }"></div>
             </div>
         </div>
     </main>
@@ -215,11 +221,7 @@
 <!-- Cards page -->
 <div data-role="page" id="cards" data-title="Счета" data-bind="attr: {'data-title': language().accounts}">
     <main data-role="main" class="ui-content" data-bind="">
-        <div class="cardsList">
-            <ul data-role="listview" data-inset="true" data-theme="a" data-bind="foreach: cards()">
-                <li><a data-bind="text: info(), click: $root.showCardsDetails"></a></li>
-            </ul>
-        </div>
+        <div class="cardsList" data-bind="template: { name: 'cardsList', data: cards() }"></div>
     </main>
 
 </div>
@@ -238,16 +240,8 @@
         <a href="#cardSettings" data-transition="fade" class="ui-btn-right ui-alt-icon ui-nodisc-icon ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all"></a>
     </header>
     <main data-role="main" class="ui-content">
-        <div class="transactionsList">
-            <ul data-role="listview" data-inset="true" data-bind="foreach: transactions(),jqmRender">
-                <li class="ui-li-static ui-body-inherit">
-                    <span class="price" style="float:right" data-bind="css: {'minus': price < 0, 'plus': price >= 0}">
-                        <span class="amount" data-bind="text: price"></span> <span class="currency" data-bind="text: $root.card().currencySymbol()"></span>
-                    </span>
-                    <b data-bind="text:text"></b><br/><span data-bind="text: timestamp"></span>
-                </li>
-            </ul>
-        </div>
+        <div class="transactionsList" data-bind="template: { name: 'transactionsList', data: transactions() }, jqmRender"></div>
+        <!--</div>-->
     </main>
 </div>
 
@@ -255,7 +249,9 @@
 <div data-role="page" id="cardSettings" data-title="Настройки карты" data-bind="attr: {'data-title': language().cardSettings}">
     <header data-role="header" class="secondToolbar">
         <a href="#cards" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
-        <h1><span data-bind="text: language().cardSettings">Настройки карты</span>: <br/><span data-bind="text: card().title"></span></h1>
+        <h1><span data-bind="text: language().cardSettings">
+            <!--Настройки карты-->
+        </span>: <br/><span data-bind="text: card().title"></span></h1>
         <a href="#cardDetails" data-transition="fade" data-direction="reverse" class="ui-btn-right ui-alt-icon ui-nodisc-icon ui-btn ui-icon-bullets ui-btn-icon-notext ui-corner-all"></a>
     </header>
     <main data-role="main" class="ui-content">
@@ -311,15 +307,15 @@
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <legend class="text-center" data-bind="text: language().paymentsMobileInstruction">
+                <input type="tel" placeholder="380932685446" class="text-right light big" data-bind="value: phoneNumber()"/>
+                <div class="text-center small instruction" data-bind="text: language().paymentsMobileInstruction">
                     <!--телефон в формате +38*** *** ** **-->
-                </legend>
-                <input type="tel" placeholder="380932685446" data-bind="value: phoneNumber()"/>
+                </div>
             </fieldset>
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="number"/>
+                        <input type="number" name="priceInput" id="priceInput" value="">
                 </div>
             </fieldset>
             <fieldset>
@@ -331,7 +327,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="submit" value="Потвердить" data-bind="click: $root.openVerifyPage, value: language().confirm"/>
+                    <button data-theme="b" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
                 </div>
             </fieldset>
         </form>
@@ -349,22 +345,24 @@
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <legend class="text-center" data-bind="text: language().paymentFrom">
-                    <!--откуда переводить-->
-                </legend>
+
                 <select data-bind="options: cards,
                                    optionsText: 'info',
                                    optionsCaption: language().chooseCard,
                                    selectedOptions: paymentCard"></select>
+                <div class="text-center small instruction" data-bind="text: language().paymentFrom">
+                    <!--откуда переводить-->
+                </div>
             </fieldset>
             <fieldset>
-                <legend class="text-center" data-bind="text: language().paymentTo">
-                    <!--куда переводить-->
-                </legend>
+
                 <select data-bind="options: cards,
                                    optionsText: 'info',
                                    optionsCaption: language().chooseCard,
                                    selectedOptions: receiveCard"></select>
+                <div class="text-center small instruction" data-bind="text: language().paymentTo">
+                    <!--куда переводить-->
+                </div>
             </fieldset>
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
@@ -375,7 +373,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="submit" value="Потвердить" data-bind="click: $root.openVerifyPage, value: language().confirm"/>
+                    <button data-theme="b" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
                 </div>
             </fieldset>
         </form>
@@ -393,10 +391,10 @@
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <legend class="text-center" data-bind="text: language().cardNumber">
-                    <!--номер карты-->
-                </legend>
                 <input type="tel" max="16" min="16"/>
+                <div class="text-center small instruction" data-bind="text: language().cardNumber">
+                    <!--номер карты-->
+                </div>
             </fieldset>
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
@@ -413,7 +411,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="submit" name="" id="" value="Потвердить" data-bind="click: $root.openVerifyPage, value: language().confirm"/>
+                    <button data-theme="b" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
                 </div>
             </fieldset>
         </form>
@@ -494,7 +492,8 @@
         </h1>
         <a href="#locationsList" class="ui-btn-right ui-alt-icon ui-nodisc-icon ui-btn ui-icon-bullets ui-btn-icon-notext ui-corner-all"></a>
     </header>
-    <main data-role="main" class="ui-content" id="locationsMap">
+    <main data-role="main" class="ui-content" id="locationsMapWrap">
+        <div id="locationsMap"></div>
     </main>
 </div>
 
@@ -563,7 +562,7 @@
             </tr>
             <tbody align="center" data-bind="foreach: currency()">
             <tr>
-                <td data-bind="text:from" class="uppercase text-left">
+                <td data-bind="text:title" class="uppercase text-left">
                     <!--USD-->
                 </td>
                 <td data-bind="text:buy">
@@ -575,17 +574,16 @@
             </tr>
             </tbody>
         </table>
+        <p class="small">
+            Указазнные курсы валют действительны на настоящий момент и могут изменяться в течении дня.
+        </p>
     </main>
 </div>
 
 <!-- News-->
 <div data-role="page" id="news" data-bind="attr: {'data-title': language().newsTitle}">
     <main data-role="main" class="ui-content">
-        <ul data-role="listview" data-bind="foreach: news()">
-            <li><a href="#newsPage" data-bind="text: title, click: $root.onNewsItemClick">
-                <!--Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и-->
-            </a></li>
-        </ul>
+        <div class="newsList" data-bind="template: { name: 'newsList', data: {news: news()} }"></div>
     </main>
 </div>
 
@@ -604,18 +602,111 @@
 <!-- Licences -->
 <div data-role="page" id="licence" data-title="Лицензии WLBank" data-bind="attr: {'data-title': language().licenceTitle}">
     <main data-role="main" class="ui-content">
-        <h3 data-bind="text: language().licenceTitle">
-            <!--Лицензии WLBank-->
-        </h3>
+        <!--<h3 data-bind="text: language().licenceTitle">-->
+            <!--&lt;!&ndash;Лицензии WLBank&ndash;&gt;-->
+        <!--</h3>-->
+        <h1>Ut optime, secundum naturam affectum esse possit.</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scio enim esse quosdam, qui quavis lingua philosophari possint; Faceres tu quidem, Torquate, haec omnia; Nescio quo modo praetervolavit oratio. Mihi enim satis est, ipsis non satis. Duo Reges: constructio interrete. Sed haec in pueris; Quid est, quod ab ea absolvi et perfici debeat? Quis enim redargueret? Collige omnia, quae soletis: Praesidium amicorum. Tibi hoc incredibile, quod beatissimum. Vidit Homerus probari fabulam non posse, si cantiunculis tantus irretitus vir teneretur; Restatis igitur vos; </p>
+
+        <dl>
+            <dt><dfn>Si longus, levis;</dfn></dt>
+            <dd>Urgent tamen et nihil remittunt.</dd>
+            <dt><dfn>Itaque fecimus.</dfn></dt>
+            <dd>Quae in controversiam veniunt, de iis, si placet, disseramus.</dd>
+            <dt><dfn>Respondeat totidem verbis.</dfn></dt>
+            <dd>Illi enim inter se dissentiunt.</dd>
+            <dt><dfn>Tubulo putas dicere?</dfn></dt>
+            <dd>Sin laboramus, quis est, qui alienae modum statuat industriae?</dd>
+            <dt><dfn>Id enim natura desiderat.</dfn></dt>
+            <dd>Hunc ipsum Zenonis aiunt esse finem declarantem illud, quod a te dictum est, convenienter naturae vivere.</dd>
+        </dl>
+
+
+        <ul>
+            <li>Piso igitur hoc modo, vir optimus tuique, ut scis, amantissimus.</li>
+            <li>Omnis enim est natura diligens sui.</li>
+        </ul>
+
+
+        <h2>Aliter homines, aliter philosophos loqui putas oportere?</h2>
+
+        <p>Sed tempus est, si videtur, et recta quidem ad me. Sed venio ad inconstantiae crimen, ne saepius dicas me aberrare; Quae cum essent dicta, finem fecimus et ambulandi et disputandi. Bonum negas esse divitias, praeposìtum esse dicis? Longum est enim ad omnia respondere, quae a te dicta sunt. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt. </p>
+
+        <ol>
+            <li>Quin etiam ferae, inquit Pacuvius, quíbus abest, ad praécavendum intéllegendi astútia, iniecto terrore mortis horrescunt.</li>
+            <li>Sed ille, ut dixi, vitiose.</li>
+            <li>Qui non moveatur et offensione turpitudinis et comprobatione honestatis?</li>
+            <li>Age nunc isti doceant, vel tu potius quis enim ista melius?</li>
+            <li>Sic enim censent, oportunitatis esse beate vivere.</li>
+            <li>Tum Piso: Quoniam igitur aliquid omnes, quid Lucius noster?</li>
+        </ol>
+
+
+        <p>Sed haec quidem liberius ab eo dicuntur et saepius. Odium autem et invidiam facile vitabis. Non ego tecum iam ita iocabor, ut isdem his de rebus, cum L. </p>
+
+        <p>Istam voluptatem perpetuam quis potest praestare sapienti? Nam et complectitur verbis, quod vult, et dicit plane, quod intellegam; Sed quanta sit alias, nunc tantum possitne esse tanta. Nonne igitur tibi videntur, inquit, mala? </p>
+
+        <h3>Quam si explicavisset, non tam haesitaret.</h3>
+
+        <p>Tum Torquatus: Prorsus, inquit, assentior; Bonum liberi: misera orbitas. Negat esse eam, inquit, propter se expetendam. Vide igitur ne non debeas verbis nostris uti, sententiis tuis. Quantum Aristoxeni ingenium consumptum videmus in musicis? Igitur ne dolorem quidem. Collatio igitur ista te nihil iuvat. Quaerimus enim finem bonorum. </p>
+
+
     </main>
 </div>
 
 <!-- Privacy -->
 <div data-role="page" id="privacy" data-title="Политика конфиденциальности WLBank" data-bind="attr: {'data-title': language().privacyTitle}">
     <main data-role="main" class="ui-content">
-        <h3 data-bind="text: language().privacyTitle">
+        <!--<h3 data-bind="text: language().privacyTitle">-->
             <!--Политика конфиденциальности WLBank-->
-        </h3>
+        <!--</h3>-->
+        <h1>Ratio quidem vestra sic cogit.</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duo Reges: constructio interrete. Graece donan, Latine voluptatem vocant. Eodem modo is enim tibi nemo dabit, quod, expetendum sit, id esse laudabile. Quod quidem nobis non saepe contingit. Idemne, quod iucunde? Quamvis enim depravatae non sint, pravae tamen esse possunt. </p>
+
+        <ul>
+            <li>Aut unde est hoc contritum vetustate proverbium: quicum in tenebris?</li>
+            <li>Ergo opifex plus sibi proponet ad formarum quam civis excellens ad factorum pulchritudinem?</li>
+            <li>Certe nihil nisi quod possit ipsum propter se iure laudari.</li>
+            <li>Tecum optime, deinde etiam cum mediocri amico.</li>
+            <li>Ut proverbia non nulla veriora sint quam vestra dogmata.</li>
+        </ul>
+
+
+        <p>Respondent extrema primis, media utrisque, omnia omnibus. Qui autem de summo bono dissentit de tota philosophiae ratione dissentit. Itaque in rebus minime obscuris non multus est apud eos disserendi labor. Claudii libidini, qui tum erat summo ne imperio, dederetur. </p>
+
+        <dl>
+            <dt><dfn>Quo tandem modo?</dfn></dt>
+            <dd>Negat esse eam, inquit, propter se expetendam.</dd>
+            <dt><dfn>Qui convenit?</dfn></dt>
+            <dd>Nam aliquando posse recte fieri dicunt nulla expectata nec quaesita voluptate.</dd>
+            <dt><dfn>Nihilo magis.</dfn></dt>
+            <dd>Eadem nunc mea adversum te oratio est.</dd>
+            <dt><dfn>Quonam, inquit, modo?</dfn></dt>
+            <dd>Maximas vero virtutes iacere omnis necesse est voluptate dominante.</dd>
+        </dl>
+
+
+        <p>Placet igitur tibi, Cato, cum res sumpseris non concessas, ex illis efficere, quod velis? Quodsi ipsam honestatem undique pertectam atque absolutam. Ut in geometria, prima si dederis, danda sunt omnia. Erat enim Polemonis. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Memini me adesse P. </p>
+
+        <h2>Res enim fortasse verae, certe graves, non ita tractantur, ut debent, sed aliquanto minutius.</h2>
+
+        <p>Sed quanta sit alias, nunc tantum possitne esse tanta. Quorum sine causa fieri nihil putandum est. Ita fit cum gravior, tum etiam splendidior oratio. Apparet statim, quae sint officia, quae actiones. Falli igitur possumus. Consequentia exquirere, quoad sit id, quod volumus, effectum. Quae cum essent dicta, finem fecimus et ambulandi et disputandi. </p>
+
+        <ol>
+            <li>Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus;</li>
+            <li>Quae cum magnifice primo dici viderentur, considerata minus probabantur.</li>
+            <li>Nam quibus rebus efficiuntur voluptates, eae non sunt in potestate sapientis.</li>
+            <li>Quodsi ipsam honestatem undique pertectam atque absolutam.</li>
+            <li>Tu quidem reddes;</li>
+            <li>Et non ex maxima parte de tota iudicabis?</li>
+        </ol>
+
+
+        <p>Illa argumenta propria videamus, cur omnia sint paria peccata. Sed ad haec, nisi molestum est, habeo quae velim. </p>
+
+
     </main>
 </div>
 

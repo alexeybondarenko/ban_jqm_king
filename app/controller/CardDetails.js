@@ -31,11 +31,12 @@ function CardDetails(card) {
 //    self.transactions = ko.observable(self.card().transactions());
 
     self.transactions = ko.computed(function(length) {
-        console.log('123', self.card());
         if (self.card() == null) {
             return null;
         }
-        return self.card().transactions();
+        var tr = self.card().transactions();
+        console.log(tr);
+        return tr;
 //        var transactionsStore = new App().stores.transactions;
 //        var transactions = transactionsStore.getTransactionsForCard(self.card().id);
 //

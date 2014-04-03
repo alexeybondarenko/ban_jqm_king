@@ -21,7 +21,7 @@ var Dashboard = function() {
     self.cards = ko.observableArray(cardsStore.data());
 
     var newsStore = new App().stores.news;
-    self.news = ko.observableArray(newsStore.data());
+    self.news = ko.observableArray(newsStore.lastData(5));
 
     var currencyStore = new App().stores.currencies;
     self.currency = ko.observableArray(currencyStore.data());
@@ -29,11 +29,7 @@ var Dashboard = function() {
     var transactionsStore = new App().stores.transactions;
     self.transactions = ko.observableArray(transactionsStore.lastData(5));
 
-    self.showCardsDetails = function(card) {
-        var id ="#cardDetails";
-        $.mobile.changePage(id);
-        var cardDetails = new CardDetails();
-        cardDetails.card(card);
-    };
+    self.showCardsDetails = new Cards().showCardsDetails;
+    self.onNewsItemClick = new NewsController().onNewsItemClick;
 }
 

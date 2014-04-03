@@ -6,6 +6,7 @@
 //@import "compass/reset";
 @import "components/panel";
 @import "components/text";
+@import "components/form";
 
 $width_base: 15em;
 $width1: 2*$width_base;
@@ -79,11 +80,13 @@ body {
   height:0;
   padding:0;
 }
-#locationsMap {
+#locationsMap,#locationsMapWrap {
   height: 100%;
   padding: 0;
+  margin:0;
   text-shadow: none;
 }
+
 
 .in, .out {
   -webkit-animation-timing-function: ease-in-out;

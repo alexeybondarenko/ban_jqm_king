@@ -208,7 +208,15 @@ var Card = function(id, owner_id, created_at, title, number, amount, currency, t
      * @type array {Transaction}
      */
 
-    this.transactions = ko.observableArray(transactions || []);
+    var resAr = [];
+
+    if(transactions) {
+        $.each(transactions, function(index, value) {
+            resAr[index] = readTransaction(value);
+        });
+    }
+
+    this.transactions = ko.observableArray(resAr|| []);
 
     this.info = ko.computed(function() {
         return title+ ' '+ amount+' '+this.currencySymbol();

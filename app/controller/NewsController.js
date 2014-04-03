@@ -16,10 +16,12 @@ var NewsController = function() {
     var self = this;
 
     self.language = ko.observable(Language().language());
-    self.chosenNews = ko.observable(new News(' ' ,'',''));
+    self.chosenNews = ko.observable(new News('' ,'',''));
 
     self.onNewsItemClick = function(news) {
-        self.chosenNews(news);
+        var contr = new NewsController();
+        console.log("news click");
+        contr.chosenNews(news);
         $.mobile.changePage("#newsPage");
     }
 
