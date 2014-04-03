@@ -19,9 +19,13 @@
     <!-- Google map API -->
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script src="lib/jquery.ui.map/jquery.ui.map.js"></script>
-    <script src="lib/jquery.ui.map/jquery.ui.map.extensions.js"></script>
+    <!--<script src="lib/jquery.ui.map/jquery.ui.map.extensions.js"></script>-->
 
     <!--<link rel="stylesheet" href="lib/jquery.mobile/themes/wlbank/wlbank.min.css" />-->
+
+    <!-- Formatter -->
+    <script src="lib/jquery.formatter/jquery.formatter.min.js"></script>
+    <script src="app/utils/FormatterConfig.js"></script>
 
     <!-- Knockout js -->
     <script src="lib/knockout/knockout-3.1.0.js"></script>
@@ -315,7 +319,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                        <input type="number" name="priceInput" id="priceInput" value="">
+                        <input type="number" class="big light text-right" name="priceInput" id="priceInput" value="">
                 </div>
             </fieldset>
             <fieldset>
@@ -367,7 +371,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="number" />
+                    <input type="number" class="big light text-right" />
                 </div>
             </fieldset>
             <fieldset class="ui-grid-a">
@@ -391,7 +395,7 @@
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <input type="tel" max="16" min="16"/>
+                <input type="tel" max="16" min="16" class="big light text-center credit-input"/>
                 <div class="text-center small instruction" data-bind="text: language().cardNumber">
                     <!--номер карты-->
                 </div>
@@ -399,7 +403,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="number" />
+                    <input type="number" class="big light text-right" />
                 </div>
             </fieldset>
             <fieldset>

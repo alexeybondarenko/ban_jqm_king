@@ -21,27 +21,44 @@ var Locations = function() {
 
     self.locations = ko.observableArray(locationsStore.data());
     self.initMap = function() {
-        console.log("Init map");
 
-        var $locationsMap = $("#locationsMap");
-        $locationsMap.gmap();
-//        $locationsMap.gmap().bind('init', function(evt, map) {
-//        $locationsMap.gmap('getCurrentPosition', function(position, status) {
-//            if ( status === 'OK' ) {
-//                var clientPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-//                $locationsMap.gmap('addMarker', {'position': clientPosition, 'bounds': true});
-//                var locations = new LocationsStore().data();
-//                $.each(locations, function(index, value) {
-////                    console.log('123');
-//                    $locationsMap.gmap('addMarker', {
-//                        'position': new google.maps.LatLng(value.latitude, value.longitude),
-//                        'bounds': true,
-//                        'title':'<h3>'+value.title+'</h3>'
-//                    });
-//                });
-//            }
-//        });
-//    });
-//
+//        var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
+        if ( navigator.geolocation ) {
+            function success(pos) {
+                // Location found, show map with these coordinates
+                drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+            }
+            function fail(error) {
+                drawMap(defaultLatLng);  // Failed to find location, show default map
+            }
+            // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
+            navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+        } else {
+            drawMap(defaultLatLng);  // No geolocation support, show default map
+        }
+        function drawMap(latlng) {
+            var myOptions = {
+                zoom: 10,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("locationsMap"), myOptions);
+            // Add an overlay to the map of current lat/lng
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                title: "You"
+            });
+            var locations = new LocationsStore().data();
+            $.each(locations, function(index, value) {
+                new google.maps.Marker({
+                    position: new google.maps.LatLng(value.latitude, value.longitude),
+                    map: map,
+                    title: value.title
+                });
+            });
+
+        }
+
     }
 }

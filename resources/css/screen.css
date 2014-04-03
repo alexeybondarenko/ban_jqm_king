@@ -260,43 +260,42 @@ body {
 
 /* line 83, ../sass/screen.scss */
 #locationsMap, #locationsMapWrap {
+  width: 100%;
   height: 100%;
   padding: 0;
-  margin: 0;
-  text-shadow: none;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .in, .out {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-duration: 30ms !important;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .minus {
   color: darkred;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 .plus {
   color: darkgreen;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .cardDetailsHeader .ui-btn {
   top: 50%;
   margin-top: -14px;
 }
-/* line 112, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .cardDetailsHeader .content {
   padding: 15px 45px;
 }
-/* line 116, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .cardDetailsHeader .number {
   font-weight: lighter;
   font-size: .8em;
 }
-/* line 120, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .cardDetailsHeader .money {
   margin-top: 8px;
   color: cornflowerblue;
@@ -304,7 +303,7 @@ body {
   font-weight: bold;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .count {
   float: right;
   background-color: rgba(255, 255, 255, 0.1);

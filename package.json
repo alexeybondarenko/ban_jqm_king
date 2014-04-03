@@ -1,0 +1,8 @@
+{
+    "name": "WLBank application",
+    "version": "0.0.1",
+    "directory": "lib",
+    "dependencies":{
+        "jquery.mobile": "jquery-mobile#~1.4"
+    }
+}
