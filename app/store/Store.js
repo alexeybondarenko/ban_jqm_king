@@ -16,9 +16,7 @@ var Store = function(rootPropery, url, storeName, readModelFunction) {
 
     self.init = function() {
 
-        console.log("Initing store ", this);
         console.assert(typeof self.readModel == 'function',"You must init readModel method");
-
         this.update();
     }
 
@@ -39,12 +37,10 @@ var Store = function(rootPropery, url, storeName, readModelFunction) {
                     data = data[roots.shift()];
                 }
 
-                console.log(self.storeName, data);
                 $.each(data, function(index, value){
                     newData[index] = self.readModel(value);
                 });
 
-                console.log(newData);
                self.data(newData);
             }
         });

@@ -24,7 +24,7 @@
     <!--<link rel="stylesheet" href="lib/jquery.mobile/themes/wlbank/wlbank.min.css" />-->
 
     <!-- Formatter -->
-    <script src="lib/jquery.formatter/jquery.formatter.min.js"></script>
+    <script src="lib/formatter/jquery.formatter.min.js"></script>
     <script src="app/utils/FormatterConfig.js"></script>
 
     <!-- Knockout js -->
@@ -70,6 +70,7 @@
 
     <script src="app/App.js"></script>
 
+    <script src="lib/worklight/main.js"></script>
 
     <link rel="stylesheet" href="resources/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
@@ -311,7 +312,7 @@
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <input type="tel" placeholder="380932685446" class="text-right light big" data-bind="value: phoneNumber()"/>
+                <input type="tel" placeholder="+38 (0XX) XXX XX XX" class="text-right light big phone-input" data-bind="value: phoneNumber()"/>
                 <div class="text-center small instruction" data-bind="text: language().paymentsMobileInstruction">
                     <!--телефон в формате +38*** *** ** **-->
                 </div>
@@ -319,7 +320,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                        <input type="number" class="big light text-right" name="priceInput" id="priceInput" value="">
+                        <input type="tel" class="big light text-right money-input" name="priceInput" id="priceInput" value="">
                 </div>
             </fieldset>
             <fieldset>
@@ -371,7 +372,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="number" class="big light text-right" />
+                    <input type="tel" class="big light text-right" />
                 </div>
             </fieldset>
             <fieldset class="ui-grid-a">
@@ -403,7 +404,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="number" class="big light text-right" />
+                    <input type="tel" class="big light text-right" />
                 </div>
             </fieldset>
             <fieldset>
@@ -440,11 +441,11 @@
                <!--На ваш телефон было отправлено СМС в формате ХХХХ-->
            </p>
            <form class="paymentsVerify-form">
-               <fieldset class="ui-grid-c">
-                   <div class="ui-block-a"><input type="number" name="digit1" id="digit1" tabindex="1" data-bind="value: digit1(), event:{ keypress: inputChainHandler}"/></div>
-                   <div class="ui-block-b"><input type="number" name="digit2" id="digit2" tabindex="2" data-bind="value: digit2(), event:{ keypress: inputChainHandler}"/></div>
-                   <div class="ui-block-c"><input type="number" name="digit3" id="digit3" tabindex="3" data-bind="value: digit3(), event:{ keypress: inputChainHandler}"/></div>
-                   <div class="ui-block-d"><input type="number" name="digit4" id="digit4" tabindex="4" data-bind="value: digit4(), event:{ keypress: inputChainHandler}"/></div>
+               <fieldset class="ui-grid-c otp-code-inputs big light" data-role="none">
+                   <div class="ui-block-a ui-corner-none"><input type="tel" class="code-input" name="digit1" id="digit1" tabindex="1" data-bind="value: digit1(), event:{ keypress: inputChainHandler}"></div>
+                   <div class="ui-block-b ui-corner-none"><input type="tel" class="code-input" name="digit2" id="digit2" tabindex="2" data-bind="value: digit2(), event:{ keypress: inputChainHandler}"/></div>
+                   <div class="ui-block-c ui-corner-none"><input type="tel" class="code-input" name="digit3" id="digit3" tabindex="3" data-bind="value: digit3(), event:{ keypress: inputChainHandler}"/></div>
+                   <div class="ui-block-d ui-corner-none"><input type="tel" class="code-input" name="digit4" id="digit4" tabindex="4" data-bind="value: digit4(), event:{ keypress: inputChainHandler}"/></div>
                </fieldset>
                <div class="form-spacer"></div>
                <button class="uppercase" data-bind="click: $root.verifyPayment, text: language().send">

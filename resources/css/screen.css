@@ -184,6 +184,38 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 19, ../sass/components/form.scss */
+fieldset.otp-code-inputs > div {
+  padding: 0 10px;
+}
+/* line 22, ../sass/components/form.scss */
+fieldset.otp-code-inputs .ui-input-text {
+  background-color: transparent;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+  border-width: 3px;
+}
+/* line 31, ../sass/components/form.scss */
+fieldset.otp-code-inputs .ui-input-text input {
+  background-color: transparent;
+  text-align: center;
+  border-width: 0 0 1 0;
+}
+
+/* line 41, ../sass/components/form.scss */
+.ui-corner-none .ui-input-text {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
 @media (min-width: 30em) and (max-width: 60em) {
   /* line 18, ../sass/screen.scss */
   .main .ui-content {

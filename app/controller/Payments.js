@@ -129,15 +129,34 @@ var Payments = function() {
      * @param event
      */
     self.inputChainHandler= function(data, event) {
-
-        var newValue = String.fromCharCode(event.charCode);
-        var inp = $(event.currentTarget);
-        var codeReg = new RegExp(/^[0-9]{1}$/i);
-        if(codeReg.test(newValue)) {
-            inp.val(newValue);
-            console.log(inp.parent().parent().next().find('input').focus());
-        }
+//        var newValue = String.fromCharCode(event.charCode);
+//        var inp = $(event.currentTarget);
+//        var codeReg = new RegExp(/^[0-9]{1}$/i);
+//        if(codeReg.test(newValue)) {
+//            inp.val(newValue);
+//            console.log(inp.parent().parent().next().find('input').focus());
+//        }
     }
 
 }
 
+$(function() {
+
+    $(".code-input").live('keyup', function(event) {
+        var codeInputs = $(".code-input");
+        var self = this;
+
+        var $inp = $(this);
+        var idx = $(codeInputs).index(self);
+
+        var keyCode = event.keyCode;
+        if(keyCode == 8) {
+            if (idx-1>=0) {
+                codeInputs.eq(idx-1).focus();
+            }
+        } else if (keyCode >=47 && keyCode <= 57) {
+            $(this).val(String.fromCharCode(keyCode));
+            codeInputs.eq(idx+1).focus();
+        }
+    })
+})

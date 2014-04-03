@@ -4,6 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 //$import "compass/reset";
+@import "compass/css3";
 
 $instructionFontSize: 75%;
 
@@ -11,4 +12,37 @@ fieldset .instruction {
 
 //  font-size: $instructionFontSize;
 
+}
+
+fieldset.otp-code-inputs {
+
+  >div {
+    padding:0 10px;
+  }
+  .ui-input-text {
+
+    background-color: transparent;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+
+    border-width:3px;
+
+    input {
+      background-color: transparent;
+      text-align:center;
+      border-width: 0 0 1 0;
+    }
+  }
+}
+
+.ui-corner-none {
+
+  .ui-input-text {
+
+    @include box-shadow(none);
+    @include border-radius(0);
+    background-color: transparent;
+  }
+  
 }
