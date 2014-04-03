@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="worklight files&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/formatter/jquery.formatter.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/store/TransactionsStore_old.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ban_jqm_king" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/bower.json" />
+    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/FormatterConfig.js" afterPath="$PROJECT_DIR$/app/utils/FormatterConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/Payments.js" afterPath="$PROJECT_DIR$/app/controller/Payments.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/Store.js" afterPath="$PROJECT_DIR$/app/store/Store.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/components/form.scss" afterPath="$PROJECT_DIR$/resources/sass/components/form.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/screen.css" afterPath="$PROJECT_DIR$/resources/css/screen.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="f96e3015-d101-46dd-9df6-c9eace68cd7b" name="Failed commit: Default" comment="news controller&#10;">
@@ -20,6 +12,7 @@
     </list>
     <ignored path="Bank.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="sources/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,19 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="38" selection-start="2823" selection-end="2823" vertical-scroll-proportion="0.72890025" vertical-offset="795" max-vertical-offset="11115">
+            <state line="398" column="127" selection-start="18528" selection-end="18528" vertical-scroll-proportion="-5.78" vertical-offset="5681" max-vertical-offset="11115">
               <folding>
-                <marker date="1396539590000" expanded="true" signature="3163:3588" placeholder="..." />
-                <marker date="1396539590000" expanded="true" signature="3223:3574" placeholder="..." />
-                <marker date="1396539590000" expanded="false" signature="3276:3287" placeholder="..." />
-                <marker date="1396539590000" expanded="true" signature="3346:3459" placeholder="..." />
-                <marker date="1396539590000" expanded="true" signature="3741:3840" placeholder="..." />
-                <marker date="1396539590000" expanded="true" signature="4138:4369" placeholder="..." />
-                <marker date="1396539590000" expanded="true" signature="4155:4355" placeholder="..." />
-                <marker date="1396539590000" expanded="true" signature="4229:4350" placeholder="..." />
+                <marker date="1396541509000" expanded="true" signature="3163:3588" placeholder="..." />
+                <marker date="1396541509000" expanded="true" signature="3223:3574" placeholder="..." />
+                <marker date="1396541509000" expanded="false" signature="3276:3287" placeholder="..." />
+                <marker date="1396541509000" expanded="true" signature="3346:3459" placeholder="..." />
+                <marker date="1396541509000" expanded="true" signature="3741:3840" placeholder="..." />
+                <marker date="1396541509000" expanded="true" signature="4138:4369" placeholder="..." />
+                <marker date="1396541509000" expanded="true" signature="4155:4355" placeholder="..." />
+                <marker date="1396541509000" expanded="true" signature="4229:4350" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -69,7 +62,25 @@
       <file leaf-file-name="FormatterConfig.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/utils/FormatterConfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="9" selection-start="272" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="20" column="3" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="20" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="1770">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bower.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bower.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="1" selection-start="165" selection-end="165" vertical-scroll-proportion="0.2413793" vertical-offset="0" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
@@ -141,13 +152,13 @@
         <option value="$PROJECT_DIR$/app/utils/FromatterConfig.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/lib/.bowerrc" />
-        <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/.bowerrc" />
         <option value="$PROJECT_DIR$/resources/sass/components/form.scss" />
         <option value="$PROJECT_DIR$/app/store/Store.js" />
-        <option value="$PROJECT_DIR$/app/utils/FormatterConfig.js" />
         <option value="$PROJECT_DIR$/app/controller/Payments.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/utils/FormatterConfig.js" />
+        <option value="$PROJECT_DIR$/bower.json" />
       </list>
     </option>
   </component>
@@ -202,141 +213,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/sass/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sources" />
     <property name="PluginDummyText.Genre" value="pirates" />
   </component>
   <component name="RecentsManager">
@@ -450,14 +339,18 @@
       <created>1396521831411</created>
       <updated>1396521831411</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="worklight support&#10;">
+      <created>1396539644310</created>
+      <updated>1396539644310</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="548" y="22" width="861" height="878" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32677165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -501,7 +394,9 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="fixes&#10;" />
     <MESSAGE value="worklight files&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="worklight files&#10;" />
+    <MESSAGE value="&#10;" />
+    <MESSAGE value="worklight support&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="worklight support&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -520,14 +415,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="446" column="99" selection-start="21235" selection-end="21235" vertical-scroll-proportion="0.0" vertical-offset="6167" max-vertical-offset="11100">
           <folding>
-            <marker date="1396539590000" expanded="true" signature="3163:3588" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="3223:3574" placeholder="..." />
-            <marker date="1396539590000" expanded="false" signature="3276:3287" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="3346:3459" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="3741:3840" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="4138:4369" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="4155:4355" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="4229:4350" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="3163:3588" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="3223:3574" placeholder="..." />
+            <marker date="1396541509000" expanded="false" signature="3276:3287" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="3346:3459" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="3741:3840" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="4138:4369" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="4155:4355" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="4229:4350" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -597,11 +492,6 @@
     <entry file="file://$PROJECT_DIR$/more_transactions.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="24" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="960" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="20" selection-start="22" selection-end="22" vertical-scroll-proportion="0.021186441" vertical-offset="0" max-vertical-offset="1770" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/Contacts.js">
@@ -708,11 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="118" selection-end="118" vertical-scroll-proportion="0.08759124" vertical-offset="0" max-vertical-offset="685" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/Locations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="27" selection-start="1918" selection-end="1918" vertical-scroll-proportion="0.68706536" vertical-offset="241" max-vertical-offset="1035" />
@@ -773,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/utils/FormatterConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="272" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/Payments.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="141" column="0" selection-start="3681" selection-end="3681" vertical-scroll-proportion="-6.796296" vertical-offset="1748" max-vertical-offset="2505">
@@ -796,17 +674,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="38" selection-start="2823" selection-end="2823" vertical-scroll-proportion="0.72890025" vertical-offset="795" max-vertical-offset="11115">
+        <state line="398" column="127" selection-start="18528" selection-end="18528" vertical-scroll-proportion="-5.78" vertical-offset="5681" max-vertical-offset="11115">
           <folding>
-            <marker date="1396539590000" expanded="true" signature="3163:3588" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="3223:3574" placeholder="..." />
-            <marker date="1396539590000" expanded="false" signature="3276:3287" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="3346:3459" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="3741:3840" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="4138:4369" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="4155:4355" placeholder="..." />
-            <marker date="1396539590000" expanded="true" signature="4229:4350" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="3163:3588" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="3223:3574" placeholder="..." />
+            <marker date="1396541509000" expanded="false" signature="3276:3287" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="3346:3459" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="3741:3840" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="4138:4369" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="4155:4355" placeholder="..." />
+            <marker date="1396541509000" expanded="true" signature="4229:4350" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/FormatterConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="3" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="20" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="1770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="1" selection-start="165" selection-end="165" vertical-scroll-proportion="0.2413793" vertical-offset="0" max-vertical-offset="435">
+          <folding />
         </state>
       </provider>
     </entry>
