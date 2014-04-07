@@ -2,6 +2,7 @@
     "name": "WLBank application",
     "version": "0.0.1",
     "dependencies":{
+        "jquery.mobile": "jquery-mobile#~1.4.2",
         "formatter": "formatter#~0.0.9",
         "numeral": "numeral#~1.5.3"
     }

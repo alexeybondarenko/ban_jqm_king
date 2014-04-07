@@ -14,8 +14,9 @@ $(function() {
 //        'persistent': true
 //    });
 //    $('.money-input').formatter({
-//        'pattern': '{{999}}',
-//        'persistent': true
+//        'pattern': '{{9999999999999999999999999999999}}.{{99}}',
+//        'persistent': false
 //    });
+
 
 });

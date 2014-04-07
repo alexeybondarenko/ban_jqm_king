@@ -1,0 +1,284 @@
+
+//$jquery-theme-config: (
+//  var: 'a',
+//  bar-text-shadow-x: 0,
+//  bar-text-shadow-y: 1px,
+//  bar-text-shadow-radius: 1px,
+//  bar-text-shadow-color: #000,
+//  bar-text-shadow-enable: true
+//);
+
+//$profiles: (
+//    bandcamp: #4e9bac,
+//    delicious: #248cff,
+//    facebook: #3b5998,
+//    ficly: #b51c2c,
+//    flickr: #0063db,
+//    github: #4183c4,
+//    googleplus: #dd4b39,
+//    instagram: #517fa4,
+//    kickstarter: #76cc1e,
+//    lanyrd: #152e51,
+//    lastfm: #d51007,
+//    linkedin: #007bb6,
+//    photodrop: #cdb6e3,
+//    pinterest: #cb2027,
+//    rdio: #0088da,
+//    soundcloud: #f60,
+//    twitter: #00aced,
+//    vimeo: #aad450,
+//    youtube: #b00
+//);
+
+@mixin jquery-theme ($jquery-theme-config){
+  
+  $var: 'a';
+  .theme-#{$var}-bar-text-shadow {
+    @include global-text-shadow(  $theme-a-bar-text-shadow-x
+    $theme-a-bar-text-shadow-y
+    $theme-a-bar-text-shadow-radius
+    $theme-a-bar-text-shadow-color,
+    $theme-a-bar-text-shadow-enable);
+  }
+  /* Bar: Toolbars, dividers, slider track */
+  .ui-bar-#{$var},
+  .ui-page-theme-#{$var} .ui-bar-inherit,
+  html .ui-bar-#{$var} .ui-bar-inherit,
+  html .ui-body-#{$var} .ui-bar-inherit,
+  html body .ui-group-theme-#{$var} .ui-bar-inherit {
+    background-color: $theme-a-bar-background-color /*{a-bar-background-color}*/;
+    border-color:	  $theme-a-bar-border-color /*{a-bar-border}*/;
+    color:            $theme-a-bar-color /*{a-bar-color}*/;
+    @extend .theme-a-bar-text-shadow;
+    font-weight:      bold;
+  }
+  .ui-bar-#{$var} {
+    border-width:     $theme-a-bar-border-width;
+    border-style:     $theme-a-bar-border-style;
+
+    .ui-title, .ui-btn {
+      height:           $theme-a-bar-height;
+      line-height:      $theme-a-bar-height;
+      vertical-align:   middle;
+      margin: 0;
+      @extend .theme-a-bar-text-shadow;
+    }
+  }
+
+  /* Page and overlay */
+  .ui-overlay-#{$var},
+  .ui-page-theme-#{$var},
+  .ui-page-theme-#{$var} .ui-panel-wrapper {
+    background-color:       $theme-a-page-background-color /*{a-page-background-color}*/;
+    border-color:	 		$theme-a-page-border /*{a-page-border}*/;
+    color: 					$theme-a-text-color /*{a-page-color}*/;
+    @include global-text-shadow($theme-a-page-text-shadow-x $theme-a-page-text-shadow-y $theme-a-page-text-shadow-radius $theme-a-page-text-shadow-color, $theme-a-page-text-shadow-enable);
+  }
+
+  /* Body: Read-only lists, text inputs, collapsible content */
+  .ui-body-#{$var},
+  .ui-page-theme-#{$var} .ui-body-inherit,
+  html .ui-bar-#{$var} .ui-body-inherit,
+  html .ui-body-#{$var} .ui-body-inherit,
+  html body .ui-group-theme-#{$var} .ui-body-inherit,
+  html .ui-panel-page-container-#{$var} {
+    background-color:       $theme-a-body-background-color /*{a-body-background-color}*/;
+    border-color:	 		$theme-a-border /*{a-body-border}*/;
+    color: 					$theme-a-body-color; /*{a-body-color}*/;
+    @include global-text-shadow($theme-a-body-text-shadow-x $theme-a-body-text-shadow-y $theme-a-body-text-shadow-radius $theme-a-body-text-shadow-color, $theme-a-body-text-shadow-enable);
+  }
+  .ui-body-#{$var} {
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  /* Links */
+  .ui-page-theme-#{$var} a,
+  html .ui-bar-#{$var} a,
+  html .ui-body-#{$var} a,
+  html body .ui-group-theme-#{$var} a {
+    color: $theme-a-link-color;
+    font-weight: bold;
+  }
+  .ui-page-theme-#{$var} a:visited,
+  html .ui-bar-#{$var} a:visited,
+  html .ui-body-#{$var} a:visited,
+  html body .ui-group-theme-#{$var} a:visited {
+    color: #3388cc /*{a-link-visited}*/;
+  }
+  .ui-page-theme-#{$var} a:hover,
+  html .ui-bar-#{$var} a:hover,
+  html .ui-body-#{$var} a:hover,
+  html body .ui-group-theme-#{$var} a:hover {
+    color: #005599 /*{a-link-hover}*/;
+  }
+  .ui-page-theme-#{$var} a:active,
+  html .ui-bar-#{$var} a:active,
+  html .ui-body-#{$var} a:active,
+  html body .ui-group-theme-#{$var} a:active {
+    color: #005599 /*{a-link-active}*/;
+  }
+
+  html .ui-bar-#{$var} .ui-btn {
+    background-color: $theme-a-bar-background-color;
+    color: $theme-a-bar-color;
+    border: 0;
+  }
+
+  html .ui-bar-#{$var} .ui-btn:visited,
+  html .ui-bar-#{$var} .ui-btn:hover,
+  html .ui-bar-#{$var} .ui-btn.ui-btn-active,
+  html .ui-bar-#{$var} .ui-checkbox-on:after,
+  html .ui-bar-#{$var} .ui-flipswitch-active,
+  html .ui-bar-#{$var} .ui-slider-track .ui-btn-active,
+  html .ui-bar-#{$var} .ui-radio-on:after,
+  html .ui-bar-#{$var} .ui-btn:focus,
+  html .ui-bar-#{$var} .ui-focus
+  {
+    background-color: $theme-a-bar-background-color;
+    color: $theme-a-bar-color;
+    border: 0;
+  }
+
+  html .ui-bar-#{$var} .ui-btn:visited {}
+  html .ui-bar-#{$var} .ui-btn:hover {}
+  html .ui-bar-#{$var} .ui-btn.ui-btn-active {}
+  html .ui-bar-#{$var}.ui-checkbox-on:after {}
+  html .ui-bar-#{$var}.ui-flipswitch-active {}
+  html .ui-bar-#{$var}.ui-slider-track .ui-btn-active {}
+  html .ui-bar-#{$var}.ui-radio-on:after {}
+  html .ui-bar-#{$var}.ui-btn:focus {}
+  html .ui-bar-#{$var}.ui-focus {}
+
+  .ui-page-theme-#{$var}.ui-btn,
+  html body .ui-group-theme-#{$var}.ui-btn
+  {
+    background-color: $theme-a-body-background-color;
+    border-color: $theme-a-border;
+    color: $theme-a-text-color;
+  }
+  /* Button up */
+  html .ui-body-#{$var}.ui-btn,
+
+  html head + body .ui-btn.ui-btn-#{$var},
+    /* Button visited */
+  .ui-page-theme-#{$var}.ui-btn:visited,
+  html .ui-body-#{$var}.ui-btn:visited,
+  html body .ui-group-theme-#{$var}.ui-btn:visited,
+  html head + body .ui-btn.ui-btn-#{$var}:visited {
+
+    background-color: 		$theme-a-bup-background-color /*{a-bup-background-color}*/;
+    border-color:	 		$theme-a-bup-border-color /*{a-bup-border}*/;
+    color: 					$theme-a-bup-color /*{a-bup-color}*/;
+
+    @include global-text-shadow(
+        $theme-a-bup-text-shadow-x
+        $theme-a-bup-text-shadow-y
+        $theme-a-bup-text-shadow-radius
+        $theme-a-bup-text-shadow-color,
+        $theme-a-bup-text-shadow-enable
+    );
+  }
+  /* Button hover */
+  .ui-page-theme-#{$var}.ui-btn:hover,
+  html .ui-body-#{$var}.ui-btn:hover,
+  html body .ui-group-theme-#{$var}.ui-btn:hover,
+  html head + body .ui-btn.ui-btn-#{$var}:hover {
+
+    background-color: 	$theme-a-bhover-background-color;
+    border-color:	 	$theme-a-bhover-border-color;
+    color: 				$theme-a-bhover-color;
+
+    @include global-text-shadow(
+        $theme-a-bhover-text-shadow-x
+        $theme-a-bhover-text-shadow-y
+        $theme-a-bhover-text-shadow-radius
+        $theme-a-bhover-text-shadow-color,
+        $theme-a-bhover-text-shadow-enable
+    );
+
+  }
+  /* Button down */
+  .ui-page-theme-#{$var}.ui-btn:active,
+  html .ui-body-#{$var}.ui-btn:active,
+  html body .ui-group-theme-#{$var}.ui-btn:active,
+  html head + body .ui-btn.ui-btn-#{$var}:active {
+
+    background-color: 	$theme-a-bdown-background-color;
+    border-color:	 	$theme-a-bdown-border-color;
+    color: 				$theme-a-bdown-color;
+
+    @include global-text-shadow(
+        $theme-a-bdown-text-shadow-x
+        $theme-a-bdown-text-shadow-y
+        $theme-a-bdown-text-shadow-radius
+        $theme-a-bdown-text-shadow-color,
+        $theme-a-bdown-text-shadow-enable
+    );
+  }
+
+  /* Active button */
+  .ui-page-theme-#{$var}.ui-btn.ui-btn-active,
+  html .ui-body-#{$var}.ui-btn.ui-btn-active,
+  html body .ui-group-theme-#{$var}.ui-btn.ui-btn-active,
+  html head + body .ui-btn.ui-btn-#{$var}.ui-btn-active,
+    /* Active checkbox icon */
+  .ui-page-theme-#{$var}.ui-checkbox-on:after,
+  html .ui-body-#{$var}.ui-checkbox-on:after,
+  html body .ui-group-theme-#{$var}.ui-checkbox-on:after,
+  .ui-btn.ui-checkbox-on.ui-btn-#{$var}:after,
+    /* Active flipswitch background */
+  .ui-page-theme-#{$var}.ui-flipswitch-active,
+  html .ui-body-#{$var}.ui-flipswitch-active,
+  html body .ui-group-theme-#{$var}.ui-flipswitch-active,
+  html body .ui-flipswitch.ui-bar-#{$var}.ui-flipswitch-active,
+    /* Active slider track */
+  .ui-page-theme-#{$var}.ui-slider-track .ui-btn-active,
+  html .ui-body-#{$var}.ui-slider-track .ui-btn-active,
+  html body .ui-group-theme-#{$var}.ui-slider-track .ui-btn-active,
+  html body div.ui-slider-track.ui-body-#{$var}.ui-btn-active {
+
+    background-color: 		$theme-a-active-background-color /*{a-active-background-color}*/;
+    border-color:	 		$theme-a-active-border-color/*{a-active-border}*/;
+    color: 					$theme-a-active-color /*{a-active-color}*/;
+
+    @include global-text-shadow(
+        $theme-a-active-text-shadow-x
+        $theme-a-active-text-shadow-y
+        $theme-a-active-text-shadow-radius
+        $theme-a-active-text-shadow-color,
+        $theme-a-active-text-shadow-enable
+    );
+  }
+  /* Active radio button icon */
+  .ui-page-theme-#{$var}.ui-radio-on:after,
+  html .ui-body-#{$var}.ui-radio-on:after,
+  html body .ui-group-theme-#{$var}.ui-radio-on:after,
+  .ui-btn.ui-radio-on.ui-btn-#{$var}:after {
+
+    border-color:			$theme-a-active-background-color;
+  }
+
+  /* Focus */
+  .ui-page-theme-#{$var}.ui-btn:focus,
+  html .ui-body-#{$var}.ui-btn:focus,
+  html body .ui-group-theme-#{$var}.ui-btn:focus,
+  html head + body .ui-btn.ui-btn-#{$var}:focus,
+    /* Focus buttons and text inputs with div wrap */
+  .ui-page-theme-#{$var}.ui-focus,
+  html .ui-body-#{$var}.ui-focus,
+  html body .ui-group-theme-#{$var}.ui-focus,
+  html head + body .ui-btn-#{$var}.ui-focus,
+  html head + body .ui-body-#{$var}.ui-focus {
+
+    @include global-box-shadow(
+        $theme-a-active-box-shadow-x
+        $theme-a-active-box-shadow-y
+        $theme-a-active-box-shadow-radius
+        $theme-a-active-box-shadow-color,
+        $theme-a-active-box-shadow-enable
+    );
+
+  }
+
+}

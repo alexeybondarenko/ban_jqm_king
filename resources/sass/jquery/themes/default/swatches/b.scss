@@ -1,0 +1,344 @@
+//
+///* B
+//-----------------------------------------------------------------------------------------------------------*/
+//
+//$var: 'b';
+//
+//// Bar
+//
+//$theme-b-bar-height: 30px;
+//$theme-b-bar-background-color: #fff;
+//$theme-b-bar-color: #000;
+//
+//$theme-b-bar-border-color: none;
+//$theme-b-bar-border-width: none;
+//$theme-b-bar-border-style: solid;
+//
+//$theme-b-bar-text-shadow-enable: true;
+//$theme-b-bar-text-shadow-x: 0;
+//$theme-b-bar-text-shadow-y: 2px;
+//$theme-b-bar-text-shadow-radius: 1;
+//$theme-b-bar-text-shadow-color: darken($theme-b-bar-background-color,20%);
+//
+////Link
+//
+//$theme-b-link-color: blue;
+//
+////Page
+//
+//$theme-b-page-background-color: #fff;
+//$theme-b-page-border: #ccc;
+//
+//$theme-b-page-text-shadow-enable: false;
+//$theme-b-page-text-shadow-x: 0;
+//$theme-b-page-text-shadow-y: 1px;
+//$theme-b-page-text-shadow-radius: 0;
+//$theme-b-page-text-shadow-color: darken($theme-b-page-background-color,20%);
+//
+//
+//$theme-b-body-background-color: #fff;
+//$theme-b-border: #D2D2D2;
+//$theme-b-text-color: $text-color;
+//
+//$theme-b-body-color:#333;
+//
+//$theme-b-body-text-shadow-enable: true;
+//$theme-b-body-text-shadow-x: 0;
+//$theme-b-body-text-shadow-y: 1px;
+//$theme-b-body-text-shadow-radius: 0;
+//$theme-b-body-text-shadow-color: #f3f3f3;
+//
+//$theme-b-active-background-color:#3388cc;
+//$theme-b-active-border-color: #3388cc;
+//$theme-b-active-color: #fff;
+//
+//$theme-b-active-box-shadow-enable: true;
+//$theme-b-active-box-shadow-x: 0;
+//$theme-b-active-box-shadow-y: 0;
+//$theme-b-active-box-shadow-radius: 12px;
+//$theme-b-active-box-shadow-color: $theme-b-active-background-color;
+//
+//$theme-b-active-text-shadow-enable: true;
+//$theme-b-active-text-shadow-x: 0;
+//$theme-b-active-text-shadow-y: 1px;
+//$theme-b-active-text-shadow-radius: 0;
+//$theme-b-active-text-shadow-color: #005599;
+//
+//$theme-b-bup-background-color: #eee;
+//$theme-b-bup-border-color: #ddd;
+//$theme-b-bup-color: #333;
+//
+//$theme-b-bup-text-shadow-enable: false;
+//$theme-b-bup-text-shadow-x: 0;
+//$theme-b-bup-text-shadow-y: 1px;
+//$theme-b-bup-text-shadow-radius: 0;
+//$theme-b-bup-text-shadow-color: #f3f3f3;
+//
+//$theme-b-bhover-background-color: #eee;
+//$theme-b-bhover-border-color: #ddd;
+//$theme-b-bhover-color: #333;
+//
+//$theme-b-bhover-text-shadow-enable: false;
+//$theme-b-bhover-text-shadow-x: 0;
+//$theme-b-bhover-text-shadow-y: 1px;
+//$theme-b-bhover-text-shadow-radius: 0;
+//$theme-b-bhover-text-shadow-color: #f3f3f3;
+//
+//$theme-b-bdown-background-color: #eee;
+//$theme-b-bdown-border-color: #ddd;
+//$theme-b-bdown-color: #333;
+//
+//$theme-b-bdown-text-shadow-enable: false;
+//$theme-b-bdown-text-shadow-x: 0;
+//$theme-b-bdown-text-shadow-y: 1px;
+//$theme-b-bdown-text-shadow-radius: 0;
+//$theme-b-bdown-text-shadow-color: #f3f3f3;
+//
+//
+//.theme-#{$var}-bar-text-shadow {
+//  @include global-text-shadow(  $theme-b-bar-text-shadow-x
+//  $theme-b-bar-text-shadow-y
+//  $theme-b-bar-text-shadow-radius
+//  $theme-b-bar-text-shadow-color,
+//    $theme-b-bar-text-shadow-enable);
+//}
+///* Bar: Toolbars, dividers, slider track */
+//.ui-bar-#{$var},
+//.ui-page-theme-#{$var} .ui-bar-inherit,
+//html .ui-bar-#{$var} .ui-bar-inherit,
+//html .ui-body-#{$var} .ui-bar-inherit,
+//html body .ui-group-theme-#{$var} .ui-bar-inherit {
+//  background-color: $theme-b-bar-background-color /*{a-bar-background-color}*/;
+//  border-color:	  $theme-b-bar-border-color /*{a-bar-border}*/;
+//  color:            $theme-b-bar-color /*{a-bar-color}*/;
+//  @extend .theme-b-bar-text-shadow;
+//  font-weight:      bold;
+//}
+//.ui-bar-#{$var} {
+//  border-width:     $theme-b-bar-border-width;
+//  border-style:     $theme-b-bar-border-style;
+//
+//  .ui-title, .ui-btn {
+//    height:           $theme-b-bar-height;
+//    line-height:      $theme-b-bar-height;
+//    vertical-align:   middle;
+//    margin: 0;
+//    @extend .theme-b-bar-text-shadow;
+//  }
+//}
+//
+///* Page and overlay */
+//.ui-overlay-#{$var},
+//.ui-page-theme-#{$var},
+//.ui-page-theme-#{$var} .ui-panel-wrapper {
+//  background-color:       $theme-b-page-background-color /*{a-page-background-color}*/;
+//  border-color:	 		$theme-b-page-border /*{a-page-border}*/;
+//  color: 					$theme-b-text-color /*{a-page-color}*/;
+//  @include global-text-shadow($theme-b-page-text-shadow-x $theme-b-page-text-shadow-y $theme-b-page-text-shadow-radius $theme-b-page-text-shadow-color, $theme-b-page-text-shadow-enable);
+//}
+//
+///* Body: Read-only lists, text inputs, collapsible content */
+//.ui-body-#{$var},
+//.ui-page-theme-#{$var} .ui-body-inherit,
+//html .ui-bar-#{$var} .ui-body-inherit,
+//html .ui-body-#{$var} .ui-body-inherit,
+//html body .ui-group-theme-#{$var} .ui-body-inherit,
+//html .ui-panel-page-container-#{$var} {
+//  background-color:       $theme-b-body-background-color /*{a-body-background-color}*/;
+//  border-color:	 		$theme-b-border /*{a-body-border}*/;
+//  color: 					$theme-b-body-color; /*{a-body-color}*/;
+//  @include global-text-shadow($theme-b-body-text-shadow-x $theme-b-body-text-shadow-y $theme-b-body-text-shadow-radius $theme-b-body-text-shadow-color, $theme-b-body-text-shadow-enable);
+//}
+//.ui-body-#{$var} {
+//  border-width: 1px;
+//  border-style: solid;
+//}
+//
+///* Links */
+//.ui-page-theme-#{$var} a,
+//html .ui-bar-#{$var} a,
+//html .ui-body-#{$var} a,
+//html body .ui-group-theme-#{$var} a {
+//  color: $theme-b-link-color;
+//  font-weight: bold;
+//}
+//.ui-page-theme-#{$var} a:visited,
+//html .ui-bar-#{$var} a:visited,
+//html .ui-body-#{$var} a:visited,
+//html body .ui-group-theme-#{$var} a:visited {
+//  color: #3388cc /*{a-link-visited}*/;
+//}
+//.ui-page-theme-#{$var} a:hover,
+//html .ui-bar-#{$var} a:hover,
+//html .ui-body-#{$var} a:hover,
+//html body .ui-group-theme-#{$var} a:hover {
+//  color: #005599 /*{a-link-hover}*/;
+//}
+//.ui-page-theme-#{$var} a:active,
+//html .ui-bar-#{$var} a:active,
+//html .ui-body-#{$var} a:active,
+//html body .ui-group-theme-#{$var} a:active {
+//  color: #005599 /*{a-link-active}*/;
+//}
+//
+//html .ui-bar-#{$var} .ui-btn {
+//  background-color: $theme-b-bar-background-color;
+//  color: $theme-b-bar-color;
+//  border: 0;
+//}
+//
+//html .ui-bar-#{$var} .ui-btn:visited,
+//html .ui-bar-#{$var} .ui-btn:hover,
+//html .ui-bar-#{$var} .ui-btn.ui-btn-active,
+//html .ui-bar-#{$var} .ui-checkbox-on:after,
+//html .ui-bar-#{$var} .ui-flipswitch-active,
+//html .ui-bar-#{$var} .ui-slider-track .ui-btn-active,
+//html .ui-bar-#{$var} .ui-radio-on:after,
+//html .ui-bar-#{$var} .ui-btn:focus,
+//html .ui-bar-#{$var} .ui-focus
+//{
+//  background-color: $theme-b-bar-background-color;
+//  color: $theme-b-bar-color;
+//  border: 0;
+//}
+//
+//html .ui-bar-#{$var} .ui-btn:visited {}
+//html .ui-bar-#{$var} .ui-btn:hover {}
+//html .ui-bar-#{$var} .ui-btn.ui-btn-active {}
+//html .ui-bar-#{$var}.ui-checkbox-on:after {}
+//html .ui-bar-#{$var}.ui-flipswitch-active {}
+//html .ui-bar-#{$var}.ui-slider-track .ui-btn-active {}
+//html .ui-bar-#{$var}.ui-radio-on:after {}
+//html .ui-bar-#{$var}.ui-btn:focus {}
+//html .ui-bar-#{$var}.ui-focus {}
+//
+//.ui-page-theme-#{$var}.ui-btn,
+//html body .ui-group-theme-#{$var}.ui-btn
+//{
+//  background-color: $theme-b-body-background-color;
+//  border-color: $theme-b-border;
+//  color: $theme-b-text-color;
+//}
+///* Button up */
+//html .ui-body-#{$var}.ui-btn,
+//
+//html head + body .ui-btn.ui-btn-#{$var},
+//  /* Button visited */
+//.ui-page-theme-#{$var}.ui-btn:visited,
+//html .ui-body-#{$var}.ui-btn:visited,
+//html body .ui-group-theme-#{$var}.ui-btn:visited,
+//html head + body .ui-btn.ui-btn-#{$var}:visited {
+//
+//  background-color: 		$theme-b-bup-background-color /*{a-bup-background-color}*/;
+//  border-color:	 		$theme-b-bup-border-color /*{a-bup-border}*/;
+//  color: 					$theme-b-bup-color /*{a-bup-color}*/;
+//
+//  @include global-text-shadow(
+//      $theme-b-bup-text-shadow-x
+//      $theme-b-bup-text-shadow-y
+//      $theme-b-bup-text-shadow-radius
+//      $theme-b-bup-text-shadow-color,
+//      $theme-b-bup-text-shadow-enable
+//  );
+//}
+///* Button hover */
+//.ui-page-theme-#{$var}.ui-btn:hover,
+//html .ui-body-#{$var}.ui-btn:hover,
+//html body .ui-group-theme-#{$var}.ui-btn:hover,
+//html head + body .ui-btn.ui-btn-#{$var}:hover {
+//
+//  background-color: 	$theme-b-bhover-background-color;
+//  border-color:	 	$theme-b-bhover-border-color;
+//  color: 				$theme-b-bhover-color;
+//
+//  @include global-text-shadow(
+//      $theme-b-bhover-text-shadow-x
+//      $theme-b-bhover-text-shadow-y
+//      $theme-b-bhover-text-shadow-radius
+//      $theme-b-bhover-text-shadow-color,
+//      $theme-b-bhover-text-shadow-enable
+//  );
+//
+//}
+///* Button down */
+//.ui-page-theme-#{$var}.ui-btn:active,
+//html .ui-body-#{$var}.ui-btn:active,
+//html body .ui-group-theme-#{$var}.ui-btn:active,
+//html head + body .ui-btn.ui-btn-#{$var}:active {
+//
+//  background-color: 	$theme-b-bdown-background-color;
+//  border-color:	 	$theme-b-bdown-border-color;
+//  color: 				$theme-b-bdown-color;
+//
+//  @include global-text-shadow(
+//      $theme-b-bdown-text-shadow-x
+//      $theme-b-bdown-text-shadow-y
+//      $theme-b-bdown-text-shadow-radius
+//      $theme-b-bdown-text-shadow-color,
+//      $theme-b-bdown-text-shadow-enable
+//  );
+//}
+//
+///* Active button */
+//.ui-page-theme-#{$var}.ui-btn.ui-btn-active,
+//html .ui-body-#{$var}.ui-btn.ui-btn-active,
+//html body .ui-group-theme-#{$var}.ui-btn.ui-btn-active,
+//html head + body .ui-btn.ui-btn-#{$var}.ui-btn-active,
+//  /* Active checkbox icon */
+//.ui-page-theme-#{$var}.ui-checkbox-on:after,
+//html .ui-body-#{$var}.ui-checkbox-on:after,
+//html body .ui-group-theme-#{$var}.ui-checkbox-on:after,
+//.ui-btn.ui-checkbox-on.ui-btn-#{$var}:after,
+//  /* Active flipswitch background */
+//.ui-page-theme-#{$var}.ui-flipswitch-active,
+//html .ui-body-#{$var}.ui-flipswitch-active,
+//html body .ui-group-theme-#{$var}.ui-flipswitch-active,
+//html body .ui-flipswitch.ui-bar-#{$var}.ui-flipswitch-active,
+//  /* Active slider track */
+//.ui-page-theme-#{$var}.ui-slider-track .ui-btn-active,
+//html .ui-body-#{$var}.ui-slider-track .ui-btn-active,
+//html body .ui-group-theme-#{$var}.ui-slider-track .ui-btn-active,
+//html body div.ui-slider-track.ui-body-#{$var}.ui-btn-active {
+//
+//  background-color: 		$theme-b-active-background-color /*{a-active-background-color}*/;
+//  border-color:	 		$theme-b-active-border-color/*{a-active-border}*/;
+//  color: 					$theme-b-active-color /*{a-active-color}*/;
+//
+//  @include global-text-shadow(
+//      $theme-b-active-text-shadow-x
+//      $theme-b-active-text-shadow-y
+//      $theme-b-active-text-shadow-radius
+//      $theme-b-active-text-shadow-color,
+//      $theme-b-active-text-shadow-enable
+//  );
+//}
+///* Active radio button icon */
+//.ui-page-theme-#{$var}.ui-radio-on:after,
+//html .ui-body-#{$var}.ui-radio-on:after,
+//html body .ui-group-theme-#{$var}.ui-radio-on:after,
+//.ui-btn.ui-radio-on.ui-btn-#{$var}:after {
+//
+//  border-color:			$theme-b-active-background-color;
+//}
+//
+///* Focus */
+//.ui-page-theme-#{$var}.ui-btn:focus,
+//html .ui-body-#{$var}.ui-btn:focus,
+//html body .ui-group-theme-#{$var}.ui-btn:focus,
+//html head + body .ui-btn.ui-btn-#{$var}:focus,
+//  /* Focus buttons and text inputs with div wrap */
+//.ui-page-theme-#{$var}.ui-focus,
+//html .ui-body-#{$var}.ui-focus,
+//html body .ui-group-theme-#{$var}.ui-focus,
+//html head + body .ui-btn-#{$var}.ui-focus,
+//html head + body .ui-body-#{$var}.ui-focus {
+//
+//  @include global-box-shadow(
+//      $theme-b-active-box-shadow-x
+//      $theme-b-active-box-shadow-y
+//      $theme-b-active-box-shadow-radius
+//      $theme-b-active-box-shadow-color,
+//      $theme-b-active-box-shadow-enable
+//  );
+//
+//}

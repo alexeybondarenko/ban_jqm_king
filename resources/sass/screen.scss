@@ -4,6 +4,8 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 //@import "compass/reset";
+@import "compass/css3";
+
 @import "components/panel";
 @import "components/text";
 @import "components/form";
@@ -87,7 +89,7 @@ body {
 
 .in, .out {
   -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 30ms !important;
+  -webkit-animation-duration: 80ms !important;
 }
 
 .minus {
@@ -130,3 +132,22 @@ $cardDetailsHeaderHeight: 80px;
   border-radius:10px;
 }
 
+.icon {
+  width:20px;
+  text-align:center;
+}
+
+#sidemenu {
+
+  %icon-style {
+    width: 24px;
+    color:#ccc;
+    text-align: center;
+  }
+  .fa {
+    @extend %icon-style;
+  }
+  .icon {
+    @extend %icon-style;
+  }
+}
