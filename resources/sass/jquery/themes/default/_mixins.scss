@@ -1,0 +1,460 @@
+@mixin global-box-shadow($shadow, $enable) {
+  @if ($enable == true) {
+    @include box-shadow($shadow);
+  }
+}
+@mixin global-text-shadow($shadow, $enable) {
+  @if ($enable == true) {
+    @include text-shadow($shadow);
+  } @else {
+    @include text-shadow(0);
+  }
+}
+
+
+@mixin theme-bar(
+$var: 'a',
+$bar_background_color: #e9e9e9,
+$bar_color: #333,
+$bar_border_width: 1px,
+$bar_border_style: solid,
+$bar_border_color: darken($bar_background_color,8%), //#ddd
+$bar_shadow_x: $global-text-shadow-x,
+$bar_shadow_y: $global-text-shadow-y,
+$bar_shadow_radius: $global-text-shadow-radius,
+$bar_shadow_color: lighten($bar_color,69%), //eee
+$bar_shadow_enable: $global-text-shadow-enable,
+$bar_font_weight: bold,
+
+$bar_height: $global-bar-height,
+
+$bar_btn_color: $bar_color,
+$bar_btn_height: $bar_height * .7,
+$bar_btn_width: $bar_btn_height,
+$bar_btn_background_color: $bar_background_color,
+$bar_btn_border_color: adjust_lightness($bar_btn_background_color,-3%),
+$bar_btn_border_width: $global-btn-border-width,
+$bar_btn_border_style: $global-btn-border-style,
+
+$bar_title_padding_top_bottom:11px,
+
+$bar_padding_left: 5px,
+$bar_padding_right: 5px,
+
+$bar_text_transform: none
+) {
+
+  %theme-#{$var}-bar {
+    background-color:   $bar_background_color /*{a-bar-background-color}*/;
+    border-color:       $bar_border_color /*{a-bar-border}*/;
+    color:              $bar_color /*{a-bar-color}*/;
+    font-weight:        $bar_font_weight;
+    text-transform:     $bar_text_transform;
+
+    @if($bar-height != 0 ) {
+      height:             $bar_height;
+      .ui-title {
+        line-height:  $bar_height - 2*$bar_title_padding_top_bottom;
+        height:       $bar_height - 2*$bar_title_padding_top_bottom;
+      }
+      .ui-btn {
+        top: ($bar_height - $bar_btn_height)/2 !important;
+      }
+    }
+
+    @include global-text-shadow(
+        $bar_shadow_x
+        $bar_shadow_y
+        $bar_shadow_radius
+        $bar_shadow_color,
+        $bar_shadow_enable
+    );
+
+
+    .ui-title {
+
+      font-weight:  $bar_font_weight;
+//      font-size:    $bar_font_size !important;
+      vertical-align: middle;
+      padding:      $bar_title_padding_top_bottom 0;
+      outline: 0;
+    }
+  }
+
+  .ui-bar-#{$var} {
+    @extend %theme-#{$var}-bar;
+    border-width: $bar_border_width;
+    border-style: $bar_border_style;
+    .ui-btn {
+
+      @if($bar_btn_height != 0) {
+        height:     $bar_btn_height;
+        vertical-align: middle;
+        margin-top: 0 !important;
+
+      }
+
+      color: $bar_btn_color !important;
+      background-color: $bar_btn_background_color;
+      border-width: 0 !important;
+      border-color: $bar_btn_border_color !important;
+      border-style: $bar_btn_border_style !important;
+
+      &.ui-btn-icon-notext {
+        @if($bar_btn_width != 0) {
+          width: $bar_btn_width;
+        }
+      }
+      &.ui-btn-left {
+        left: $bar_padding_left;
+        border-right-width: $bar_btn_border_width !important;
+      }
+      &.ui-btn-right {
+        right: $bar_padding_right;
+        border-left-width: $bar_btn_border_width !important;
+      }
+    }
+  }
+
+  .ui-page-theme-#{$var} .ui-bar-inherit {@extend %theme-#{$var}-bar;}
+  html .ui-bar-#{$var} .ui-bar-inherit {@extend %theme-#{$var}-bar;}
+  html .ui-body-#{$var} .ui-bar-inherit {@extend %theme-#{$var}-bar;}
+  html body .ui-group-theme-#{$var} .ui-bar-inherit {@extend %theme-#{$var}-bar;}
+
+}
+
+@mixin theme-page(
+$var: 'a',
+$page_background_color: #f9f9f9,
+$page_border_color: darken(#f9f9f9,25%),
+$page_color: #333,
+$page_shadow_x: $global-text-shadow-x,
+$page_shadow_y: $global-text-shadow-y,
+$page_shadow_radius: $global-text-shadow-radius,
+$page_shadow_color: #f3f3f3,
+$page_shadow_enable: $global-text-shadow-enable
+) {
+
+  %theme-#{$var}-page {
+    background-color:   $page_background_color /*{a-page-background-color}*/;
+    border-color:   $page_border_color /*{a-page-border}*/;
+    color:          $page_color /*{a-page-color}*/;
+    @include global-text-shadow(
+        $page_shadow_x
+        $page_shadow_y
+        $page_shadow_radius
+        $page_shadow_color,
+        $page_shadow_enable
+    );
+  }
+  .ui-overlay-#{$var} {@extend %theme-#{$var}-page;}
+  .ui-page-theme-#{$var} {@extend %theme-#{$var}-page;}
+  .ui-page-theme-#{$var} .ui-panel-wrapper {@extend %theme-#{$var}-page;}
+
+}
+
+@mixin theme-body(
+$var: 'a',
+$body_background_color: #fff,
+$body_border_color: #ddd,
+$body_border_width: 1px,
+$body_border_style: solid,
+$body_color: #333,
+$body_shadow_x: $global-text-shadow-x,
+$body_shadow_y: $global-text-shadow-y,
+$body_shadow_radius: $global-text-shadow-radius,
+$body_shadow_color: #f3f3f3,
+$body_shadow_enable: $global-text-shadow-enable
+) {
+
+  %theme-#{$var}-ui-body {
+    background-color:   $body_background_color /*{a-body-background-color}*/;
+    border-color:     $body_border_color /*{a-body-border}*/;
+    color:        $body_color /*{a-body-color}*/;
+    @include global-text-shadow(
+        $body_shadow_x
+        $body_shadow_y
+        $body_shadow_radius
+        $body_shadow_color,
+        $body_shadow_enable
+    );
+  }
+
+  .ui-body-#{$var} {
+    @extend %theme-#{$var}-ui-body;
+    border-width: $body_border_width;
+    border-style: $body_border_style;
+  }
+
+  .ui-page-theme-#{$var} .ui-body-inherit {@extend %theme-#{$var}-ui-body;}
+  html .ui-bar-#{$var} .ui-body-inherit {@extend %theme-#{$var}-ui-body;}
+  html .ui-body-#{$var} .ui-body-inherit {@extend %theme-#{$var}-ui-body;}
+  html body .ui-group-theme-#{$var} .ui-body-inherit {@extend %theme-#{$var}-ui-body;}
+  html .ui-panel-page-container-#{$var} {@extend %theme-#{$var}-ui-body;}
+
+}
+
+@mixin theme-link(
+$var: 'a',
+$link_weight: bold,
+$link_color: #3388cc,
+$link_visited_color: $link_color,
+$link_hover_color: #005599,
+$link_active_color: $link_hover_color
+) {
+
+  /* Links */
+
+  %theme-#{$var}-page-link {
+    color: $link_color /*{a-link-color}*/;
+    font-weight: $link_weight
+  }
+
+  .ui-page-theme-#{$var} a {@extend %theme-#{$var}-page-link;}
+  html .ui-bar-#{$var} a {@extend %theme-#{$var}-page-link;}
+  html .ui-body-#{$var} a {@extend %theme-#{$var}-page-link;}
+  html body .ui-group-theme-#{$var}  {@extend %theme-#{$var}-page-link;}
+
+  %theme-#{$var}-page-link-visited {
+    color: $link_visited_color
+  }
+
+  .ui-page-theme-#{$var} a:visited {@extend %theme-#{$var}-page-link-visited;}
+  html .ui-bar-#{$var} a:visited {@extend %theme-#{$var}-page-link-visited;}
+  html .ui-body-#{$var} a:visited {@extend %theme-#{$var}-page-link-visited;}
+  html body .ui-group-theme-#{$var} a:visited {@extend %theme-#{$var}-page-link-visited;}
+
+  %theme-#{$var}-page-link-hover {
+    color: $link_hover_color
+  }
+
+  .ui-page-theme-#{$var} a:hover {@extend %theme-#{$var}-page-link-hover;}
+  html .ui-bar-#{$var} a:hover {@extend %theme-#{$var}-page-link-hover;}
+  html .ui-body-#{$var} a:hover {@extend %theme-#{$var}-page-link-hover;}
+  html body .ui-group-theme-#{$var} a:hover {@extend %theme-#{$var}-page-link-hover;}
+
+  %theme-#{$var}-page-link-active {
+    color: $link_active_color
+  }
+
+  .ui-page-theme-#{$var} a:active {@extend %theme-#{$var}-page-link-active;}
+  html .ui-bar-#{$var} a:active {@extend %theme-#{$var}-page-link-active;}
+  html .ui-body-#{$var} a:active {@extend %theme-#{$var}-page-link-active;}
+  html body .ui-group-theme-#{$var} a:active {@extend %theme-#{$var}-page-link-active;}
+
+}
+
+@mixin theme-btn(
+$var: 'a',
+
+$btn_icon_color: $global-icon-color,
+$btn_font_weight: $global-btn-font-weight,
+$btn_shadow_x: $global-text-shadow-x,
+$btn_shadow_y: $global-text-shadow-y,
+$btn_shadow_radius: $global-text-shadow-radius,
+$btn_shadow_enable: $global-text-shadow-enable,
+$btn_background_color: #f6f6f6,
+$btn_color: #333,
+
+$btn_up_background_color: $btn_background_color,//#f6f6f6,
+//$btn_up_border_width: $global-btn-border-width,
+//$btn_up_border_style: $global-btn-border-style,
+$btn_up_border_color: #ddd,
+$btn_up_color: $btn_color,//#333,
+$btn_up_icon_color: $btn_icon_color,
+$btn_up_font_weight: $btn_font_weight,
+$btn_up_shadow_x: $btn_shadow_x,
+$btn_up_shadow_y: $btn_shadow_y,
+$btn_up_shadow_radius: $btn_shadow_radius,
+$btn_up_shadow_color: #f3f3f3,
+$btn_up_shadow_enable: $btn_shadow_enable,
+
+$btn_hover_background_color: darken($btn_background_color,2%),//#ededed,
+$btn_hover_border_color: #ddd,
+$btn_hover_color: $btn_color,//#333,
+$btn_hover_icon_color: $btn_icon_color,
+$btn_hover_font_weight: $btn_font_weight,
+$btn_hover_shadow_x: $btn_shadow_x,
+$btn_hover_shadow_y: $btn_shadow_y,
+$btn_hover_shadow_radius: $btn_shadow_radius,
+$btn_hover_shadow_color: #f3f3f3,
+$btn_hover_shadow_enable: $btn_shadow_enable,
+
+$btn_down_background_color: darken($btn_background_color,4%),//#e8e8e8,
+$btn_down_border_color: #ddd,
+$btn_down_color: $btn_color,//#333,
+$btn_down_icon_color: $btn_icon_color,
+$btn_down_font_weight: $btn_font_weight,
+$btn_down_shadow_x: $btn_shadow_x,
+$btn_down_shadow_y: $btn_shadow_y,
+$btn_down_shadow_radius: $btn_shadow_radius,
+$btn_down_shadow_color: #f3f3f3,
+$btn_down_shadow_enable: $btn_shadow_enable
+) {
+
+
+  %theme-#{$var}-btn-up {
+    background-color: $btn_up_background_color /*{a-bup-background-color}*/;
+//    border-width: $btn_up_border_width;
+//    border-style: $btn_up_border_style;
+    border-color: $btn_up_border_color /*{a-bup-border}*/;
+    color: $btn_up_color/*{a-bup-color}*/;
+    font-weight: $btn_up_font_weight;
+    @include global-text-shadow(
+        $btn_up_shadow_x $btn_up_shadow_y $btn_up_shadow_radius $btn_up_shadow_color, $btn_up_shadow_enable
+    );
+
+    &::after {
+      background-color: $btn_up_icon_color;
+    }
+  }
+
+  /* Button up */
+  .ui-page-theme-#{$var} .ui-btn {@extend %theme-#{$var}-btn-up;}
+//  html .ui-bar-#{$var} .ui-btn {@extend %theme-#{$var}-btn-up;}
+  html .ui-body-#{$var} .ui-btn {@extend %theme-#{$var}-btn-up;}
+  html body .ui-group-theme-#{$var} .ui-btn {@extend %theme-#{$var}-btn-up;}
+  html head + body .ui-btn.ui-btn-#{$var} {@extend %theme-#{$var}-btn-up;}
+  /* Button visited */
+  .ui-page-theme-#{$var} .ui-btn:visited {@extend %theme-#{$var}-btn-up;}
+//  html .ui-bar-#{$var} .ui-btn:visited {@extend %theme-#{$var}-btn-up;}
+  html .ui-body-#{$var} .ui-btn:visited {@extend %theme-#{$var}-btn-up;}
+  html body .ui-group-theme-#{$var} .ui-btn:visited {@extend %theme-#{$var}-btn-up;}
+  html head + body .ui-btn.ui-btn-#{$var}:visited {@extend %theme-#{$var}-btn-up;}
+
+  /* Button hover */
+  %theme-#{$var}-btn-hover {
+    background-color: $btn_hover_background_color /*{a-bhover-background-color}*/;
+    border-color: $btn_hover_border_color /*{a-bhover-border}*/;
+    color: $btn_hover_color !important/*{a-bhover-color}*/;
+    font-weight: $btn_hover_font_weight;
+    @include global-text-shadow(
+        $btn_hover_shadow_x $btn_hover_shadow_y $btn_hover_shadow_radius $btn_hover_shadow_color, $btn_hover_shadow_enable
+    );
+    &::after {
+      background-color: $btn_hover_icon_color;
+    }
+  }
+
+  .ui-page-theme-#{$var} .ui-btn:hover {@extend %theme-#{$var}-btn-hover;}
+//  html .ui-bar-#{$var} .ui-btn:hover {@extend %theme-#{$var}-btn-hover;}
+  html .ui-body-#{$var} .ui-btn:hover {@extend %theme-#{$var}-btn-hover;}
+  html body .ui-group-theme-#{$var} .ui-btn:hover {@extend %theme-#{$var}-btn-hover;}
+  html head + body .ui-btn.ui-btn-#{$var}:hover {@extend %theme-#{$var}-btn-hover;}
+
+  /* Button down */
+  %theme-#{$var}-btn-down {
+    background-color: $btn_down_background_color /*{a-bdown-background-color}*/;
+    border-color: $btn_down_border_color /*{a-bdown-border}*/;
+    color: $btn_down_color !important/*{a-bdown-color}*/;
+    font-weight: $btn_down_font_weight;
+    @include global-text-shadow(
+        $btn_down_shadow_x $btn_down_shadow_y $btn_down_shadow_radius $btn_down_shadow_color, $btn_down_shadow_enable
+    );
+    &::after {
+      background-color: $btn_down_icon_color;
+    }
+  }
+
+  .ui-page-theme-#{$var} .ui-btn:active {@extend %theme-#{$var}-btn-down;}
+//  html .ui-bar-#{$var} .ui-btn:active {@extend %theme-#{$var}-btn-down;}
+  html .ui-body-#{$var} .ui-btn:active {@extend %theme-#{$var}-btn-down;}
+  html body .ui-group-theme-#{$var} .ui-btn:active {@extend %theme-#{$var}-btn-down;}
+  html head + body .ui-btn.ui-btn-#{$var}:active {@extend %theme-#{$var}-btn-down;}
+
+}
+
+@mixin theme-active(
+$var: 'a',
+$active_background_color: #3388cc,
+$active_border_color: #3388cc,
+$active_color: #fff,
+$active_shadow_x: $global-text-shadow-x,
+$active_shadow_y: $global-text-shadow-y,
+$active_shadow_radius: $global-text-shadow-radius,
+$active_shadow_color: #005599,
+$active_shadow_enable: $global-text-shadow-enable
+) {
+
+  %theme-#{$var}-active {
+    background-color:   $active_background_color /*{a-active-background-color}*/;
+    border-color:   $active_border_color /*{a-active-border}*/;
+    color:        $active_color /*{a-active-color}*/;
+    @include global-text-shadow(
+        $active_shadow_x
+        $active_shadow_y
+        $active_shadow_radius
+        $active_shadow_color,
+        $active_shadow_enable
+    );
+  }
+  /* Active button */
+  .ui-page-theme-#{$var} .ui-btn.ui-btn-active { @extend %theme-#{$var}-active; }
+  html .ui-bar-#{$var} .ui-btn.ui-btn-active { @extend %theme-#{$var}-active; }
+  html .ui-body-#{$var} .ui-btn.ui-btn-active { @extend %theme-#{$var}-active; }
+  html body .ui-group-theme-#{$var} .ui-btn.ui-btn-active { @extend %theme-#{$var}-active; }
+  html head + body .ui-btn.ui-btn-a.ui-btn-active { @extend %theme-#{$var}-active; }
+  /* Active checkbox icon */
+  .ui-page-theme-#{$var} .ui-checkbox-on:after { @extend %theme-#{$var}-active; }
+  html .ui-bar-#{$var} .ui-checkbox-on:after { @extend %theme-#{$var}-active; }
+  html .ui-body-#{$var} .ui-checkbox-on:after { @extend %theme-#{$var}-active; }
+  html body .ui-group-theme-#{$var} .ui-checkbox-on:after { @extend %theme-#{$var}-active; }
+  .ui-btn.ui-checkbox-on.ui-btn-a:after { @extend %theme-#{$var}-active; }
+  /* Active flipswitch background */
+  .ui-page-theme-#{$var} .ui-flipswitch-active { @extend %theme-#{$var}-active; }
+  html .ui-bar-#{$var} .ui-flipswitch-active { @extend %theme-#{$var}-active; }
+  html .ui-body-#{$var} .ui-flipswitch-active { @extend %theme-#{$var}-active; }
+  html body .ui-group-theme-#{$var} .ui-flipswitch-active { @extend %theme-#{$var}-active; }
+  html body .ui-flipswitch.ui-bar-#{$var}.ui-flipswitch-active { @extend %theme-#{$var}-active; }
+  /* Active slider track */
+  .ui-page-theme-#{$var} .ui-slider-track .ui-btn-active { @extend %theme-#{$var}-active; }
+  html .ui-bar-#{$var} .ui-slider-track .ui-btn-active { @extend %theme-#{$var}-active; }
+  html .ui-body-#{$var} .ui-slider-track .ui-btn-active { @extend %theme-#{$var}-active; }
+  html body .ui-group-theme-#{$var} .ui-slider-track .ui-btn-active { @extend %theme-#{$var}-active; }
+  html body div.ui-slider-track.ui-body-#{$var} .ui-btn-active { @extend %theme-#{$var}-active; }
+
+  /* Active radio button icon */
+
+  %theme-#{$var}-radio-on {
+    border-color: $active_background_color /*{a-active-background-color}*/;
+  }
+
+  .ui-page-theme-#{$var} .ui-radio-on:after {@extend %theme-#{$var}-radio-on;}
+  html .ui-bar-#{$var} .ui-radio-on:after {@extend %theme-#{$var}-radio-on;}
+  html .ui-body-#{$var} .ui-radio-on:after {@extend %theme-#{$var}-radio-on;}
+  html body .ui-group-theme-#{$var} .ui-radio-on:after {@extend %theme-#{$var}-radio-on;}
+  .ui-btn.ui-radio-on.ui-btn-#{$var}:after {@extend %theme-#{$var}-radio-on;}
+}
+
+@mixin theme-focus(
+$var: 'a',
+$focus_shadow_x: 0,
+$focus_shadow_y: 0,
+$focus_shadow_radius: 12px,
+$focus_shadow_color: #3388cc,
+$focus_shadow_enable: true
+) {
+
+  %theme-#{$var}-focus {
+    @include global-box-shadow(
+        $focus_shadow_x
+        $focus_shadow_y
+        $focus_shadow_radius
+        $focus_shadow_color,
+        $focus_shadow_enable
+    );
+  }
+
+  .ui-page-theme-#{$var} .ui-btn:focus {@extend %theme-#{$var}-focus;}
+  html .ui-bar-#{$var} .ui-btn:focus {@extend %theme-#{$var}-focus;}
+  html .ui-body-#{$var} .ui-btn:focus {@extend %theme-#{$var}-focus;}
+  html body .ui-group-theme-#{$var} .ui-btn:focus {@extend %theme-#{$var}-focus;}
+  html head + body .ui-btn.ui-btn-#{$var}:focus {@extend %theme-#{$var}-focus;}
+  /* Focus buttons and text inputs with div wrap */
+  .ui-page-theme-#{$var} .ui-focus {@extend %theme-#{$var}-focus;}
+  html .ui-bar-#{$var} .ui-focus {@extend %theme-#{$var}-focus;}
+  html .ui-body-#{$var} .ui-focus {@extend %theme-#{$var}-focus;}
+  html body .ui-group-theme-#{$var} .ui-focus {@extend %theme-#{$var}-focus;}
+  html head + body .ui-btn-#{$var}.ui-focus {@extend %theme-#{$var}-focus;}
+  html head + body .ui-body-#{$var}.ui-focus {@extend %theme-#{$var}-focus;}
+}
