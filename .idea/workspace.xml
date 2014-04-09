@@ -1,15 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="design fix&#10;Pushing to Github&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/App.js" afterPath="$PROJECT_DIR$/app/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/FormatterConfig.js" afterPath="$PROJECT_DIR$/app/utils/FormatterConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/Payments.js" afterPath="$PROJECT_DIR$/app/controller/Payments.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en.json" afterPath="$PROJECT_DIR$/resources/lang/en.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="to debug&#10;to debug&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/swatches/a.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/swatches/b.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/components/form.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.collapsible.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.controlgroup.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.core.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.dialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.external-png.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.filterable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.fixedToolbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.button.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.checkboxradio.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.fieldcontain.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.flipswitch.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.rangeslider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.select.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.slider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.slider.tooltip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.textinput.autogrow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.textinput.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.icons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.icons.external-png.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.icons.inline-png.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.icons.inline-svg.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.inline-png.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.inline-svg.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.listview.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.navbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.panel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.popup.arrow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.popup.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.structure.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.table.columntoggle.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.table.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.table.reflow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.tabs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.fade.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.flip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.flow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.pop.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slide.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slidedown.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slidefade.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slidein.keyframes.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slideout.keyframes.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slideup.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.turn.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.visuals.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/mixins/jquery.theme.generator.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/components/panel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/components/text.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/variables.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" afterPath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/ru.json" afterPath="$PROJECT_DIR$/resources/lang/ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/ua.json" afterPath="$PROJECT_DIR$/resources/lang/ua.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="f96e3015-d101-46dd-9df6-c9eace68cd7b" name="Failed commit: Default" comment="news controller&#10;">
@@ -40,7 +89,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="421" column="186" selection-start="20467" selection-end="20467" vertical-scroll-proportion="0.65430266" vertical-offset="5874" max-vertical-offset="11550">
+            <state line="400" column="22" selection-start="19295" selection-end="19295" vertical-scroll-proportion="0.2544643" vertical-offset="5829" max-vertical-offset="11550">
               <folding>
                 <marker date="1396990542000" expanded="true" signature="3279:3652" placeholder="..." />
                 <marker date="1396990542000" expanded="true" signature="3335:3642" placeholder="..." />
@@ -414,6 +463,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -615,18 +682,23 @@
       <created>1396885902415</created>
       <updated>1396885902415</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="to debug&#10;">
+      <created>1397028258531</created>
+      <updated>1397028258531</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="22" width="1387" height="878" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32677165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3887262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3887262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -636,7 +708,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -691,7 +762,8 @@
     <MESSAGE value="numerical" />
     <MESSAGE value="design" />
     <MESSAGE value="design fix&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="design fix&#10;" />
+    <MESSAGE value="to debug&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="to debug&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -973,7 +1045,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="421" column="186" selection-start="20467" selection-end="20467" vertical-scroll-proportion="0.65430266" vertical-offset="5874" max-vertical-offset="11550">
+        <state line="400" column="22" selection-start="19295" selection-end="19295" vertical-scroll-proportion="0.2544643" vertical-offset="5829" max-vertical-offset="11550">
           <folding>
             <marker date="1396990542000" expanded="true" signature="3279:3652" placeholder="..." />
             <marker date="1396990542000" expanded="true" signature="3335:3642" placeholder="..." />
