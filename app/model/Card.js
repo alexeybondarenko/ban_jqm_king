@@ -202,7 +202,16 @@ var Card = function(id, owner_id, created_at, title, number, amount, currency, t
      * @type string
      */
     this.type = (type == 'credit' || type == 'debit') ? type : undefined;
-
+    this.typeTitle = ko.computed(function() {
+        switch (this.type) {
+            case 'credit':
+                return new Language().language().creditCard;
+                break;
+            case 'debit':
+                return new Language().language().debitCard;
+                break;
+        }
+    },this);
     /**
      * Последние транзакции по карте
      * @type array {Transaction}

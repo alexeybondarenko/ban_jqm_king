@@ -63,6 +63,9 @@
 
     "language": "Language",
     "lastTransactions": "Last transactions",
-    "currencyDescription": "These exchange rates are valid at the moment and can change throughout the day."
+    "currencyDescription": "These exchange rates are valid at the moment and can change throughout the day.",
+
+    "creditCard": "Credit card",
+    "debitCard": "Debit card"
 
 }

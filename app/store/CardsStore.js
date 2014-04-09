@@ -17,10 +17,14 @@ CardsStore = function () {
     var self = this;
 
     self.init();
+
 };
 
 function readCard(value) {
     return new Card(value.id,value.owner_id,value.created_at,value.title,value.number,value.amount,value.currency,value.type, value.transactions);
 }
 
+//CardsStore.prototype.sortBy = ['amount'];
+
 CardsStore.prototype = new Store('data/cards', null, 'cards', readCard);
+CardsStore.prototype.sortBy = '-type';

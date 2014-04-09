@@ -1,7 +1,7 @@
 $(document).bind("mobileinit", function () {
 
 //    $.support.cors = true;
-//    $.mobile.touchOverflowEnabled = true;
+    $.mobile.touchOverflowEnabled = true;
 //    $.mobile.allowCrossDomainPages = true;
 //    $.mobile.loadingMessage = "Loading...";
 //    $.mobile.pageLoadErrorMessage = "Error Loading Data";

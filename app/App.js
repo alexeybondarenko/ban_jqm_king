@@ -1,6 +1,8 @@
 
 $("div[data-role=\"page\"]").live('pagebeforecreate', function() {
 
+    console.log('Page before create');
+
     var id = this.id;
     var controller;
 
@@ -55,13 +57,28 @@ $("div[data-role=\"page\"]").live('pagebeforecreate', function() {
     ko.applyBindings(controller, this);
 });
 
-$("div[data-role=\"page\"]").live('pagebeforeshow', function(event, data) {
+$(document).bind( "pagebeforechange", function( event , data ) {
+    var page = data.toPage[0].id;
+    console.log(data, page);
+    if (page == undefined) return;
+    var result = new Login().getAccess(page);
 
+    if(!result) { event.preventDefault(); }
+});
+
+
+$(document).on( "pagebeforehide", "div[data-role='page']", function( event , data ) {
+//    console.log('Page before hide');
+});
+
+$(document).on('pagebeforeshow',"div[data-role=\"page\"]", function(e, data) {
+
+//    console.log('Page before show');
     var pageId = this.id;
     var prevPage = data.prevPage.attr('id');
 
-    new Login().getAccess(pageId);
 
+//    alert('after');
     var title = $(this).attr('data-title') || '';
     new App().title(title);
 
@@ -75,10 +92,10 @@ $("div[data-role=\"page\"]").live('pagebeforeshow', function(event, data) {
         }
             break;
     }
-
 });
 $("div[data-role=\"page\"]").live('pageshow', function() {
 
+    console.log('Page show');
     var pageId = this.id;
     new App().id(pageId);
 
