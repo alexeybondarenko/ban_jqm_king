@@ -61,6 +61,8 @@
     "privacyTitle": "Privacy Policy WLBank",
     "settingsTitle": "Settings",
 
-    "language": "Language"
+    "language": "Language",
+    "lastTransactions": "Last transactions",
+    "currencyDescription": "These exchange rates are valid at the moment and can change throughout the day."
 
 }

@@ -72,6 +72,7 @@
     <script src="lib/worklight/main.js"></script>
 
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
 </head>
 
 <script type="text/html" id="transactionsList">
@@ -209,11 +210,11 @@
         <div class="cardsList" data-bind="template: { name: 'cardsList', data: cards() }"></div>
         <div class="ui-grid-a breakpoint space-grid">
             <div class="ui-block-a">
-                <h4 class="text-center">Последние операции</h4>
+                <h4 class="text-center"  data-bind="text: language().lastTransactions">Последние операции</h4>
                 <div class="transactionsList" data-bind="template: { name: 'transactionsList', data: transactions() }"></div>
             </div>
             <div class="ui-block-b">
-                <h4 class="text-center">Новости банка</h4>
+                <h4 class="text-center" data-bind="text: language().newsTitle">Новости банка</h4>
                 <div class="newsList" data-bind="template: { name: 'newsList', data: {news:news(), inset: 'true'} }"></div>
             </div>
         </div>
@@ -336,7 +337,7 @@
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <input type="tel" placeholder="+38 (0XX) XXX XX XX" class="text-center light big phone-input" data-bind="value: phoneNumber()"/>
+                <input type="tel" placeholder="+38 (0XX) XXX XX XX" class="text-center light big phone-input" data-bind="value: phoneNumber,valueUpdate: 'afterkeydown'"/>
                 <div class="text-center small instruction" data-bind="text: language().paymentsMobileInstruction">
                     <!--телефон в формате +38*** *** ** **-->
                 </div>
@@ -344,7 +345,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="tel" class="big light text-right money-input" name="priceInput" id="priceInput" value="">
+                    <input type="tel" data-bind="value: paymentAmount, valueUpdate: 'afterkeydown'" class="big light text-right money-input" name="priceInput" id="priceInput" value="">
                 </div>
             </fieldset>
             <fieldset class="ui-alt-icon">
@@ -394,7 +395,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="tel" class="big light text-right" />
+                    <input type="tel" data-bind="value: paymentAmount, valueUpdate: 'afterkeydown'" class="big light text-right" />
                 </div>
             </fieldset>
             <fieldset class="ui-grid-a">
@@ -418,15 +419,17 @@
     <main data-role="main" class="ui-content">
         <form class="paymentsCardsForm">
             <fieldset>
-                <input type="tel" max="16" min="16" class="big light text-center credit-input" placeholder="XXXX XXXX XXXX XXXX"/>
+                <input type="tel" max="16" min="16" data-bind="value: cardNumber,valueUpdate: 'afterkeydown'" class="big light text-center credit-input" placeholder="XXXX XXXX XXXX XXXX"/>
+
                 <div class="text-center small instruction" data-bind="text: language().cardNumber">
                     <!--номер карты-->
                 </div>
             </fieldset>
+
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="tel" class="big light text-right money-input" />
+                    <input type="tel" data-bind="value: paymentAmount, valueUpdate: 'afterkeydown'" class="big light text-right money-input" />
                 </div>
             </fieldset>
             <fieldset class="ui-alt-icon">
@@ -464,10 +467,10 @@
             </p>
             <form class="paymentsVerify-form">
                 <fieldset class="ui-grid-c otp-code-inputs big light" data-role="none">
-                    <div class="ui-block-a ui-corner-none"><input type="tel" class="code-input" name="digit1" id="digit1" tabindex="1" data-bind="value: digit1(), event:{ keypress: inputChainHandler}"></div>
-                    <div class="ui-block-b ui-corner-none"><input type="tel" class="code-input" name="digit2" id="digit2" tabindex="2" data-bind="value: digit2(), event:{ keypress: inputChainHandler}"/></div>
-                    <div class="ui-block-c ui-corner-none"><input type="tel" class="code-input" name="digit3" id="digit3" tabindex="3" data-bind="value: digit3(), event:{ keypress: inputChainHandler}"/></div>
-                    <div class="ui-block-d ui-corner-none"><input type="tel" class="code-input" name="digit4" id="digit4" tabindex="4" data-bind="value: digit4(), event:{ keypress: inputChainHandler}"/></div>
+                    <div class="ui-block-a ui-corner-none"><input type="tel" class="code-input" name="digit1" id="digit1" tabindex="1" data-bind="value: digit1, valueUpdate: 'afterkeydown'"></div>
+                    <div class="ui-block-b ui-corner-none"><input type="tel" class="code-input" name="digit2" id="digit2" tabindex="2" data-bind="value: digit2, valueUpdate: 'afterkeydown'"/></div>
+                    <div class="ui-block-c ui-corner-none"><input type="tel" class="code-input" name="digit3" id="digit3" tabindex="3" data-bind="value: digit3, valueUpdate: 'afterkeydown'"/></div>
+                    <div class="ui-block-d ui-corner-none"><input type="tel" class="code-input" name="digit4" id="digit4" tabindex="4" data-bind="value: digit4, valueUpdate: 'afterkeydown'"/></div>
                 </fieldset>
                 <div class="form-spacer"></div>
                 <button data-theme="c" class="uppercase" data-bind="click: $root.verifyPayment, text: language().send">
@@ -501,7 +504,9 @@
             <h3 class="uppercase"><span data-bind="text: language().success">
                 <!--Успешно-->
             </span>!</h3>
-            <p data-bind="text: language().successPaymentMsg">Оплата произведена успашно. В течении нескольких минут средства будут зачислины. Чек вы сможете распечатать в любом отделении банка или через наш веб сайт.</p>
+            <p data-bind="text: language().successPaymentMsg">
+            <!--Оплата произведена успашно. В течении нескольких минут средства будут зачислины. Чек вы сможете распечатать в любом отделении банка или через наш веб сайт.-->
+            </p>
             <a data-role="button" data-theme="c" href="#payments"  >
                 <span data-theme="a" class="ui-icon-carat-l ui-btn-left ui-btn-icon-notext ui-corner-all"></span>
                 <span data-bind="text: language().returnToPayments" ></span>
@@ -603,8 +608,8 @@
             </tr>
             </tbody>
         </table>
-        <p class="small">
-            Указазнные курсы валют действительны на настоящий момент и могут изменяться в течении дня.
+        <p class="small" data-bind="text: language().currencyDescription">
+            <!--Указазнные курсы валют действительны на настоящий момент и могут изменяться в течении дня.-->
         </p>
     </main>
 </div>

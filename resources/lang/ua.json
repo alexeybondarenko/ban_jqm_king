@@ -61,6 +61,8 @@
     "privacyTitle": "Політика конфіденційності WLBank",
     "settingsTitle": "Налаштування",
 
-    "language": "Мова"
+    "language": "Мова",
+    "lastTransactions": "Останні платежі",
 
+    "currencyDescription": "Зазначені курси валют дійсні на даний момент і можуть змінюватися протягом дня."
 }

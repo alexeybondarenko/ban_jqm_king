@@ -55,9 +55,10 @@ $("div[data-role=\"page\"]").live('pagebeforecreate', function() {
     ko.applyBindings(controller, this);
 });
 
-$("div[data-role=\"page\"]").live('pagebeforeshow', function() {
+$("div[data-role=\"page\"]").live('pagebeforeshow', function(event, data) {
 
     var pageId = this.id;
+    var prevPage = data.prevPage.attr('id');
 
     new Login().getAccess(pageId);
 
@@ -67,8 +68,11 @@ $("div[data-role=\"page\"]").live('pagebeforeshow', function() {
     switch(pageId) {
         case 'paymentsMobile':
         case 'paymentsAccount':
-        case 'paymentsCards':
-            new Payments().reset();
+        case 'paymentsCards': {
+            if (prevPage != 'paymentsVerify') { //Back from verify to payment page. Save data
+                new Payments().reset();
+            }
+        }
             break;
     }
 
@@ -79,11 +83,6 @@ $("div[data-role=\"page\"]").live('pageshow', function() {
     new App().id(pageId);
 
     var $navbar = $("#mainNavBar");
-
-//    var the_height = ($(window).height() - $("#mainHeader").height() - $("#mainFooter").height());
-//    $(this).height(the_height);
-
-//    $navbar.find("a[href=#"+pageId+"]").addClass("ui-btn-active");
 });
 
 
@@ -117,7 +116,7 @@ var App = function() {
         var controller = new CardDetails(cardsController.chosenCard());
         return controller;
     }
-    self.payments = function() {
+    self.payments = function(oldPage,newPage) {
         var controller = new Payments();
         controller.reset();
         return controller;
