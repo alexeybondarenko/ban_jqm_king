@@ -1,63 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="to debug&#10;to debug&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/swatches/a.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/swatches/b.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/components/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.collapsible.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.controlgroup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.core.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.external-png.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.filterable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.fixedToolbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.checkboxradio.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.fieldcontain.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.flipswitch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.rangeslider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.slider.tooltip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.textinput.autogrow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.forms.textinput.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.icons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.icons.external-png.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.icons.inline-png.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.icons.inline-svg.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.inline-png.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.inline-svg.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.listview.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.navbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.panel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.popup.arrow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.popup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.structure.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.table.columntoggle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.table.reflow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.tabs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.fade.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.flip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.flow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.pop.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slide.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slidedown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slidefade.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slidein.keyframes.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slideout.keyframes.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.slideup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.turn.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/structure/jquery.mobile.transition.visuals.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/mixins/jquery.theme.generator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/components/panel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/components/text.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/variables.css" />
+    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" afterPath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -86,10 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="400" column="22" selection-start="19295" selection-end="19295" vertical-scroll-proportion="0.2544643" vertical-offset="5829" max-vertical-offset="11550">
+            <state line="400" column="22" selection-start="19295" selection-end="19295" vertical-scroll-proportion="-7.125" vertical-offset="5829" max-vertical-offset="11550">
               <folding>
                 <marker date="1396990542000" expanded="true" signature="3279:3652" placeholder="..." />
                 <marker date="1396990542000" expanded="true" signature="3335:3642" placeholder="..." />
@@ -101,6 +52,15 @@
                 <marker date="1396990542000" expanded="true" signature="4234:4426" placeholder="..." />
                 <marker date="1396990542000" expanded="true" signature="4308:4421" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="461">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,15 +132,6 @@
         <entry file="file://$PROJECT_DIR$/app/controller/Payments.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="172" column="24" selection-start="4932" selection-end="4932" vertical-scroll-proportion="0.0" vertical-offset="2333" max-vertical-offset="3450">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Language.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Language.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="151" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -361,7 +312,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,33 +326,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
+              <option name="myItemId" value="font-awesome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -415,55 +344,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="font-awesome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -694,7 +579,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32677165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3263158" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -763,7 +648,8 @@
     <MESSAGE value="design" />
     <MESSAGE value="design fix&#10;" />
     <MESSAGE value="to debug&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="to debug&#10;" />
+    <MESSAGE value="add jquery sass css file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add jquery sass css file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -771,11 +657,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/structure/jquery.mobile.transition.slideup.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/sass/jquery/structure/jquery.mobile.transition.turn.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785" />
@@ -1045,7 +926,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="400" column="22" selection-start="19295" selection-end="19295" vertical-scroll-proportion="0.2544643" vertical-offset="5829" max-vertical-offset="11550">
+        <state line="400" column="22" selection-start="19295" selection-end="19295" vertical-scroll-proportion="-7.125" vertical-offset="5829" max-vertical-offset="11550">
           <folding>
             <marker date="1396990542000" expanded="true" signature="3279:3652" placeholder="..." />
             <marker date="1396990542000" expanded="true" signature="3335:3642" placeholder="..." />
@@ -1057,6 +938,13 @@
             <marker date="1396990542000" expanded="true" signature="4234:4426" placeholder="..." />
             <marker date="1396990542000" expanded="true" signature="4308:4421" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="461">
+          <folding />
         </state>
       </provider>
     </entry>
