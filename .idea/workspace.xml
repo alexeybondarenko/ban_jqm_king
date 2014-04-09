@@ -509,7 +509,8 @@
     <MESSAGE value="add jquery sass css file" />
     <MESSAGE value="add fonts-icons&#10;" />
     <MESSAGE value="designing 1.0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="designing 1.0.1" />
+    <MESSAGE value="designing 1.0.1&#10;designing 1.0.1&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="designing 1.0.1&#10;designing 1.0.1&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
