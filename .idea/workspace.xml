@@ -1,369 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="designing 1.0.1">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/Flat-UI-Icons-24.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/Flat-UI-Icons-24.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/36f9c2daf463bc0f3354797cb721dbdb399eede6/_alternating-rows-and-columns.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/d640b07e6050096cb9b081e93a051c9ba20fe49b/_alternating-rows-and-columns.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_animation.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_appearance.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_appearance.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_background-clip.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_background-clip.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_background-origin.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_background-origin.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_background-size.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/67ab44eb5365b021be7f1ececce8fcb218a0a5ca/_base.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/af3c3ee21c996c8c15528bbba9b63c810ddb32fd/_base.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_border-radius.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_border-radius.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/36f9c2daf463bc0f3354797cb721dbdb399eede6/_borders.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/d640b07e6050096cb9b081e93a051c9ba20fe49b/_borders.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_box-shadow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_box-shadow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_box-sizing.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_box.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/debcb10de3dd389c32ccfd7ea73759cfc13b6b33/_brightness.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/71fcdfaed29354f1b2b22143f2ac30794bdfd46a/_bullets.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/7bbcf22ba137b96f363faaef0478a929af83ba99/_bullets.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f279c0842c0a3cbc705189eede9ac7a411f79c89/_clearfix.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/fc1bacf4178b15b4eb00fa8f25c3aec982842261/_color.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_columns.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_columns.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/debcb10de3dd389c32ccfd7ea73759cfc13b6b33/_contrast.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e8e852582c279b0632af3c5b5e4f6216a3aaf363/_contrast.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_deprecated-support.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e5f0566fd4e41b785b8fd916a440bc26b6dff7b8/_ellipsis.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_filter.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_filter.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_flexbox.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/48a8e3483b65e18a9d726a4a70dc62410c67e71e/_float.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f279c0842c0a3cbc705189eede9ac7a411f79c89/_float.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_font-face.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_font-face.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/1490b45ffed82af46d7c5cd9e5e328c3d5b853be/_force-wrap.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e5f0566fd4e41b785b8fd916a440bc26b6dff7b8/_force-wrap.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/3b91a2db7433074b093e387d9dab65dfb3a9dff9/_general.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/fc1bacf4178b15b4eb00fa8f25c3aec982842261/_general.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/_global.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/32f0a9100112298418867fa0c3486fcd8162b67f/_grid-background.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/52a8e183eaf43d44ee614a1479d673f0b42c3777/_grid-background.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/48a8e3483b65e18a9d726a4a70dc62410c67e71e/_hacks.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f279c0842c0a3cbc705189eede9ac7a411f79c89/_hacks.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/71fcdfaed29354f1b2b22143f2ac30794bdfd46a/_horizontal-list.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/7bbcf22ba137b96f363faaef0478a929af83ba99/_horizontal-list.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/9a3e0dd2b90d2ed5c090374b8f7a669e80bb1f28/_hover-link.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f70b08478c5a93adeb614142bed449d96cec25e2/_hover-link.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_hyphenation.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_hyphenation.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_images.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_images.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/71fcdfaed29354f1b2b22143f2ac30794bdfd46a/_inline-block-list.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/7bbcf22ba137b96f363faaef0478a929af83ba99/_inline-block-list.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_inline-block.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_inline-block.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/71fcdfaed29354f1b2b22143f2ac30794bdfd46a/_inline-list.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/7bbcf22ba137b96f363faaef0478a929af83ba99/_inline-list.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/9a3e0dd2b90d2ed5c090374b8f7a669e80bb1f28/_link-colors.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f70b08478c5a93adeb614142bed449d96cec25e2/_link-colors.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/4ad90d2be3a8f058b8a2c4925114adfd4e54957f/_links.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/4ad90d2be3a8f058b8a2c4925114adfd4e54957f/_lists.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/48a8e3483b65e18a9d726a4a70dc62410c67e71e/_min.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f279c0842c0a3cbc705189eede9ac7a411f79c89/_min.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/_mixins.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e5f0566fd4e41b785b8fd916a440bc26b6dff7b8/_nowrap.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_opacity.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_opacity.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_regions.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_regions.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/1490b45ffed82af46d7c5cd9e5e328c3d5b853be/_replacement.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e5f0566fd4e41b785b8fd916a440bc26b6dff7b8/_replacement.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f279c0842c0a3cbc705189eede9ac7a411f79c89/_reset.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/36f9c2daf463bc0f3354797cb721dbdb399eede6/_scaffolding.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/d640b07e6050096cb9b081e93a051c9ba20fe49b/_scaffolding.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_shared.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/67ab44eb5365b021be7f1ececce8fcb218a0a5ca/_sprite-img.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/af3c3ee21c996c8c15528bbba9b63c810ddb32fd/_sprite-img.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/fc1bacf4178b15b4eb00fa8f25c3aec982842261/_sprites.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/7318f7c9a59bc0815fba9706621a7f633fe5a8c4/_support.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/d2aa0d621dd92f8df73c5f4b89b5952ba97f52b7/_support.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/fc1bacf4178b15b4eb00fa8f25c3aec982842261/_tables.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/48a8e3483b65e18a9d726a4a70dc62410c67e71e/_tag-cloud.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f279c0842c0a3cbc705189eede9ac7a411f79c89/_tag-cloud.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_text-shadow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_text-shadow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/4ad90d2be3a8f058b8a2c4925114adfd4e54957f/_text.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_transform.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_transform.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_transition.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_transition.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/4ad90d2be3a8f058b8a2c4925114adfd4e54957f/_units.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/9a3e0dd2b90d2ed5c090374b8f7a669e80bb1f28/_unstyled-link.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f70b08478c5a93adeb614142bed449d96cec25e2/_unstyled-link.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_user-interface.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/cc4d1f4762e4b05594ae5c951fa16d7183718829/_user-interface.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/4948d87a6ab02064cfb0eb13050b7d5c353d318e/_utilities.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/7318f7c9a59bc0815fba9706621a7f633fe5a8c4/_utilities.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/d2aa0d621dd92f8df73c5f4b89b5952ba97f52b7/_utilities.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/eff5a0ad62d1c5bc5e09d531dda25592a8afcb46/_utilities.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/4ad90d2be3a8f058b8a2c4925114adfd4e54957f/_vertical_rhythm.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/93227cb97803abbba1177fe4b3ebcc7b26c4cc48/_vertical_rhythm.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/action-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/action-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/images/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/alert-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/alert-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-d-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-d-l-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-d-l-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-d-r-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-d-r-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-d-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-l-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-l-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-r-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-r-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-u-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-u-l-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-u-l-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-u-r-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-u-r-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/arrow-u-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/audio-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/audio-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/back-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/back-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/bars-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/bars-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/bullets-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/bullets-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/calendar-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/calendar-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/camera-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/camera-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/carat-d-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/carat-d-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/carat-l-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/carat-l-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/carat-r-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/carat-r-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/carat-u-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/carat-u-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/8f9a8733f665d138d651f229443318d4b06460de/cardDetailsHeader.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/8f9a8733f665d138d651f229443318d4b06460de/cardList.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/check-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/check-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/clock-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/clock-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/cloud-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/cloud-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/comment-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/comment-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/delete-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/delete-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/edit-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/edit-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/eye-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/eye-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/forbidden-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/forbidden-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/8f9a8733f665d138d651f229443318d4b06460de/form.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/forward-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/forward-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/gear-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/gear-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/grid-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/grid-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/heart-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/heart-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/home-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/home-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/info-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/info-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.collapsible.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.controlgroup.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.core.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.dialog.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.filterable.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.fixedToolbar.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.button.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.checkboxradio.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.fieldcontain.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.flipswitch.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.rangeslider.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.select.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.slider.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.slider.tooltip.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.textinput.autogrow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.forms.textinput.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.grid.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.icons.external-png.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.icons.inline-png.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.icons.inline-svg.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.icons.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.listview.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.navbar.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.panel.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.popup.arrow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.popup.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.table.columntoggle.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.table.reflow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.table.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.tabs.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.theme.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.fade.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.flip.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.flow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.pop.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.slide.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.slidedown.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.slidefade.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.slidein.keyframes.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.slideout.keyframes.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.slideup.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.turn.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/2badd77e10677824db3b0a74d5d23d779a0fe362/jquery.theme.generator.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/lato-black.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/lato-black.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/lato-bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/lato-bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/lato-italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/lato-italic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/lato-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/fonts/lato-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/location-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/location-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/lock-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/lock-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/mail-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/mail-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/minus-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/minus-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/mixins.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/navigation-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/navigation-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/8f9a8733f665d138d651f229443318d4b06460de/panel.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/phone-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/phone-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/plus-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/plus-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/power-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/power-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/recycle-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/recycle-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/refresh-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/refresh-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/search-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/search-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/shop-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/shop-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/star-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/star-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/tag-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/tag-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/8f9a8733f665d138d651f229443318d4b06460de/text.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/user-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/user-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/variables.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/video-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/images/icons-png/video-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_background-size.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/_base.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/851eebe0429c069b1b04660fda9ae154b3d0f81c/_box-sizing.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/48a8e3483b65e18a9d726a4a70dc62410c67e71e/_clearfix.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/3b91a2db7433074b093e387d9dab65dfb3a9dff9/_color.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/c48b4f69aacb8ca003fd47c30786b05e55ec6a10/_compass.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/f5ce0b8c162ff1352d743ac2e59f8ab8a51e0da3/_compass.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/7318f7c9a59bc0815fba9706621a7f633fe5a8c4/_css3.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/d2aa0d621dd92f8df73c5f4b89b5952ba97f52b7/_css3.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/1490b45ffed82af46d7c5cd9e5e328c3d5b853be/_ellipsis.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/93227cb97803abbba1177fe4b3ebcc7b26c4cc48/_links.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/93227cb97803abbba1177fe4b3ebcc7b26c4cc48/_lists.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/1490b45ffed82af46d7c5cd9e5e328c3d5b853be/_nowrap.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/48a8e3483b65e18a9d726a4a70dc62410c67e71e/_reset.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_spinning.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/3b91a2db7433074b093e387d9dab65dfb3a9dff9/_sprites.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/3b91a2db7433074b093e387d9dab65dfb3a9dff9/_tables.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/93227cb97803abbba1177fe4b3ebcc7b26c4cc48/_text.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/7318f7c9a59bc0815fba9706621a7f633fe5a8c4/_typography.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/d2aa0d621dd92f8df73c5f4b89b5952ba97f52b7/_typography.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/_variables.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/5d6141b9ec53c5de055ae73ddc03d47d085ef2b6/a.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/5d6141b9ec53c5de055ae73ddc03d47d085ef2b6/b.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/components/cardDetailsHeader.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/sass/components/cardDetailsHeader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/components/cardList.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/sass/components/cardList.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/sass/components/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gmaps/gmaps.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/worklight/initOptions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.external-png.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/flat-ui/jquery.mobile.flatui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/jquery.mobile.icons.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.inline-png.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.inline-svg.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.structure.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/e065f0a5e5cfe71b143b40158ec83b94336d709d/jquery.mobile.transition.visuals.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/lightBank.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/lightBank.min copy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery.mobile/themes/lightBank/lightBank.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/worklight/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/worklight/messages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/spinning.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/sass/components/text.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/.sass-cache/df6837dbf511313d4afca83b40158a3fa7b6e423/theme.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/font-awesome/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/.sass-cache/df6837dbf511313d4afca83b40158a3fa7b6e423/screen.scssc" afterPath="$PROJECT_DIR$/resources/.sass-cache/df6837dbf511313d4afca83b40158a3fa7b6e423/screen.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/App.js" afterPath="$PROJECT_DIR$/app/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/Card.js" afterPath="$PROJECT_DIR$/app/model/Card.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/CardsStore.js" afterPath="$PROJECT_DIR$/app/store/CardsStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/Login.js" afterPath="$PROJECT_DIR$/app/controller/Login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/Store.js" afterPath="$PROJECT_DIR$/app/store/Store.js" />
+    <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/jquery/themes/default/_mixins.scss" afterPath="$PROJECT_DIR$/resources/sass/jquery/themes/default/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.json" afterPath="$PROJECT_DIR$/data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en.json" afterPath="$PROJECT_DIR$/resources/lang/en.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/jquery.mobile.config.js" afterPath="$PROJECT_DIR$/app/jquery.mobile.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.css" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.external-png.css" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.external-png.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.inline-png.css" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.inline-png.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.inline-svg.css" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.inline-svg.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worklight/initOptions.js" afterPath="$PROJECT_DIR$/lib/worklight/initOptions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" afterPath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.theme.css" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.theme.scss" afterPath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.theme.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/knockout.bind.js" afterPath="$PROJECT_DIR$/app/knockout.bind.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/ru.json" afterPath="$PROJECT_DIR$/resources/lang/ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/screen.css" afterPath="$PROJECT_DIR$/resources/css/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/screen.scss" afterPath="$PROJECT_DIR$/resources/sass/screen.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/ua.json" afterPath="$PROJECT_DIR$/resources/lang/ua.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worklight/main.js" afterPath="$PROJECT_DIR$/lib/worklight/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worklight/messages.js" afterPath="$PROJECT_DIR$/lib/worklight/messages.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="f96e3015-d101-46dd-9df6-c9eace68cd7b" name="Failed commit: Default" comment="news controller&#10;">
@@ -394,7 +38,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="0" selection-start="5281" selection-end="5281" vertical-scroll-proportion="0.80898875" vertical-offset="1395" max-vertical-offset="11940">
+            <state line="117" column="0" selection-start="5281" selection-end="5281" vertical-scroll-proportion="0.5179856" vertical-offset="1395" max-vertical-offset="11940">
               <folding>
                 <marker date="1397072822000" expanded="true" signature="3803:4464" placeholder="..." />
                 <marker date="1397072822000" expanded="true" signature="3865:4454" placeholder="..." />
@@ -781,14 +425,18 @@
       <created>1397028258531</created>
       <updated>1397028258531</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="designing 1.0.1">
+      <created>1397072946627</created>
+      <updated>1397072946627</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="22" width="1387" height="878" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -860,7 +508,8 @@
     <MESSAGE value="to debug&#10;" />
     <MESSAGE value="add jquery sass css file" />
     <MESSAGE value="add fonts-icons&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fonts-icons&#10;" />
+    <MESSAGE value="designing 1.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="designing 1.0.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1172,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="5281" selection-end="5281" vertical-scroll-proportion="0.80898875" vertical-offset="1395" max-vertical-offset="11940">
+        <state line="117" column="0" selection-start="5281" selection-end="5281" vertical-scroll-proportion="0.5179856" vertical-offset="1395" max-vertical-offset="11940">
           <folding>
             <marker date="1397072822000" expanded="true" signature="3803:4464" placeholder="..." />
             <marker date="1397072822000" expanded="true" signature="3865:4454" placeholder="..." />
