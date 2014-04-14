@@ -7,7 +7,7 @@
   @if ($enable == true) {
     @include text-shadow($shadow);
   } @else {
-    @include text-shadow(0);
+    @include text-shadow(0 !important);
   }
 }
 
@@ -31,10 +31,18 @@ $bar_height: $global-bar-height,
 $bar_btn_color: $bar_color,
 $bar_btn_height: $bar_height * .7,
 $bar_btn_width: $bar_btn_height,
+$bar_btn_font_weight: $global-btn-font-weight,
+$bar_btn_font_size: inherit,
 $bar_btn_background_color: $bar_background_color,
 $bar_btn_border_color: adjust_lightness($bar_btn_background_color,-3%),
 $bar_btn_border_width: $global-btn-border-width,
 $bar_btn_border_style: $global-btn-border-style,
+
+$bar_btn_shadow_x: $global-text-shadow-x,
+$bar_btn_shadow_y: $global-text-shadow-y,
+$bar_btn_shadow_radius: $global-text-shadow-radius,
+$bar_btn_shadow_color: $global-text-shadow-color,
+$bar_btn_shadow_enable: $global-text-shadow-enable,
 
 $bar_title_padding_top_bottom:11px,
 
@@ -95,6 +103,15 @@ $bar_text_transform: none
       }
 
       color: $bar_btn_color !important;
+      font-weight: $bar_btn_font_weight;
+      font-size: $bar_btn_font_size;
+      @include global-text-shadow(
+        $bar_btn_shadow_x
+        $bar_btn_shadow_y
+        $bar_btn_shadow_radius
+        $bar_btn_shadow_color,
+        $bar_btn_shadow_enable
+      );
       background-color: $bar_btn_background_color;
       border-width: 0 !important;
       border-color: $bar_btn_border_color !important;

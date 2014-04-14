@@ -10,9 +10,9 @@
     &:last-child {
       @extend .ui-last-child;
     }
+
     &:first-child {
       @extend .ui-first-child;
     }
   }
-
 }

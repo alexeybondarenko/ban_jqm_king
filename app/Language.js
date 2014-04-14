@@ -13,7 +13,7 @@ var Language = function() {
     self.availableLanguages = ko.observableArray([
         {title: "Українська", code: "ua"},
         {title: "Русский", code: "ru"},
-        {title: "English", code: "en"},
+        {title: "English", code: "en"}
     ]);
 
     self.lang = ko.observable('ru' , {persist: 'languageCode'});

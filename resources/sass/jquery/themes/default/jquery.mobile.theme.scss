@@ -363,7 +363,11 @@ $theme-b-bar: (
   bar-shadow-radius: 0,
   bar-shadow-color: #111,
   bar-shadow-enable: false,
-  bar-font-weight: bold
+  bar-btn-font-weight: 300,
+  bar-btn-font-size: 11px,
+  bar-height: 60,
+  bar-btn-shadow-enable: false,
+  bar-btn-shadow-color: transparent
 
 );
 
@@ -517,7 +521,8 @@ $theme-d-bar: (
   bar-shadow-enable: false,
   bar-font-weight: 300,
   bar-text-transform: uppercase,
-  bar-btn-border-width: 0
+  bar-btn-border-width: 0,
+  bar-btn-shadow-enable: false
 );
 @include theme-bar($theme-d-bar...);
 

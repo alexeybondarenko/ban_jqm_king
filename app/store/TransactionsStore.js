@@ -22,4 +22,4 @@ TransactionsStore = function () {
 function readTransaction(value) {
     return new Transaction(value.text, value.price, value.timestamp, value.card_id);
 }
-TransactionsStore.prototype = new Store('transactions','more_transactions.json', 'transactions', readTransaction);
+TransactionsStore.prototype = new Store('transactions',AppConfig.transactionsURL, 'transactions', readTransaction);

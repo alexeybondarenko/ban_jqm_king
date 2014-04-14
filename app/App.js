@@ -100,6 +100,21 @@ $("div[data-role=\"page\"]").live('pageshow', function() {
     new App().id(pageId);
 
     var $navbar = $("#mainNavBar");
+    var $navpanel = $("#sidemenu");
+
+
+    pageId = ['payments', 'paymentsMobile', 'paymentsCards','paymentsAccount','paymentsVerify','paymentsSuccess'].indexOf(pageId) > -1 ? 'payments': pageId;
+    pageId = ['cards', 'cardDetails','cardSettings'].indexOf(pageId) > -1 ? 'cards': pageId;
+    pageId = ['locations', 'locationsList'].indexOf(pageId) > -1 ? 'locations': pageId;
+    $.each([$navbar, $navpanel],function(index, value) {
+
+        value.find(".ui-btn-active").removeClass('ui-btn-active');
+        value.find("a[href='#"+pageId+"']").addClass('ui-btn-active');
+    });
+
+//    [$navbar, $navpanel].find("a[href='#"+pageId+"']").addClass('ui-btn-active');
+
+
 });
 
 
@@ -118,7 +133,7 @@ var App = function() {
 
     var self = this;
 
-    self.dataURL = 'data.json';
+    self.dataURL = AppConfig.dataURL;
     self.id = ko.observable();
     self.isAuth = ko.computed(function() {
         return new Login().isAuth();

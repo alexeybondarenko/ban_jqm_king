@@ -187,27 +187,23 @@
 <footer data-role="footer" data-tap-toggle="false" id="mainFooter" data-position="fixed" data-theme="b">
     <div data-role="navbar" id="mainNavBar">
         <ul>
-            <li><a href="#cards">
-                <i class="fa fa-credit-card fa-2x"></i>
-                <br/>
+            <li><a href="#cards"  class="text-center">
+                <span class="fa fa-credit-card fa-2x"></span><br/>
                 <span  data-bind="text: language().accounts"></span>
                 <!--Счета-->
             </a></li>
-            <li><a href="#payments">
-                <i class="fa fa-money fa-2x"></i>
-                <br/>
+            <li><a href="#payments"  class="text-center">
+                <span class="fa fa-money fa-2x"></span><br/>
                 <span data-icon="info" data-bind="text: language().payments"></span>
                 <!--Платежи-->
             </a></li>
-            <li><a href="#locations">
-                <i class="fa fa-map-marker fa-2x"></i>
-                <br/>
+            <li><a href="#locations"  class="text-center">
+                <span class="fa fa-map-marker fa-2x"></span><br/>
                 <span data-icon="info" data-bind="text: language().locations"></span>
                 <!--Отделения-->
             </a></li>
-            <li><a href="#contacts">
-                <i class="fa fa-mobile-phone fa-2x"></i>
-                <br/>
+            <li><a href="#contacts"  class="text-center">
+                <span class="fa fa-mobile-phone fa-2x"></span><br/>
                 <span data-icon="info" data-bind="text: language().contacts"></span>
                 <!--Контакты-->
             </a></li>
@@ -649,7 +645,7 @@
 
 <div data-role="page" data-theme="a" id="newsPage" data-bind="attr: {'data-title': chosenNews().title || ' '}">
     <main data-role="main" class="ui-content">
-        <div data-iscroll data-bind="with: chosenNews()">
+        <div data-bind="with: chosenNews()">
             <h3 data-bind="text: title">
                 <!--Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и скидках-->
             </h3>

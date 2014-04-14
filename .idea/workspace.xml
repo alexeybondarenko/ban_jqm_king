@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80af7148-f8b3-4ea9-b9bf-cd168e0b7f0d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data_en.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/more_transactions_en.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/news_en.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/_mixins.scssc" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/_mixins.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.scssc" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.theme.scssc" afterPath="$PROJECT_DIR$/resources/.sass-cache/767d1817dec84215a178d8e0ac391a76e7d1662f/jquery.mobile.theme.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/App.js" afterPath="$PROJECT_DIR$/app/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Config.js" afterPath="$PROJECT_DIR$/app/Config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Language.js" afterPath="$PROJECT_DIR$/app/Language.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/NewsStore.js" afterPath="$PROJECT_DIR$/app/store/NewsStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/TransactionsStore.js" afterPath="$PROJECT_DIR$/app/store/TransactionsStore.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/jquery/themes/default/_mixins.scss" afterPath="$PROJECT_DIR$/resources/sass/jquery/themes/default/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worklight/initOptions.js" afterPath="$PROJECT_DIR$/lib/worklight/initOptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.css" afterPath="$PROJECT_DIR$/resources/css/jquery/themes/default/jquery.mobile.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" afterPath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.theme.scss" afterPath="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.theme.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worklight/main.js" afterPath="$PROJECT_DIR$/lib/worklight/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/worklight/messages.js" afterPath="$PROJECT_DIR$/lib/worklight/messages.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="f96e3015-d101-46dd-9df6-c9eace68cd7b" name="Failed commit: Default" comment="news controller&#10;">
@@ -35,34 +45,88 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="data_en.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data_en.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="156" column="16" selection-start="5950" selection-end="5950" vertical-scroll-proportion="0.5414847" vertical-offset="1968" max-vertical-offset="2655">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="0" selection-start="5281" selection-end="5281" vertical-scroll-proportion="0.80898875" vertical-offset="1395" max-vertical-offset="11940">
+            <state line="190" column="51" selection-start="9082" selection-end="9082" vertical-scroll-proportion="250.04167" vertical-offset="8851" max-vertical-offset="11880">
               <folding>
-                <marker date="1397072822000" expanded="true" signature="3803:4464" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="3865:4454" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="3907:4440" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="4017:4421" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="4116:4221" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="4264:4397" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="4623:5269" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="4780:5259" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="4825:5254" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="4859:5052" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="5086:5241" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="5566:5801" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="5599:5791" placeholder="..." />
-                <marker date="1397072822000" expanded="true" signature="5673:5786" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="3803:4464" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="3865:4454" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="3907:4440" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="4017:4421" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="4116:4221" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="4264:4397" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="4623:5269" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="4780:5259" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="4825:5254" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="4859:5052" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="5086:5241" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="5566:5801" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="5599:5791" placeholder="..." />
+                <marker date="1397118628000" expanded="true" signature="5673:5786" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="knockout.bind.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/knockout.bind.js">
+      <file leaf-file-name="news.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/news.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="23" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0" vertical-offset="656" max-vertical-offset="1215">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news_en.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/news_en.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="43" selection-start="5139" selection-end="5139" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="330">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="more_transactions_en.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/more_transactions_en.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="9" selection-start="2821" selection-end="2821" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1500">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Language.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Language.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="0" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="885">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Store.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/store/Store.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="39" selection-start="301" selection-end="318" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1575">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionsStore.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/store/TransactionsStore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="80" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -71,25 +135,16 @@
       <file leaf-file-name="App.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="16" selection-start="1640" selection-end="1812" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="2805">
+            <state line="107" column="71" selection-start="3083" selection-end="3083" vertical-scroll-proportion="0.0" vertical-offset="1194" max-vertical-offset="3030">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controller/NewsController.js">
+      <file leaf-file-name="NewsStore.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/store/NewsStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controller/Login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="810">
+            <state line="12" column="6" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -108,13 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/Language.js" />
-        <option value="$PROJECT_DIR$/app/controller/NewsController.js" />
-        <option value="$PROJECT_DIR$/app/controller/Dashboard.js" />
-        <option value="$PROJECT_DIR$/app/controller/CardDetails.js" />
-        <option value="$PROJECT_DIR$/app/model/Location.js" />
-        <option value="$PROJECT_DIR$/app/controller/Locations.js" />
-        <option value="$PROJECT_DIR$/app/utils/FromatterConfig.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/lib/.bowerrc" />
         <option value="$PROJECT_DIR$/.bowerrc" />
@@ -149,23 +197,30 @@
         <option value="$PROJECT_DIR$/app/store/CardsStore.js" />
         <option value="$PROJECT_DIR$/app/store/Store.js" />
         <option value="$PROJECT_DIR$/resources/sass/components/cardList.scss" />
-        <option value="$PROJECT_DIR$/resources/sass/jquery/themes/default/_mixins.scss" />
-        <option value="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.theme.scss" />
-        <option value="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" />
         <option value="$PROJECT_DIR$/data.json" />
         <option value="$PROJECT_DIR$/resources/sass/screen.scss" />
         <option value="$PROJECT_DIR$/resources/sass/components/cardDetailsHeader.scss" />
         <option value="$PROJECT_DIR$/app/controller/Login.js" />
-        <option value="$PROJECT_DIR$/app/App.js" />
         <option value="$PROJECT_DIR$/app/knockout.bind.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/resources/sass/jquery/themes/default/_mixins.scss" />
+        <option value="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.theme.scss" />
+        <option value="$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss" />
+        <option value="$PROJECT_DIR$/more_transactions_en.json" />
+        <option value="$PROJECT_DIR$/app/Language.js" />
+        <option value="$PROJECT_DIR$/news_en.json" />
+        <option value="$PROJECT_DIR$/app/store/TransactionsStore.js" />
+        <option value="$PROJECT_DIR$/app/Config.js" />
+        <option value="$PROJECT_DIR$/app/store/NewsStore.js" />
+        <option value="$PROJECT_DIR$/app/App.js" />
+        <option value="$PROJECT_DIR$/data_en.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
+    <option name="x" value="60" />
     <option name="y" value="22" />
-    <option name="width" value="1387" />
+    <option name="width" value="1380" />
     <option name="height" value="878" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -241,7 +296,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -270,16 +324,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,11 +347,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/sass/components" />
       <recent name="$PROJECT_DIR$/resources/sass/jquery/themes/default" />
       <recent name="$PROJECT_DIR$/resources/sass/jquery/themes/default/swatches" />
       <recent name="$PROJECT_DIR$/resources/sass/jquery/themes/default/mixins" />
-      <recent name="$PROJECT_DIR$/resources/sass" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -311,14 +362,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -329,15 +372,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -433,24 +484,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="22" width="1387" height="878" extended-state="6" />
-    <editor active="false" />
+    <frame x="60" y="22" width="1380" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3887262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21780722" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32545933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16052632" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16010499" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -471,9 +522,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36903888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32545933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32545933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -518,36 +569,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/sass/theme.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="711" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/print.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="711" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.icons.inline-png.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5445" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.external-png.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="49" selection-start="124" selection-end="124" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="135" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.icons.external-png.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5445" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.inline-svg.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="124" selection-end="124" vertical-scroll-proportion="0.06338028" vertical-offset="0" max-vertical-offset="710" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.inline-png.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="124" selection-end="124" vertical-scroll-proportion="0.06338028" vertical-offset="0" max-vertical-offset="710" />
@@ -633,212 +654,210 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.16485013" vertical-offset="121" max-vertical-offset="855" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/TransactionsStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="721" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Language.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/utils/FormatterConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="289" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
+        <state line="13" column="11" selection-start="289" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/Settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="734">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="734" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/Payments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="24" selection-start="4932" selection-end="4932" vertical-scroll-proportion="0.0" vertical-offset="2333" max-vertical-offset="3450">
-          <folding />
-        </state>
+        <state line="172" column="24" selection-start="4932" selection-end="4932" vertical-scroll-proportion="0.0" vertical-offset="2333" max-vertical-offset="3450" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ru.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="4" selection-start="2447" selection-end="2514" vertical-scroll-proportion="-13.833333" vertical-offset="688" max-vertical-offset="1155">
-          <folding />
-        </state>
+        <state line="68" column="4" selection-start="2447" selection-end="2514" vertical-scroll-proportion="-13.833333" vertical-offset="688" max-vertical-offset="1155" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ua.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="4" selection-start="2462" selection-end="2527" vertical-scroll-proportion="0.82227486" vertical-offset="673" max-vertical-offset="1170">
-          <folding />
-        </state>
+        <state line="68" column="4" selection-start="2462" selection-end="2527" vertical-scroll-proportion="0.82227486" vertical-offset="673" max-vertical-offset="1170" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/CardsStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="525">
+        <state line="16" column="20" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="525" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="28" selection-start="2342" selection-end="2342" vertical-scroll-proportion="-14.458333" vertical-offset="673" max-vertical-offset="1140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/_global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="23" selection-start="101" selection-end="101" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="25" selection-start="1679" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="3570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/components/cardList.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="5" selection-start="1111" selection-end="1111" vertical-scroll-proportion="-35.625" vertical-offset="0" max-vertical-offset="1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/jquery.mobile.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="37" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/components/cardDetailsHeader.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="285" selection-end="285" vertical-scroll-proportion="0.4827586" vertical-offset="0" max-vertical-offset="720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/screen.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="473" selection-end="473" vertical-scroll-proportion="0.37007874" vertical-offset="99" max-vertical-offset="3135" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/NewsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/knockout.bind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="23" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0" vertical-offset="656" max-vertical-offset="1215" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="810" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="1" selection-start="4874" selection-end="4874" vertical-scroll-proportion="0.0" vertical-offset="2535" max-vertical-offset="7230" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.theme.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="524" column="30" selection-start="12464" selection-end="12464" vertical-scroll-proportion="0.0" vertical-offset="7573" max-vertical-offset="8640" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="18" selection-start="173" selection-end="173" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="37" selection-start="3975" selection-end="3975" vertical-scroll-proportion="-63.125" vertical-offset="0" max-vertical-offset="2670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/more_transactions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/Store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="63" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1575">
+        <state line="11" column="39" selection-start="301" selection-end="318" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en.json">
+    <entry file="file://$PROJECT_DIR$/more_transactions_en.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="28" selection-start="2342" selection-end="2342" vertical-scroll-proportion="-14.458333" vertical-offset="673" max-vertical-offset="1140">
+        <state line="92" column="9" selection-start="2821" selection-end="2821" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/Dashboard.js">
+    <entry file="file://$PROJECT_DIR$/app/Language.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
+        <state line="47" column="0" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="885">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/_global.scss">
+    <entry file="file://$PROJECT_DIR$/news.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="23" selection-start="101" selection-end="101" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="825">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="698">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Card.js">
+    <entry file="file://$PROJECT_DIR$/news_en.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="25" selection-start="1679" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="3570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/components/cardList.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="5" selection-start="1111" selection-end="1111" vertical-scroll-proportion="-35.625" vertical-offset="0" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/jquery.mobile.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/components/cardDetailsHeader.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="285" selection-end="285" vertical-scroll-proportion="0.4827586" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/screen.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="473" selection-end="473" vertical-scroll-proportion="0.37007874" vertical-offset="99" max-vertical-offset="3135">
+        <state line="10" column="43" selection-start="5139" selection-end="5139" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+        <state line="5" column="0" selection-start="126" selection-end="126" vertical-scroll-proportion="0.10548523" vertical-offset="0" max-vertical-offset="711" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/TransactionsStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="80" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
+    <entry file="file://$PROJECT_DIR$/app/store/NewsStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="37" selection-start="3975" selection-end="3975" vertical-scroll-proportion="0.55676854" vertical-offset="1260" max-vertical-offset="2670">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.theme.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="519" column="25" selection-start="12315" selection-end="12315" vertical-scroll-proportion="0.7460674" vertical-offset="7453" max-vertical-offset="8565">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/jquery.mobile.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.52401745" vertical-offset="0" max-vertical-offset="458">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/jquery/themes/default/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="13" selection-start="1488" selection-end="1488" vertical-scroll-proportion="1.1123595" vertical-offset="300" max-vertical-offset="6975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/NewsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="810">
+        <state line="12" column="6" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="16" selection-start="1640" selection-end="1812" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="2805">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/knockout.bind.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="23" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0" vertical-offset="656" max-vertical-offset="1215">
+        <state line="107" column="71" selection-start="3083" selection-end="3083" vertical-scroll-proportion="0.0" vertical-offset="1194" max-vertical-offset="3030">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="5281" selection-end="5281" vertical-scroll-proportion="0.80898875" vertical-offset="1395" max-vertical-offset="11940">
+        <state line="190" column="51" selection-start="9082" selection-end="9082" vertical-scroll-proportion="250.04167" vertical-offset="8851" max-vertical-offset="11880">
           <folding>
-            <marker date="1397072822000" expanded="true" signature="3803:4464" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="3865:4454" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="3907:4440" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="4017:4421" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="4116:4221" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="4264:4397" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="4623:5269" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="4780:5259" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="4825:5254" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="4859:5052" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="5086:5241" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="5566:5801" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="5599:5791" placeholder="..." />
-            <marker date="1397072822000" expanded="true" signature="5673:5786" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="3803:4464" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="3865:4454" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="3907:4440" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="4017:4421" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="4116:4221" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="4264:4397" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="4623:5269" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="4780:5259" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="4825:5254" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="4859:5052" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="5086:5241" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="5566:5801" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="5599:5791" placeholder="..." />
+            <marker date="1397118628000" expanded="true" signature="5673:5786" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="16" selection-start="5950" selection-end="5950" vertical-scroll-proportion="0.5414847" vertical-offset="1968" max-vertical-offset="2655">
+          <folding />
         </state>
       </provider>
     </entry>

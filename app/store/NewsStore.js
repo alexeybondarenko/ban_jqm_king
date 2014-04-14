@@ -24,5 +24,5 @@ function readNews(value) {
     return new News(value.title, value.created_at, htmlDecode(value.html));
 }
 
-NewsStore.prototype = new Store('news', 'news.json', 'news', readNews);
+NewsStore.prototype = new Store('news', AppConfig.newsURL, 'news', readNews);
 
