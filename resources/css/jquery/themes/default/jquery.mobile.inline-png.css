@@ -1,10 +1,10 @@
 /*
-Syntax error: Undefined variable: "$global-field-contain-border-color".
-        on line 40 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.theme.scss
+Syntax error: Undefined variable: "$global-font-family".
+        on line 10 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.theme.scss
         from line 2 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.inline-png.scss
 
 Backtrace:
-/Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.theme.scss:40
+/Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.theme.scss:10
 /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.inline-png.scss:2
 /Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/script/tree/node.rb:50:in `perform'
@@ -84,4 +84,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$global-field-contain-border-color\".\A         on line 40 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.theme.scss\A         from line 2 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.inline-png.scss"; }
+  content: "Syntax error: Undefined variable: \"$global-font-family\".\A         on line 10 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.theme.scss\A         from line 2 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/jquery/themes/default/jquery.mobile.inline-png.scss"; }

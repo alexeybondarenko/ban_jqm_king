@@ -36,8 +36,9 @@ var Login = function() {
 
         if((!self.isAuth() || self.isAuth() == null) && self.noAuthPages.indexOf(pageId) <= -1) {
             $.mobile.changePage("#"+self.loginPage);
-            return;
+            return false;
         }
+        return true;
     }
 
     /**

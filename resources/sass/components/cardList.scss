@@ -1,0 +1,67 @@
+
+.cardsListWrap {
+  padding:15px 0;
+}
+
+.cardList {
+  li {
+    $cardListPaddingLeft: 25px;
+    $cardMarkerWidth: 8px;
+
+    font-size: 12px;
+    a, &[data-role=divider] {
+      border: 0 !important;
+    }
+
+    &[data-role=divider] {
+      padding-left: $cardListPaddingLeft !important;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #666666; //light gray color
+    }
+
+    &.card {
+      a {
+        padding-left: $cardListPaddingLeft - $cardMarkerWidth;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+      .balance {
+        font-size:17px;
+        font-weight:bold;
+        font-family: 'Open Sans Condensed';
+      }
+      .topline {
+        width: 100%;
+        position: relative;
+      }
+      .title {
+        width: auto;
+        display: block;
+        white-space: normal;
+        padding-right: 65px;
+      }
+      .number {
+        font-size:12px;
+        float:right;
+        width:60px;
+        height:100%;
+        text-align: right;
+      }
+    }
+
+    &.credit {
+      border-left: 8px solid $color2;
+      .balance {
+        color: $color2;
+      }
+    }
+    &.debit {
+      border-left: 8px solid $color1;
+
+      .balance {
+        color: $color1;
+      }
+    }
+  }
+}

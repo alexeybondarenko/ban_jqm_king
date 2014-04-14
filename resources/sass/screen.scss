@@ -14,12 +14,13 @@ $width_base: 15em;
 $width1: 2*$width_base;
 $width2: 4*$width_base;
 
+
 $blocks: a,b,c,d,e;
 
 @media (min-width: $width1) and (max-width: $width2) {
   .main .ui-content {
-    padding-left:2%;
-    padding-right:2%;
+//    padding-left:2%;
+//    padding-right:2%;
   }
 }
 
@@ -53,8 +54,14 @@ $space-grid-padding: 15px;
   }
 }
 
+.ui-page, .ui-mobile-viewport {
+//  overflow: hidden;
+}
+$color1: #0087CD;
+$color2: #D10062;
 
 body {
+
   padding: 0;
   margin:0;
 
@@ -66,8 +73,6 @@ body {
   height:100% !important;
 
 }
-
-
 
 .ui-field-contain .ui-controlgroup,
 .ui-field-contain fieldset.ui-controlgroup {
@@ -99,30 +104,6 @@ body {
   color:darkgreen;
 }
 
-$cardDetailsHeaderHeight: 80px;
-
-.cardDetailsHeader {
-//  min-height:$cardDetailsHeaderHeight;
-//  max-height: 1.5*$cardDetailsHeaderHeight;
-  .ui-btn {
-    top:50%;
-    margin-top:-14px;
-  }
-  .content {
-
-    padding: 15px 45px;
-  }
-  .number {
-    font-weight: lighter;
-    font-size:.8em;
-  }
-  .money {
-    margin-top:8px;
-    color:cornflowerblue;
-    font-size: 1.3em;
-    font-weight: bold;
-  }
-}
 
 .count {
   float:right;
@@ -149,5 +130,75 @@ $cardDetailsHeaderHeight: 80px;
   }
   .icon {
     @extend %icon-style;
+  }
+}
+
+@import "components/cardList";
+@import "components/cardDetailsHeader";
+
+.no-padding {
+  padding: 0 !important;
+}
+.no-padding-left-right {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#cardDetails {
+  background-color: #FAFAFA;
+
+
+  main.ui-content {
+
+  }
+  .transaction {
+    border:0;
+  }
+}
+.transactionsListWrap {
+//  width: auto;
+  position: relative;
+  .transactionList {
+    @extend .small, .light;
+
+    &.ui-listview-inset {
+
+      .transaction .transactionWrap {
+        padding-left:0 !important;
+        padding-right: 0 !important;
+      }
+    }
+    .transaction {
+//      border:0;
+
+      .transactionWrap {
+        padding-right:15px;
+        padding-left:15px;
+      }
+      background-color: #FAFAFA;
+      .transactionIcon {
+        float: left;
+        width: 50p;
+      }
+      .main {
+        width: auto;
+
+        .price {
+          z-index: 10;
+          float: right;
+          width: 50px;
+          text-align: right;
+          font-weight: bold;
+          font-size: 12px;
+        }
+        .content {
+          padding: 0 55px 0 35px;
+          width: auto;
+          white-space: normal;
+          display: block;
+        }
+      }
+
+    }
   }
 }

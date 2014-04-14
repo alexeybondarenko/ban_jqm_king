@@ -7,7 +7,7 @@
 
 html {
   font-size: 100%;
-  font-family: sans-serif;
+  font-family: $global-font-family;
 }
 
 body,
@@ -18,7 +18,7 @@ button,
 .ui-btn {
   font-size: 1em;
   line-height: 1.3;
-  font-family: sans-serif;
+  font-family: $global-font-family;
 }
 legend,
 .ui-input-text input,
@@ -482,7 +482,11 @@ $theme-c-bar: (
   bar-shadow-enable: false,
   bar-font-weight: 300,
   bar-text-transform: uppercase,
-  bar-btn-border-width: 0
+  bar-btn-border-width: 0,
+  bar-btn-height:28px,
+  bar-height: 60px,
+  bar-padding-left: 10px,
+  bar-padding-right: 10px
 );
 @include theme-bar($theme-c-bar...);
 
@@ -501,6 +505,21 @@ $theme-c-btn: (
 
 );
 @include theme-btn('c',$theme-c-btn...);
+
+
+/**
+D
+*/
+
+$theme-d-bar: (
+  var: 'd',
+  bar-background-color: #fff,
+  bar-shadow-enable: false,
+  bar-font-weight: 300,
+  bar-text-transform: uppercase,
+  bar-btn-border-width: 0
+);
+@include theme-bar($theme-d-bar...);
 
 /* Structure */
 

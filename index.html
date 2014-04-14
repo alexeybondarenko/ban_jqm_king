@@ -14,7 +14,10 @@
     <script src="app/jquery.mobile.config.js"></script>
 
     <script src="lib/jquery.mobile/jquery.mobile-1.4.2.min.js"></script>
+
     <!--<link rel="stylesheet" href="lib/jquery.mobile/jquery.mobile.structure-1.4.2.min.css"/>-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="resources/css/jquery/themes/default/jquery.mobile.css"/>
     <link rel="stylesheet" href="resources/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
@@ -72,22 +75,37 @@
     <script src="lib/worklight/main.js"></script>
 
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"/>
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script> -->
 </head>
 
 <script type="text/html" id="transactionsList">
-    <ul data-role="listview" data-theme="a" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-bind="foreach: $data">
-        <li class="ui-li-static ui-body-inherit small">
-            <span class="price" style="float:right" data-bind="css: {'minus': price < 0, 'plus': price >= 0}">
-                <span class="amount" data-bind="text: price"></span>
-            </span>
-            <b data-bind="text:text"></b><br/><span data-bind="text: formatedDate()"></span>
+    <ul data-role="listview" data-theme="a" class="transactionList ui-listview ui-group-theme-a" data-inset="false" data-bind="foreach: $data.data, attr: {'data-inset': $data.inset}">
+        <li class="ui-li-static ui-body-inherit transaction">
+            <div class="transactionWrap">
+                <span class="transactionIcon fa fa-barcode fa-2x"></span>
+                <span class="main">
+                    <span class="price" data-bind="css: {'minus': price < 0, 'plus': price >= 0}">
+                        <span class="amount" data-bind="text: price"></span>
+                    </span>
+                    <span class="content">
+                        <b data-bind="text:text"></b><br/><span data-bind="text: formatedDate()"></span>
+                    </span>
+                </span>
+            </div>
         </li>
     </ul>
 </script>
 <script type="text/html" id="cardsList">
-    <ul data-role="listview" data-inset="true" data-theme="a" data-bind="foreach: $data">
-        <li class="ui-alt-icon"><a data-bind="text: info(), click: $root.showCardsDetails"></a></li>
+    <ul data-role="listview" class="cardList" data-inset="false" data-theme="a" data-bind="foreach: $data">
+        <li data-role="divider" data-bind="groupTitle: {field: 'type', text: 'typeTitle'}"></li>
+        <li class="card ui-alt-icon" data-bind="css: type"><a data-bind="click: $root.showCardsDetails">
+            <div class="topline">
+                <div data-bind="text: '****'+lastNumberDigits()" class="number"></div>
+                <div data-bind="truncatedText: title, length: 53" class="title"></div>
+            </div>
+            <div class="balance">
+                <span data-bind="text: amount" class="amount"></span> <span data-bind="text: currencySymbol()" class="currency"></span>
+            </div>
+        </a></li>
     </ul>
 </script>
 
@@ -151,7 +169,7 @@
 </div>
 
 <div class="main">
-<header data-role="header" id="mainHeader" data-position="fixed" data-theme="a">
+<header data-role="header" data-tap-toggle="false" id="mainHeader" data-position="fixed" data-theme="a">
     <!--<a href="#sidemenu" data-swipe="true" class="navpanel-toogle-button ui-btn ui-btn-left ui-nodisc-icon ui-icon-bars"></a>-->
     <a href="#sidemenu" data-swipe="true" class="navpanel-toogle-button ui-btn ui-btn-icon-left ui-nodisc-icon ui-btn-icon-notext  ui-icon-bars"></a>
     <a data-bind="visible: isAuth(), click: $root.logout" class="ui-btn ui-btn-icon-right ui-nodisc-icon ui-btn-icon-notext  ui-icon-power"></a>
@@ -159,7 +177,7 @@
         <!--Заголовок header -->
     </h1>
 </header>
-<footer data-role="footer" id="mainFooter" data-position="fixed" data-theme="b">
+<footer data-role="footer" data-tap-toggle="false" id="mainFooter" data-position="fixed" data-theme="b">
     <div data-role="navbar" id="mainNavBar">
         <ul>
             <li><a href="#cards">
@@ -207,11 +225,11 @@
                 </span>
             </div>
         </div>
-        <div class="cardsList" data-bind="template: { name: 'cardsList', data: cards() }"></div>
+        <div class="cardsListWrap" data-bind="template: { name: 'cardsList', data: cards() }"></div>
         <div class="ui-grid-a breakpoint space-grid">
             <div class="ui-block-a">
                 <h4 class="text-center"  data-bind="text: language().lastTransactions">Последние операции</h4>
-                <div class="transactionsList" data-bind="template: { name: 'transactionsList', data: transactions() }"></div>
+                <div class="transactionsListWrap no-padding" data-bind="template: { name: 'transactionsList', data: {data: transactions(), inset: 'true'} }"></div>
             </div>
             <div class="ui-block-b">
                 <h4 class="text-center" data-bind="text: language().newsTitle">Новости банка</h4>
@@ -248,17 +266,17 @@
 <!-- Cards page -->
 <div data-role="page" data-theme="a" id="cards" data-title="Счета" data-bind="attr: {'data-title': language().accounts}" >
     <main data-role="main" class="ui-content" data-bind="">
-        <div class="cardsList" data-bind="template: { name: 'cardsList', data: cards() }"></div>
+        <div class="cardsListWrap" data-bind="template: { name: 'cardsList', data: cards() }"></div>
     </main>
 
 </div>
 
 <!-- Cards Details page -->
 <div data-role="page" data-theme="a" id="cardDetails" data-title="Подробности счета" data-bind="attr: {'data-title': language().cardDetails}">
-    <header data-role="header" data-theme="c" class="cardDetailsHeader">
-        <a data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+    <header data-role="header" data-theme="d" class="cardDetailsHeader">
+        <a data-rel="back" class="ui-btn-left back"><i class="fa fa-angle-left fa-3x"></i></a>
         <div class="content">
-            <div data-bind="text: card().title" class="name uppercase"></div>
+            <div data-bind="text: card().title" class="title"></div>
             <div data-bind="text:card().number" class="number"></div>
             <div class="money uppercase">
                 <span data-bind="text: card().amount"></span> <span data-bind="text: card().currency"></span>
@@ -266,8 +284,9 @@
         </div>
         <a href="#cardSettings" data-transition="fade" class="ui-btn-right ui-alt-icon ui-nodisc-icon ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all"></a>
     </header>
-    <main data-role="main" class="ui-content">
-        <div class="transactionsList" data-bind="template: { name: 'transactionsList', data: transactions() }, jqmRender"></div>
+    <main data-role="main" class="ui-content no-padding-left-right">
+
+        <div class="transactionsListWrap"  data-bind="template: { name: 'transactionsList', data: {data: transactions(), inset: 'false'} }, jqmRender"></div>
         <!--</div>-->
     </main>
 </div>
@@ -275,7 +294,7 @@
 <!-- Card Settings page -->
 <div data-role="page" data-theme="a" id="cardSettings" data-title="Настройки карты" data-bind="attr: {'data-title': language().cardSettings}">
     <header data-role="header" data-theme="c" class="secondToolbar">
-        <a href="#cards" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
+        <a href="#cards" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>
         <h1><span data-bind="text: language().cardSettings">
             <!--Настройки карты-->
         </span>: <br/><span data-bind="text: card().title"></span></h1>
