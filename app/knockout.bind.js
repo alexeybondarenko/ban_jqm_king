@@ -11,7 +11,6 @@
         update: function (element, valueAccessor) {
             // Get jQuery Mobile to enhance elements within this element
             $(element).trigger("create");
-            console.log('create jqmRender');
         }
     };
 
@@ -35,7 +34,7 @@
      */
     ko.bindingHandlers.groupTitle = {
         init: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
-            console.log("Grouping");
+//            console.log("Grouping");
             var observable = valueAccessor();
 
             var groupArg = observable.field;
@@ -48,7 +47,7 @@
             var idx = bindingContext['$index']();
             var data = bindingContext['$parent'];
 
-            console.log(groupArg, "groupVal:"+fieldValue, textArg, "groupArg:"+textValue);
+//            console.log(groupArg, "groupVal:"+fieldValue, textArg, "groupArg:"+textValue);
 
             var prevFieldValue = (idx-1 >=0) ?  data[idx-1] : null;
 

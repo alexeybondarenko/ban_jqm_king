@@ -3,7 +3,8 @@
  * @param card {Card} выбранная карты, для которой отображаются детали
  * @constructor
  */
-function CardDetails(card) {
+
+var CardDetails = function(card) {
 
     /**
      * Singleton pattern part
@@ -27,15 +28,12 @@ function CardDetails(card) {
      * @type computed {Card}
      */
 
-    console.log(self.card().transactions());
-//    self.transactions = ko.observable(self.card().transactions());
-
     self.transactions = ko.computed(function(length) {
         if (self.card() == null) {
             return null;
         }
         var tr = self.card().transactions();
-        console.log(tr);
+
         return tr;
 //        var transactionsStore = new App().stores.transactions;
 //        var transactions = transactionsStore.getTransactionsForCard(self.card().id);
@@ -48,4 +46,4 @@ function CardDetails(card) {
      * Обьект со всеми переводами.
      */
     self.language = ko.observable(Language().language());
-}
+};

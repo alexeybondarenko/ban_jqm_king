@@ -21,7 +21,7 @@ var Language = function() {
 
     self.path = 'resources/lang/';
 
-    self.language = ko.observable(null,{persist: 'languagePack'});
+    self.language = ko.observable(null);
 
     self.init = function() {
         if(self.language() == null)

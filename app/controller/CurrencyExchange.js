@@ -21,5 +21,5 @@ var CurrencyExchange = function() {
 
     self.currency = ko.observableArray(currencyStore.data());
     console.log(self.currency());
-}
+};
 

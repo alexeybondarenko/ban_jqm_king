@@ -10,10 +10,11 @@
 @import "components/text";
 @import "components/form";
 
+@import "_colors";
+
 $width_base: 15em;
 $width1: 2*$width_base;
 $width2: 4*$width_base;
-
 
 $blocks: a,b,c,d,e;
 
@@ -57,9 +58,16 @@ $space-grid-padding: 15px;
 .ui-page, .ui-mobile-viewport {
 //  overflow: hidden;
 }
-$color1: #0087CD;
-$color2: #D10062;
 
+.fa {
+  line-height: inherit !important;
+}
+$base: $base-color;
+$darken: darken($base,20%);
+
+$background-color: $base-color2;
+$color3: #B20000;
+$color4: #00B233;
 body {
 
   padding: 0;
@@ -98,13 +106,17 @@ body {
 }
 
 .minus {
-  color:darkred;
+  color:$color4;
 }
 .plus {
-  color:darkgreen;
+  color:$color3;
 }
 
-
+#mainHeader {
+  .fa.fa-2x {
+    margin-top:-8px;
+  }
+}
 .count {
   float:right;
   background-color:rgba(255,255,255,.1);
@@ -122,7 +134,7 @@ body {
 
   %icon-style {
     width: 24px;
-    color:#ccc;
+    color:#fff;
     text-align: center;
   }
   .fa {
@@ -131,10 +143,88 @@ body {
   .icon {
     @extend %icon-style;
   }
+  height:100%;
+  overflow-y: scroll;
 }
 
-@import "components/cardList";
+//@import "components/cardList";
 @import "components/cardDetailsHeader";
+@import "components/transactionsListWrap";
+// CardList
+
+
+.cardsListWrap {
+  padding:15px 0;
+}
+
+.cardList {
+  li {
+    $cardListPaddingLeft: 12px;
+    $cardMarkerWidth: 0px;
+
+    font-size: 11px !important;
+    font-weight: lighter;
+    a, &[data-role=divider] {
+      border: 0 !important;
+    }
+
+    &[data-role=divider] {
+      padding-left: $cardListPaddingLeft !important;
+      font-weight: 200;
+      text-align: left;
+      text-transform: uppercase;
+      color: #666666; //light gray color
+    }
+
+    &.card {
+      a {
+        padding-left: $cardListPaddingLeft - $cardMarkerWidth;
+//        padding-top: 12px;
+//        padding-bottom: 12px;
+      }
+      .balance {
+//        font-size:17px;
+      }
+      .topline {
+          padding-bottom: 5px;
+//        position: relative;
+      }
+      .title {
+//        width: auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+//        white-space: normal;
+        font-weight: 200 !important;
+      }
+      .number {
+//        font-size:12px;
+//        width:60px;
+//        height:100%;
+//        text-align: right;
+      }
+    }
+
+    .balance {
+      color: $darken;
+    }
+    &.credit {
+      //      border-left: 8px solid $color2;
+      .balance {
+//        color: $color2;
+      }
+    }
+    &.debit {
+      //      border-left: 8px solid $color1;
+
+      .balance {
+//        color: $color1;
+      }
+    }
+  }
+}
 
 .no-padding {
   padding: 0 !important;
@@ -145,7 +235,7 @@ body {
 }
 
 #cardDetails {
-  background-color: #FAFAFA;
+  background-color: #fff;
 
 
   main.ui-content {
@@ -155,50 +245,72 @@ body {
     border:0;
   }
 }
-.transactionsListWrap {
-//  width: auto;
-  position: relative;
-  .transactionList {
-    @extend .small, .light;
 
-    &.ui-listview-inset {
+/** Payments Template Swipe Delete **/
 
-      .transaction .transactionWrap {
-        padding-left:0 !important;
-        padding-right: 0 !important;
-      }
-    }
-    .transaction {
-//      border:0;
-
-      .transactionWrap {
-        padding-right:15px;
-        padding-left:15px;
-      }
-      background-color: #FAFAFA;
-      .transactionIcon {
-        float: left;
-        width: 50p;
-      }
-      .main {
-        width: auto;
-
-        .price {
-          z-index: 10;
-          float: right;
-          width: 50px;
-          text-align: right;
-          font-weight: bold;
-          font-size: 12px;
-        }
-        .content {
-          padding: 0 55px 0 35px;
-          width: auto;
-          white-space: normal;
-          display: block;
-        }
-      }
-
-    }
-  }
+/* Left transition */
+li.ui-li.left {
+  -webkit-transition: -webkit-transform 250ms ease;
+  -webkit-transform: translateX(-100%);
+  -moz-transition: -moz-transform 250ms ease;
+  -moz-transform: translateX(-100%);
+  -o-transition: -o-transform 250ms ease;
+  -o-transform: translateX(-100%);
+  transition: transform 250ms ease;
+  transform: translateX(-100%);
+  border-top-width: 0; /* We switch to border bottom on previous list item */
+  border-right-width: 1px;
+}
+/* Right transition */
+li.ui-li.right {
+  -webkit-transition: -webkit-transform 250ms ease;
+  -webkit-transform: translateX(100%);
+  -moz-transition: -moz-transform 250ms ease;
+  -moz-transform: translateX(100%);
+  -o-transition: -o-transform 250ms ease;
+  -o-transform: translateX(100%);
+  transition: transform 250ms ease;
+  transform: translateX(100%);
+  border-top-width: 0; /* We switch to border bottom on previous list item */
+  border-left-width: 1px;
+}
+/* Border bottom for the previous list item during the transition*/
+li.ui-li.border {
+  border-bottom-width: 1px;
+}
+/* Hide the delete button on touch devices */
+.touch .delete {
+  display: none;
+}
+.touch .ui-link-inherit {
+  padding-right: 15px !important;
+}
+/* Custom styling for the popup */
+#confirm {
+  border: 1px solid;
+  border-color: #044062; /* Fallback for older browsers */
+  border-color: rgba(4,64,98,.4);
+  background: #456f9a; /* Fallback for older browsers */
+  background: rgba(69,111,154,.8);
+  -moz-box-shadow: 0 2px 6px rgba(69,111,154,.5), inset 0 1px rgba(255,255,255,.3), inset 0 6px rgba(255,255,255,.1), inset 0 10px 20px rgba(255,255,255,.25), inset 0 -15px 30px rgba(69,111,154,.3);
+  -webkit-box-shadow: 0 2px 6px rgba(69,111,154,.5), inset 0 1px rgba(255,255,255,.3), inset 0 6px rgba(255,255,255,.1), inset 0 10px 20px rgba(255,255,255,.25), inset 0 -15px 30px rgba(69,111,154,.3);
+  box-shadow: 0 2px 6px rgba(69,111,154,.5), inset 0 1px rgba(255,255,255,.3), inset 0 6px rgba(255,255,255,.1), inset 0 10px 20px rgba(255,255,255,.25), inset 0 -15px 30px rgba(69,111,154,.3);
+  max-width: 250px;
+}
+#confirm p {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.6);
+  margin-bottom: .75em;
+}
+/* Make the buttons inherit the popup border-radius (.ui-corner-all) */
+#confirm div, #confirm .ui-btn-corner-all {
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+}
+#confirm #cancel {
+  background-image: none;
+}
+#confirm .topic.ui-li-desc {
+  font-size: inherit; /* The cloned topic will have class ui-li-desc so we negate the font-size settings of this class */
+  text-align: center;
 }

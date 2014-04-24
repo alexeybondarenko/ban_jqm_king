@@ -1,0 +1,68 @@
+.transactionsListWrap {
+  //  width: auto;
+  position: relative;
+  .transactionList {
+
+    &.ui-listview-inset {
+
+      .transaction .transactionWrap {
+        padding-left:0 !important;
+        padding-right: 0 !important;
+      }
+    }
+    .transaction {
+
+      padding: {
+        top:10px;
+        bottom:10px;
+      }
+      font-size: .9em;
+      font-weight: 200;
+      .transactionWrap {
+        padding-right:15px;
+        padding-left:15px;
+        position: relative;
+
+      }
+//      background-color: #FAFAFA;
+      .transactionIcon .fa {
+        float: left;
+        position: absolute;
+        top:50%;
+        width: 50px;
+        &.fa-1x {
+          margin-top:-8px;
+        }
+        &.fa-2x {
+          margin-top:-16px;
+        }
+
+      }
+      .main {
+        .price {
+          z-index: 10;
+          position: absolute;
+          right: 10px;
+
+          text-shadow: none !important;
+          font-weight: 400;
+          .currency {
+            font-size: .7em;
+          }
+        }
+        .time {
+          color: #666666;
+        }
+        .content {
+          padding: 0 100px 0 20px;
+          width: auto;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: block;
+          white-space: nowrap;
+        }
+      }
+
+    }
+  }
+}

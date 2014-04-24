@@ -1,16 +1,23 @@
 /*
 Syntax error: Undefined variable: "$color2".
-        on line 54 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/components/cardList.scss
+        on line 56 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/components/cardList.scss
 
 Backtrace:
-/Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/components/cardList.scss:54
+/Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/components/cardList.scss:56
 /Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/script/tree/list_literal.rb:62:in `block in _perform'
-/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/script/tree/list_literal.rb:62:in `map'
-/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/script/tree/list_literal.rb:62:in `_perform'
-/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:366:in `visit_prop'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:389:in `block (2 levels) in visit_rule'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:389:in `map'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:389:in `block in visit_rule'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:387:in `visit_rule'
 /Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
 /Users/alexeybondarenko/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
@@ -95,4 +102,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$color2\".\A         on line 54 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/components/cardList.scss"; }
+  content: "Syntax error: Undefined variable: \"$color2\".\A         on line 56 of /Users/alexeybondarenko/Sites/jQM/Bank/resources/sass/components/cardList.scss"; }

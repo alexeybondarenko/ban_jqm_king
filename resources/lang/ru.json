@@ -56,9 +56,9 @@
     "currencyBuy": "Покупка",
     "currencySale": "Продажа",
 
-    "newsTitle": "Новости WLBank",
-    "licenceTitle": "Лицензия WLBank",
-    "privacyTitle": "Политика конфиденциальности WLBank",
+    "newsTitle": "Новости IBank",
+    "licenceTitle": "Лицензия IBank",
+    "privacyTitle": "Политика конфиденциальности IBank",
     "settingsTitle": "Настройки",
 
     "language": "Язык",
@@ -67,6 +67,9 @@
     "currencyDescription": "Указазнные курсы валют действительны на настоящий момент и могут изменяться в течении дня.",
 
     "creditCard": "Кредитная карта",
-    "debitCard": "Дебетовая карта"
+    "debitCard": "Дебетовая карта",
+    "logoutTitle": "Выйти",
+
+    "saveAsTemplate": "Сохранить в шаблоны"
 
 }

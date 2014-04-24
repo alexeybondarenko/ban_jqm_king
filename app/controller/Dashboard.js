@@ -15,8 +15,6 @@ var Dashboard = function() {
 
     var self = this;
 
-    self.language = ko.observable(new Language().language());
-
     var cardsStore = new App().stores.cards;
     self.cards = ko.observableArray(cardsStore.data());
 
@@ -31,5 +29,6 @@ var Dashboard = function() {
 
     self.showCardsDetails = new Cards().showCardsDetails;
     self.onNewsItemClick = new NewsController().onNewsItemClick;
-}
+};
 
+Dashboard.prototype = new Controller();

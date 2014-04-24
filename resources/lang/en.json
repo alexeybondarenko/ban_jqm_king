@@ -6,7 +6,7 @@
 
     "cardDetails": "Account Details",
 
-    "cardSettings": "Map Settings",
+    "cardSettings": "Card Settings",
     "changeCreditLimit": "Change credit limit",
     "blockUnblockCard": "Enable / disable card",
     "alertStolenCard": "Report missing cards",
@@ -56,9 +56,9 @@
     "currencyBuy": "Buy",
     "currencySale": "Sale",
 
-    "newsTitle": "News WLBank",
-    "licenceTitle": "License WLBank",
-    "privacyTitle": "Privacy Policy WLBank",
+    "newsTitle": "News IBank",
+    "licenceTitle": "License IBank",
+    "privacyTitle": "Privacy Policy IBank",
     "settingsTitle": "Settings",
 
     "language": "Language",
@@ -66,6 +66,9 @@
     "currencyDescription": "These exchange rates are valid at the moment and can change throughout the day.",
 
     "creditCard": "Credit card",
-    "debitCard": "Debit card"
+    "debitCard": "Debit card",
+    "logoutTitle": "Log Out",
+
+    "saveAsTemplate": "Save as template"
 
 }

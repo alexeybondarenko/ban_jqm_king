@@ -4,7 +4,6 @@
  **/
 
 var TransactionsStore;
-
 TransactionsStore = function () {
 
     /**
@@ -20,6 +19,6 @@ TransactionsStore = function () {
 
 };
 function readTransaction(value) {
-    return new Transaction(value.text, value.price, value.timestamp, value.card_id);
+    return new Transaction(value.text, value.price, value.timestamp, value.card_id, value.type);
 }
 TransactionsStore.prototype = new Store('transactions',AppConfig.transactionsURL, 'transactions', readTransaction);

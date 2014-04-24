@@ -1,0 +1,57 @@
+
+$cardDetailsHeaderHeight: 80px;
+
+.cardDetailsHeader {
+
+  //  min-height:$cardDetailsHeaderHeight;
+  //  max-height: 1.5*$cardDetailsHeaderHeight;
+  .ui-btn {
+    top:50%;
+    margin-top:-14px;
+  }
+  .back {
+    //    padding-top:0;
+    margin-top:-27px;
+    //    color: $base !important;
+
+    &:hover {
+      //      background-color: transparent;
+      //      color: $darken !important;
+      //      font-weight: 200;
+    }
+  }
+  .content {
+    padding: 10px 15px;
+    text-align: left;
+  }
+  .title-wrap {
+//    margin-bottom: 5px;
+  }
+  .title {
+    font-size: 1.3em;
+    font-weight: 200;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+
+    //    font-weight:bold;
+    //    font-size: 15px;
+    //    text-transform: uppercase;
+  }
+  .number {
+    //    font-weight: lighter;
+    //    font-size:12px;
+  }
+  .money {
+    font-size:24px; //2em
+    text-align:left;
+    color:rgb(57, 120, 57);
+    //    margin-top:5px;
+    //    color:$base;
+    //    font-weight: bold;
+    //    font-size: 30px;
+    //    font-family: 'Open Sans Condensed';
+  }
+}

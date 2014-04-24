@@ -4,7 +4,7 @@ var Location = function(title, type, adress, city, latitude, longitude) {
     self.countryDefault = "Ukraine";
 
     self.title = title;
-    self.type = type;
+    self.type = type; // atm or branch
     self.adress = adress;
     self.city = city;
     self.latitude = latitude;

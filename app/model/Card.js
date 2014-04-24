@@ -37,7 +37,7 @@ var Card = function(id, owner_id, created_at, title, number, amount, currency, t
      * Название карты
      * @type string
      **/
-    this.title = title || 'Тестовая карта';
+    this.title = title || 'Тестовая карта, но с очень большим - пребольшим названием';
     /**
      * 16-разрядный номер карты
      * @type number
@@ -202,13 +202,18 @@ var Card = function(id, owner_id, created_at, title, number, amount, currency, t
      * @type string
      */
     this.type = (type == 'credit' || type == 'debit') ? type : undefined;
+    /**
+     * Card type in formated form
+     * @type {*}
+     */
     this.typeTitle = ko.computed(function() {
+
         switch (this.type) {
             case 'credit':
-                return new Language().language().creditCard;
+                return Language().language().creditCard;
                 break;
             case 'debit':
-                return new Language().language().debitCard;
+                return Language().language().debitCard;
                 break;
         }
     },this);

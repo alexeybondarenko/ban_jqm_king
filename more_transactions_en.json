@@ -5,91 +5,37 @@
             "text": " Recharge mobile +380994118952 ",
             "price": -15.50,
             "timestamp": "2014-03-21T15:28:23",
-            "card_id": 1
+            "card_id": 1,
+            "type": "phone"
         },
         {
             "text": " Restaurant : McDonald's 020 ",
             "price": -14.50,
             "timestamp": "2014-03-20T20:05:23",
-            "card_id": 1
+            "card_id": 1,
+            "type": "cafe"
         },
         {
             "text": " Purchase of goods / Payment for services EVA- 329 ",
             "price": -48.38,
             "timestamp": "2014-03-19T14:46:32",
-            "card_id": 1
+            "card_id": 1,
+            "type": "store"
         },
         {
-            "text": " Restaurant : McDonald's 020 ",
-            "price": -14.50,
+            "text": "Transfer from terminal",
+            "price": 900,
             "timestamp": "2014-03-20T20:05:23",
-            "card_id": 1
+            "card_id": 1,
+            "type": "terminal pay"
+
         },
         {
-            "text": " Purchase of goods / Payment for services EVA- 329 ",
-            "price": -48.38,
+            "text": "Food: Auchan",
+            "price": -380.56,
             "timestamp": "2014-03-19T14:46:32",
-            "card_id": 1
-        },
-        {
-            "text": " Recharge mobile +380994118952 ",
-            "price": -15.50,
-            "timestamp": "2014-03-21T15:28:23",
-            "card_id": 1
-        },
-        {
-            "text": " Restaurant : McDonald's 020 ",
-            "price": -14.50,
-            "timestamp": "2014-03-20T20:05:23",
-            "card_id": 1
-        },
-        {
-            "text": " Purchase of goods / Payment for services EVA- 329 ",
-            "price": -48.38,
-            "timestamp": "2014-03-19T14:46:32",
-            "card_id": 1
-        },
-        {
-            "text": " Restaurant : McDonald's 020 ",
-            "price": -14.50,
-            "timestamp": "2014-03-20T20:05:23",
-            "card_id": 1
-        },
-        {
-            "text": " Purchase of goods / Payment for services EVA- 329 ",
-            "price": -48.38,
-            "timestamp": "2014-03-19T14:46:32",
-            "card_id": 1
-        },
-        {
-            "text": " Recharge mobile +380994118952 ",
-            "price": -15.50,
-            "timestamp": "2014-03-21T15:28:23",
-            "card_id": 1
-        },
-        {
-            "text": " Restaurant : McDonald's 020 ",
-            "price": -14.50,
-            "timestamp": "2014-03-20T20:05:23",
-            "card_id": 1
-        },
-        {
-            "text": " Purchase of goods / Payment for services EVA- 329 ",
-            "price": -48.38,
-            "timestamp": "2014-03-19T14:46:32",
-            "card_id": 1
-        },
-        {
-            "text": " Restaurant : McDonald's 020 ",
-            "price": -14.50,
-            "timestamp": "2014-03-20T20:05:23",
-            "card_id": 1
-        },
-        {
-            "text": " Purchase of goods / Payment for services EVA- 329 ",
-            "price": -48.38,
-            "timestamp": "2014-03-19T14:46:32",
-            "card_id": 1
+            "card_id": 1,
+            "type": "food"
         }
     ]
 }

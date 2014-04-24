@@ -4,20 +4,17 @@
  * @constructor
  */
 
-var Contacts = function() {
+    var Contacts = function() {
 
-    /**
-     * Singleton pattern part
-     */
-    if ( arguments.callee._singletonInstance )
-        return arguments.callee._singletonInstance;
-    arguments.callee._singletonInstance = this;
+        /**
+         * Singleton pattern part
+         */
+        if ( arguments.callee._singletonInstance )
+            return arguments.callee._singletonInstance;
+        arguments.callee._singletonInstance = this;
 
-    var self = this;
+    };
 
-    self.language = ko.observable(Language().language());
+    Contacts.prototype = new Controller();
 
-
-
-}
 

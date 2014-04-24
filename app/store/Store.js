@@ -9,17 +9,16 @@ var Store = function(rootPropery, url, storeName, readModelFunction) {
     self.storeName = storeName;
     self.data = ko.observableArray([],{persist: self.storeName});
     self.lastUpdate = new Date();
-    self.url = url || AppConfig.dataURL;
+    self.url = url;
     self.readModel = readModelFunction;
 
     self.sortBy = null;
-
     self.rootProperty = rootPropery || '';
 
     self.init = function() {
-
         console.assert(typeof self.readModel == 'function',"You must init readModel method");
-        this.update();
+        if (this.url != null)
+            this.update();
     }
 
     self.update = function() {
@@ -48,7 +47,7 @@ var Store = function(rootPropery, url, storeName, readModelFunction) {
             }
         });
 
-    }
+    };
 
     self.lastData = function(count) {
         var data = this.data();

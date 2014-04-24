@@ -14,8 +14,6 @@ var NewsController = function() {
     arguments.callee._singletonInstance = this;
 
     var self = this;
-
-    self.language = ko.observable(Language().language());
     self.chosenNews = ko.observable(new News('' ,'',''));
 
     self.onNewsItemClick = function(news) {
@@ -23,10 +21,11 @@ var NewsController = function() {
         console.log("news click");
         contr.chosenNews(news);
         $.mobile.changePage("#newsPage");
-    }
+    };
 
     var newsStore = new App().stores.news;
     self.news = ko.observableArray(newsStore.data());
 
-}
+};
 
+NewsController.prototype = new Controller();

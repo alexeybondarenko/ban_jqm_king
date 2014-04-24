@@ -4,7 +4,6 @@
  **/
 
 var CurrencyStore;
-
 CurrencyStore = function () {
 
     /**
@@ -24,4 +23,4 @@ function readCurrency(value) {
     return new Currency(value.title, value.from, value.to, value.buy, value.sale);
 }
 
-CurrencyStore.prototype = new Store('data/currency', null, 'currency', readCurrency);
+CurrencyStore.prototype = new Store('data/currency', AppConfig.dataURL, 'currency', readCurrency);

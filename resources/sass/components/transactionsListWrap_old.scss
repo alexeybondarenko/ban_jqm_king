@@ -1,0 +1,47 @@
+.transactionsListWrap {
+  //  width: auto;
+  position: relative;
+  .transactionList {
+    @extend .small, .light;
+
+    &.ui-listview-inset {
+
+      .transaction .transactionWrap {
+        padding-left:0 !important;
+        padding-right: 0 !important;
+      }
+    }
+    .transaction {
+      //      border:0;
+
+      .transactionWrap {
+        padding-right:15px;
+        padding-left:15px;
+      }
+      background-color: #FAFAFA;
+      .transactionIcon {
+        float: left;
+        width: 50p;
+      }
+      .main {
+        width: auto;
+
+        .price {
+          z-index: 10;
+          float: right;
+          width: 50px;
+          text-align: right;
+          font-weight: bold;
+          font-size: 12px;
+        }
+        .content {
+          padding: 0 55px 0 35px;
+          width: auto;
+          white-space: normal;
+          display: block;
+        }
+      }
+
+    }
+  }
+}

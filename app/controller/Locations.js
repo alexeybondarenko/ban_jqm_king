@@ -22,13 +22,13 @@ var Locations = function() {
     self.locations = ko.observableArray(locationsStore.data());
     self.initMap = function() {
 
-//        var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
+        var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
         if ( navigator.geolocation ) {
             function success(pos) {
                 // Location found, show map with these coordinates
                 drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
             }
-            function fail(error) {
+            function fail() {
                 drawMap(defaultLatLng);  // Failed to find location, show default map
             }
             // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
@@ -44,11 +44,7 @@ var Locations = function() {
             };
             var map = new google.maps.Map(document.getElementById("locationsMap"), myOptions);
             // Add an overlay to the map of current lat/lng
-            var marker = new google.maps.Marker({
-                position: latlng,
-                map: map,
-                title: "You"
-            });
+
             var locations = new LocationsStore().data();
             $.each(locations, function(index, value) {
                 new google.maps.Marker({
@@ -57,8 +53,6 @@ var Locations = function() {
                     title: value.title
                 });
             });
-
         }
-
-    }
-}
+    };
+    };
