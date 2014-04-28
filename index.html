@@ -50,6 +50,7 @@
     <script src="app/model/Location.js"></script>
     <script src="app/model/Currency.js"></script>
     <script src="app/model/News.js"></script>
+    <script src="app/model/City.js"></script>
     <script src="app/model/Company.js"></script>
 
     <script src="app/store/Store.js"></script>
@@ -59,6 +60,8 @@
     <script src="app/store/CurrencyStore.js"></script>
     <script src="app/store/NewsStore.js"></script>
     <script src="app/store/PaymentsStore.js"></script>
+    <script src="app/store/CitiesStore.js"></script>
+    <script src="app/store/CompaniesStore.js"></script>
 
     <script src="app/Language.js"></script>
 
@@ -69,8 +72,16 @@
     <script src="app/controller/Cards.js"></script>
     <script src="app/controller/CardDetails.js"></script>
     <script src="app/controller/Payments.js"></script>
+    <script src="app/controller/Payments/Mobile.js"></script>
+    <script src="app/controller/Payments/Account.js"></script>
+    <script src="app/controller/Payments/Cards.js"></script>
+    <script src="app/controller/Payments/OnBankAccount.js"></script>
+    <script src="app/controller/Payments/Verify.js"></script>
+    <script src="app/controller/Payments/Success.js"></script>
+
     <script src="app/controller/Payments/Utilities.js"></script>
     <script src="app/controller/Payments/Utilities/Grid.js"></script>
+    <script src="app/controller/Payments/Utilities/Gas.js"></script>
 
     <script src="app/controller/Locations.js"></script>
     <script src="app/controller/Contacts.js"></script>
@@ -121,14 +132,139 @@
             </a></li>
         </ul>
     </script>
-
-    <!--<div class="newsList" data-bind="template: { name: 'newsList', data: {news: news(), clickFunc:$root.onNewsItemClick} }"></div>-->
     <script type="text/html" id="newsList">
         <ul data-role="listview" data-theme="a" data-bind="foreach: $data.news, attr: {'data-inset': $data.inset}">
             <li class="ui-alt-icon"><a href="#newsPage" data-bind="text: title, click: $root.onNewsItemClick">
                 <!--Новость WLBanka о новых возможностях банка и других приятных сюрпризах, акциях и-->
             </a></li>
         </ul>
+    </script>
+    <script type="text/html" id="utilitiesForm">
+        <fieldset>
+            <select name="city"
+                    class="text-left"
+                    data-bind="disable: paymentIsTemplate,
+                               options: availableCities,
+                               optionsText: 'name',
+                               value: selectedCity,
+                               optionsCaption: language().selectCityCaption
+                               "></select>
+            <select name="company"
+                    class="text-left"
+                    data-bind="disable: paymentIsTemplate,
+                               options: companies,
+                               optionsText: 'name',
+                               value: selectedCompany,
+                               optionsCaption: language().selectCompanyCaption
+                               "></select>
+        </fieldset>
+        <fieldset data-bind="visible: isVisibleAccountInfo">
+            <input type="tel" name="account"
+                   data-bind="disable: paymentIsTemplate,
+                              value: personalAccount,
+                              attr: {'placeholder': 'лицевой счет'}"/>
+            <div class="text-center small instruction" data-bind="text: language().personalAccountNumber"><!--лицевой счет--></div>
+            <input type="text" name="fio"
+                   data-bind="disable: paymentIsTemplate,
+                              value: recipientName,
+                              attr: {'placeholder': 'ФИО'}"/>
+            <div class="text-center small instruction" data-bind="text: language().fio"><!--ФИО--></div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <input type="tel" data-bind="" class="big light text-right money-input" name="priceInput" id="priceInput" value="">
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <button data-theme="c" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
+                </div>
+            </div>
+        </fieldset>
+    </script>
+    <script type="text/html" id="utilitiesForm_old">
+        <fieldset>
+            <select name="city"
+                    class="text-left"
+                    data-bind="disable: paymentIsTemplate,
+                               options: availableCities,
+                               optionsText: 'name',
+                               optionsCaption: language().selectCityCaption,
+                               selectedOptions: selectedCity,
+                               value: selectedCity()
+                               "></select>
+            <select name="company"
+                    class="text-left"
+                    data-bind="disable: paymentIsTemplate,
+                               options: companies,
+                               optionsText: 'name',
+                               optionsCaption: language().selectCompanyCaption,
+                               selectedOptions: selectedCompany,
+                               value: selectedCompany()
+                               "></select>
+        </fieldset>
+        <fieldset data-bind="visible: isVisibleAccountInfo">
+            <input type="tel" name="account"
+                   data-bind="disable: paymentIsTemplate,
+                                  value: personalAccount,
+                                  attr: {'placeholder': 'лицевой счет'}"/>
+            <div class="text-center small instruction" data-bind="text: language().personalAccountNumber"><!--лицевой счет--></div>
+            <input type="text" name="fio"
+                   data-bind="disable: paymentIsTemplate,
+                                  value: recipientName,
+                                  attr: {'placeholder': 'ФИО'}"/>
+            <div class="text-center small instruction" data-bind="text: language().fio"><!--ФИО--></div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <input type="tel" data-bind="" class="big light text-right money-input" name="priceInput" id="priceInput" value="">
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <button data-theme="c" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
+                </div>
+            </div>
+        </fieldset>
+    </script>
+    <script type="text/html" id="paymentCardTemplate">
+        <select data-bind="disable: paymentIsTemplate,
+                           options: cards,
+                           optionsText: 'info',
+                           optionsCaption: language().chooseCard,
+                           selectedOptions: paymentCard,
+                           value: paymentCard()"></select>
+        <div class="text-center small instruction" data-bind="text: language().paymentFrom">
+            <!--откуда переводить-->
+        </div>
+    </script>
+    <script type="text/html" id="receiveCardTemplate">
+        <select data-bind="disable: paymentIsTemplate,
+                                   options: cards,
+                                   optionsText: 'info',
+                                   optionsCaption: language().chooseCard,
+                                   selectedOptions: receiveCard,
+                                   value: receiveCard()"></select>
+    </script>
+    <script type="text/html" id="paymentAmountTemplate">
+        <div class="ui-grid-a">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                        <input type="tel" data-bind="value: paymentAmount, valueUpdate: 'afterkeydown'"
+                                class="big light text-right money-input"
+                                name="priceInput" value="" />
+                </div>
+        </div>
+    </script>
+    <script type="text/html" id="paymentConfirmButtonTemplate">
+        <div class="ui-grid-a">
+            <div class="ui-block-a"></div>
+            <div class="ui-block-b">
+                <button data-theme="c" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
+            </div>
+        </div>
     </script>
 </head>
 
@@ -189,11 +325,10 @@
 </div>
 
 <div class="main">
-<header data-role="header" data-tap-toggle="false" id="mainHeader" data-position="fixed" data-theme="a">
+<header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
     <a href="#sidemenu" data-swipe="true" class="navpanel-toogle-button ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-bars fa-1x"></i></a>
-    <!--<a data-bind="visible: isAuth(), click: $root.logout" class="ui-btn ui-btn-icon-right ui-icon ui-btn-icon-notext"><i class="fa fa-power-off fa-1x"></i></a>-->
     <h1 data-bind="text: title()" class="uppercase">
-        <!--Заголовок header -->
+        <!-- header title -->
     </h1>
 </header>
 <footer data-role="footer" data-tap-toggle="false" id="mainFooter" data-position="fixed" data-theme="b">
@@ -222,7 +357,9 @@
         </ul>
     </div>
 </footer>
-
+<!----------------------------------
+     Dashboard page
+----------------------------------->
 <div data-role="page" id="dashboard" data-theme="a">
     <main data-role="main" class="ui-content">
         <div class="currency" >
@@ -253,7 +390,9 @@
         </div>
     </main>
 </div>
-<!-- Login page -->
+<!----------------------------------
+     Login page
+----------------------------------->
 <div data-role="page" id="login" data-title="Integrity Bank" data-theme="a">
     <main data-role="main" class="ui-content" data-bind="">
         
@@ -277,28 +416,28 @@
                 </label>
             </fieldset>
             <button data-theme="b" class="uppercase"data-bind="click: $root.auth, text: language().logIn">
-                <!--Войти-->
+<!--Войти-->
             </button>
         </form>
     </main>
 </div>
-
-<!-- Cards page -->
+<!----------------------------------
+     Cards page
+----------------------------------->
 <div data-role="page" data-theme="a" id="cards" data-title="Счета" data-bind="attr: {'data-title': language().accounts}" >
     <main data-role="main" class="ui-content" data-bind="">
         <div class="cardsListWrap" data-bind="template: { name: 'cardsList', data: cards() }"></div>
     </main>
 
 </div>
-
-<!-- Cards Details page -->
+<!----------------------------------
+     Card Details page
+----------------------------------->
 <div data-role="page" data-theme="a" id="cardDetails" data-title="Подробности счета" data-bind="attr: {'data-title': language().cardDetails}">
-    <header data-role="header" data-tap-toggle="false" id="mainHeader" data-position="fixed" data-theme="a">
-        <a href="#cards"  class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a href="#cards" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
         <a href="#cardSettings" data-transition="fade"  data-swipe="true" class="ui-btn ui-icon ui-btn-right ui-btn-icon-notext"><i class="fa fa-gear fa-1x"></i></a>
-        <h1 сlass="uppercase" data-bind="text: language().cardDetails">
-            <!--Заголовок header -->
-        </h1>
+        <h1 сlass="uppercase" data-bind="text: language().cardDetails"><!-- Cards Details --></h1>
     </header>
     <header data-role="header" data-theme="d" class="cardDetailsHeader">
         <div class="content">
@@ -309,52 +448,19 @@
                 <span data-bind="text: card().amount"></span> <span class="currency" data-bind="text: card().currency"></span>
             </div>
         </div>
-
-        <!--&lt;!&ndash;<a data-rel="back" class="ui-btn-left back"><i class="fa fa-angle-left fa-3x"></i></a>&ndash;&gt;-->
-        <!--<div class="content">-->
-            <!--<div class="title-wrap">-->
-                <!--<div data-bind="text: card().title" class="title"></div>-->
-            <!--</div>-->
-            <!--<div data-bind="text:card().number" class="number"></div>-->
-            <!--<div class="money uppercase">-->
-                <!--<span data-bind="text: card().amount"></span> <span data-bind="text: card().currency"></span>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<a href="#cardSettings" data-transition="fade" class="ui-btn-right ui-alt-icon ui-nodisc-icon ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all"></a>-->
     </header>
     <main data-role="main" class="ui-content no-padding-left-right">
-        <!--<div class="transactionsListWrap">-->
-            <!--<ul data-role="listview" data-theme="a" class="transactionList ui-listview ui-group-theme-a" data-inset="false" >-->
-                <!--<li class="ui-li-static ui-body-inherit transaction">-->
-                    <!--<div class="transactionWrap">-->
-                        <!--<span class="transactionIcon">-->
-                            <!--<i class="fa fa-mobile fa-2x"></i>-->
-                        <!--</span>-->
-                        <!--<span class="main">-->
-                            <!--<span class="price minus">-->
-                                <!--<span class="amount">-10 000,00</span> <span class="currency">грн</span>-->
-                            <!--</span>-->
-                            <!--<span class="content">-->
-                                <!--<span>Пополнение мобильного +380994118952</span><br><span >2014-03-21 17:28:23</span>-->
-                            <!--</span>-->
-                        <!--</span>-->
-                    <!--</div>-->
-                <!--</li>-->
-            <!--</ul>-->
-        <!--</div>-->
         <div class="transactionsListWrap"  data-bind="template: { name: 'transactionsList', data: {data: transactions(), inset: 'false'} }, jqmRender"></div>
-        <!--</div>-->
     </main>
 </div>
-
-<!-- Card Settings page -->
+<!----------------------------------
+     Card Settings page
+----------------------------------->
 <div data-role="page" data-theme="a" id="cardSettings" data-title="Настройки карты" data-bind="attr: {'data-title': language().cardSettings}">
-    <header data-role="header" data-tap-toggle="false" id="mainHeader" data-position="fixed" data-theme="a">
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
         <a href="#cards"  class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
         <a href="#cardDetails" data-transition="fade"  data-swipe="true" class="ui-btn ui-icon ui-btn-right ui-btn-icon-notext"><i class="fa fa-gear fa-1x"></i></a>
-        <h1 сlass="uppercase" data-bind="text: language().cardSettings">
-            <!--Заголовок header -->
-        </h1>
+        <h1 сlass="uppercase" data-bind="text: language().cardSettings"><!-- Card settings --></h1>
     </header>
     <main data-role="main" class="ui-content">
         <ul data-role="listview" data-inset="true">
@@ -379,7 +485,9 @@
         </ul>
     </main>
 </div>
-
+<!----------------------------------
+     Payments page
+----------------------------------->
 <div data-role="page" data-theme="a" id="payments" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
     <main data-role="main" class="ui-content">
         <div data-role="tabs" id="tabs">
@@ -387,8 +495,10 @@
                 <ul>
                     <li><a href="#paymentsList" data-ajax="false"
                            data-bind="text: language().payments"
-                           class="ui-btn-active ui-state-persist"></a></li>
-                    <li><a href="#paymentsRegular" data-ajax="false">Шаблоны</a></li>
+                           class="ui-btn-active"></a></li>
+                    <li><a href="#paymentsRegular" data-ajax="false" data-bind="text: language().templates">
+                        <!--Шаблоны-->
+                    </a></li>
                 </ul>
             </div>
             <div id="paymentsList" class="paymentsList">
@@ -406,255 +516,201 @@
                         <!--Перевод на карту-->
                     </a></li>
                     <li><a href="#paymentsOnBankAccount">
-                        <i class="icon fa fa-hospital-o fa-1x"></i>  <span>
-                            Перевод по Украине
-                        </span>
+                        <i class="icon fa fa-hospital-o fa-1x"></i>  <span data-bind="text: language().paymentOnBankAccount"></span>
                         <!--Перевод на карту-->
                     </a></li>
                     <li><a href="#paymentsUtilities">
-                        <i class="icon fa fa-lightbulb-o fa-1x"></i>  <span>
-                            Оплата коммунальных
+                        <i class="icon fa fa-lightbulb-o fa-1x"></i>  <span data-bind="text: language().utilities">
+                        <!-- Комунальные услуги -->
                         </span>
-
-                    </a></li>
-                    <li><a href="#paymentsShift">
-                        <i class="icon fa fa-globe fa-1x"></i>  <span>
-                            SWIFT-перевод
-                        </span>
-                        <!--Перевод на карту-->
                     </a></li>
                 </ul>
             </div>
-
-            <div id="paymentsRegular">
-                <!--<button class="ui-btn-icon-left ui-icon-plus" data-theme="c">Новый шаблон...</button>-->
-                <!--<ul data-role="listview" data-inset="true" data-split-icon="delete" data-bind="foreach: paymentTemplates(), jqmRender">-->
-                 <ul id="list" class="touch" data-inset="true" data-role="listview" data-icon="false" data-split-icon="delete" data-split-theme="d" data-bind="foreach: paymentTemplates(), jqmRender">
-                    <li class="ui-li-has-al" data-bind="jqmRender">
-                        <a data-bind="text: title, attr: {'href': '#'+url}, click: $root.payFromTemplate"></a>
-                        <!--<a class="ui-btn ui-alt-icon ui-btn-icon-right ui-icon-carat-r" data-bind="text: title, attr: {'href': '#'+url}, click: $root.payFromTemplate"></a>-->
-                        <a href="#" class="delete" data-bind="click: $root.paymentTemplateDelete">Delete</a>
-                    </li>
+            <div id="paymentsRegular" class="ui-alt-icon">
+                 <ul id="list" class="touch ui-listview ui-listview-inset ui-corner-all ui-shadow" data-bind="foreach: paymentTemplates()">
+                     <!--class="touch" data-inset="true" data-role="listview" data-icon="false" data-split-icon="delete" data-split-theme="d"-->
+                     <li class="ui-li-has-al ui-li-has-alt ui-li">
+                         <a data-bind="text: title, click: $root.payFromTemplate" class="ui-btn"></a>
+                         <a href="#" class="delete ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-d" data-bind="click: $root.paymentTemplateDelete" title="Delete"></a>
+                     </li>
                 </ul>
-                <p class="light text-center small">Добавить шаблон можно после совершения платежа</p>
-            </div><!-- /content -->
-            <div id="confirm" class="ui-content" data-role="popup" data-theme="none">
-                <p id="question">Are you sure you want to delete</p>
-                <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <a id="yes" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Yes</a>
-                    </div>
-                    <div class="ui-block-b">
-                        <a id="cancel" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Cancel</a>
-                    </div>
-                </div>
-            </div><!-- /popup -->
-
+                <p class="light text-center small" data-bind="text: language().addTemplateAfterPayment">
+                    <!--Добавить шаблон можно после совершения платежа-->
+                </p>
+            </div>
         </div>
     </main>
 </div>
- <!--Payments Utilities page-->
+<!----------------------------------
+     Payments Utilities page
+----------------------------------->
 <div data-role="page" data-theme="a" id="paymentsUtilities" data-title="Платежи">
-    <header data-role="header" class="secondToolbar" data-theme="c">
-        <a data-rel="back" data-direction="reverse" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-2x fa-angle-left"></i></a>
-        <h1>
-            Коммунальные
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a data-rel="back"  class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+        <h1 сlass="uppercase" data-bind="text: language().utilities">
+            <!--Электроэнергия -->
         </h1>
     </header>
     <main data-role="main" class="ui-content">
         <ul data-role="listview" data-inset="true">
-            <li><a href="#paymentsUtilitiesGrid"><i class="icon fa fa-lightbulb-o fa-1x"></i>  <span>Электроэнергия</span></a></li>
-            <li><a href="#"><i class="icon fa fa-home fa-1x"></i>  <span>Жеки (квартплата)</span></a></li>
-            <li><a href="#"><i class="icon fa fa-female fa-1x"></i>  <span>Водоканал и канализация</span></a></li>
-            <li><a href="#"><i class="icon fa fa-warning fa-1x"></i> <span>Отопление</span></a></li>
-            <li><a href="#"><i class="icon fa fa-fire fa-1x"></i> <span>Газ</span></a></li>
-            <li><a href="#"><i class="icon fa fa-signal fa-1x"></i> <span>Интернет</span></a></li>
-            <li><a href="#"><i class="icon fa fa-file fa-1x"></i> <span>Кабельное / спутниковое ТВ</span></a></li>
+            <li><a href="#paymentsUtilitiesGrid"><i class="icon fa fa-lightbulb-o fa-1x"></i> <span>Электроэнергия</span></a></li>
+            <!--<li><a href="#"><i class="icon fa fa-home fa-1x"></i>  <span>Жеки (квартплата)</span></a></li>-->
+            <!--<li><a href="#"><i class="icon fa fa-female fa-1x"></i>  <span>Водоканал и канализация</span></a></li>-->
+            <!--<li><a href="#"><i class="icon fa fa-warning fa-1x"></i> <span>Отопление</span></a></li>-->
+            <li><a href="#paymentsUtilitiesGas"><i class="icon fa fa-fire fa-1x"></i> <span data-bind="text: language().utilitiesGas">Газ</span></a></li>
+            <!--<li><a href="#"><i class="icon fa fa-signal fa-1x"></i> <span>Интернет</span></a></li>-->
+            <!--<li><a href="#"><i class="icon fa fa-file fa-1x"></i> <span>Кабельное / спутниковое ТВ</span></a></li>-->
         </ul>
     </main>
 </div>
-<!-- Payments Utilities Grid page-->
-<div data-role="page" data-theme="a" id="paymentsUtilitiesGrid" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
-    <header data-role="header" class="secondToolbar" data-theme="c">
-        <a data-rel="back" data-direction="reverse" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-2x fa-angle-left"></i></a>
-        <h1>
-            Электроэнергия
+<!----------------------------------
+     Payments Utilities Gas page
+----------------------------------->
+<div data-role="page" data-theme="a" id="paymentsUtilitiesGas">
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a data-rel="back" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+        <h1 сlass="uppercase" data-bind="text: language().utilitiesGas">
+            <!--Gas -->
         </h1>
     </header>
     <main data-role="main" class="ui-content">
-        <fotm class="paymentsUtilitiesGridForm">
-            <fieldset>
-                <select name="city" id="utilitiesGridCitySelect"
-                        class="text-left"
-                        data-bind="options: availableCities,
-                                   optionsText: 'name',
-                                   optionsCaption: 'Выберите город...',
-                                   selectedOptions: selectedCity"></select>
-                <div data-bind="enable: selectedCity">
-                <select name="company" id="utilitiesGridCompanySelect"
-                        class="text-left"
-                        data-bind="
-                                   options: companies,
-                                   optionsText: 'name',
-                                   optionsCaption: 'Выберите компанию...',
-                                   selectedOptions: selectedCompany
-                                   "></select>
-                </div>
-            </fieldset>
-            <fieldset  data-bind="visible: selectedCity() && selectedCompany()">
-                <input type="tel" name="account" data-bind="attr: {'placeholder': 'лицевой счет'}"/>
-                <input type="text" name="fio"   data-bind="attr: {'placeholder': 'ФИО'}"/>
-            <div class="ui-grid-a">
-                <div class="ui-block-a"></div>
-                <div class="ui-block-b">
-                    <input type="tel" data-bind="" class="big light text-right money-input" name="priceInput" id="priceInput" value="">
-                </div>
-            </div>
-            <div class="ui-grid-a">
-                <div class="ui-block-a"></div>
-                <div class="ui-block-b">
-                    <button data-theme="c" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
-                </div>
-            </div>
-        </form>
+        <form class="paymentsUtilitiesGasForm" data-bind="template: { name : 'utilitiesForm'} "></form>
     </main>
 </div>
-<!-- Payments Mobile page -->
+<!----------------------------------
+     Payments Utilities Grid page
+----------------------------------->
+<div data-role="page" data-theme="a" id="paymentsUtilitiesGrid" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a data-rel="back"  class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+        <h1 сlass="uppercase" data-bind="text: language().utilitiesGrid"><!--Электроэнергия --></h1>
+    </header>
+    <main data-role="main" class="ui-content">
+        <form class="paymentsUtilitiesGridForm" data-bind="template: { name : 'utilitiesForm'} "></form>
+    </main>
+</div>
+<!----------------------------------
+     Payments Mobile page
+----------------------------------->
 <div data-role="page" data-theme="a" id="paymentsMobile" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
-    <header data-role="header" class="secondToolbar" data-theme="c">
-        <a data-rel="back" data-direction="reverse" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-2x fa-angle-left"></i></a>
-        <h1 data-bind="text: language().paymentMobile">
-            <!--Пополнение мобильного-->
-        </h1>
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a href="#payments"  class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+        <h1 сlass="uppercase" data-bind="text: language().paymentMobile"><!-- Пополнение мобильного  --></h1>
     </header>
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
             <fieldset>
-                <input type="tel" placeholder="+38 (XXX) XXX XX XX" class="text-center light big phone-input" data-bind="disable: paymentIsTemplate, value: phoneNumber, valueUpdate: 'afterkeydown'"/>
+                <input type="tel" placeholder="+38 (XXX) XXX XX XX" class="text-center light big phone-input"
+                       data-bind="disable: paymentIsTemplate,
+                                  value: phoneNumber,
+                                  valueUpdate: 'afterkeydown'"/>
                 <div class="text-center small instruction" data-bind="text: language().paymentsMobileInstruction">
                     <!--телефон в формате +38*** *** ** **-->
                 </div>
             </fieldset>
-            <fieldset class="ui-alt-icon">
-                <select data-bind="disable: paymentIsTemplate,
-                                   options: cards,
-                                   optionsText: 'info',
-                                   optionsCaption: language().chooseCard,
-                                   selectedOptions: paymentCard,
-                                   value: paymentCard()"></select>
-            </fieldset>
-            <fieldset class="ui-grid-a">
-                <div class="ui-block-a"></div>
-                <div class="ui-block-b">
-                    <input type="tel" data-bind="value: paymentAmount, valueUpdate: 'afterkeydown'" class="big light text-right money-input" name="priceInput" id="priceInput" value="">
-                </div>
-            </fieldset>
-
-            <fieldset class="ui-grid-a">
-                <div class="ui-block-a"></div>
-                <div class="ui-block-b">
-                    <button data-theme="c" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
-                </div>
-            </fieldset>
+            <fieldset class="ui-alt-icon" data-bind="template: {name: 'paymentCardTemplate'}"></fieldset>
+            <fieldset data-bind="template: {name: 'paymentAmountTemplate'}"></fieldset>
+            <fieldset data-bind="template: {name: 'paymentConfirmButtonTemplate'}"></fieldset>
         </form>
     </main>
 </div>
-
-<!-- Payments Account page -->
+<!----------------------------------
+     Payments Account page
+----------------------------------->
 <div data-role="page" data-theme="a" id="paymentsAccount" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
-    <header data-role="header"  class="secondToolbar" data-theme="c">
-        <a data-rel="back" data-direction="reverse" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-2x fa-angle-left"></i></a>
-        <h1 data-bind="text: language().paymentAccounts">
-            <!--Перевод между счетами-->
-        </h1>
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a href="#payments"  class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+        <h1 сlass="uppercase" data-bind="text: language().paymentAccounts"><!--Перевод между счетами--></h1>
     </header>
     <main data-role="main" class="ui-content">
         <form class="paymentsMobileForm">
-            <fieldset class="ui-alt-icon">
-                <select data-bind="disable: paymentIsTemplate,
-                                   options: cards,
-                                   optionsText: 'info',
-                                   optionsCaption: language().chooseCard,
-                                   selectedOptions: paymentCard,
-                                   value: paymentCard()"></select>
-                <div class="text-center small instruction" data-bind="text: language().paymentFrom">
-                    <!--откуда переводить-->
-                </div>
-            </fieldset>
-            <fieldset class="ui-alt-icon">
-                <select data-bind="disable: paymentIsTemplate,
-                                   options: cards,
-                                   optionsText: 'info',
-                                   optionsCaption: language().chooseCard,
-                                   selectedOptions: receiveCard,
-                                   value: receiveCard()"></select>
-                <div class="text-center small instruction" data-bind="text: language().paymentTo">
-                    <!--куда переводить-->
-                </div>
-            </fieldset>
-            <fieldset class="ui-grid-a">
-                <div class="ui-block-a"></div>
-                <div class="ui-block-b">
-                    <input type="tel" data-bind="value: paymentAmount, valueUpdate: 'afterkeydown'" class="big light text-right" />
-                </div>
-            </fieldset>
-            <fieldset class="ui-grid-a">
-                <div class="ui-block-a"></div>
-                <div class="ui-block-b">
-                    <button data-theme="c" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
-                </div>
-            </fieldset>
+            <fieldset class="ui-alt-icon" data-bind="template: {name: 'paymentCardTemplate'}"></fieldset>
+            <fieldset class="ui-alt-icon" data-bind="template: {name: 'receiveCardTemplate'}"></fieldset>
+            <fieldset data-bind="template: {name: 'paymentAmountTemplate'}"></fieldset>
+            <fieldset data-bind="template: {name: 'paymentConfirmButtonTemplate'}"></fieldset>
         </form>
     </main>
 </div>
-
-<!-- Payments cards page -->
+<!----------------------------------
+     Payments Cards page
+----------------------------------->
 <div data-role="page" data-theme="a" id="paymentsCards" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
-    <header data-role="header" class="secondToolbar" data-theme="c">
-        <a data-rel="back" data-direction="reverse" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-2x fa-angle-left"></i></a>
-        <h1 data-bind="text: language().paymentCards">
-            <!--Перевод на карту-->
-        </h1>
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a href="#payments"  class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+        <h1 сlass="uppercase" data-bind="text: language().paymentCards"><!--Перевод между счетами--></h1>
     </header>
     <main data-role="main" class="ui-content">
         <form class="paymentsCardsForm">
             <fieldset>
-                <input type="tel" max="16" min="16" data-bind="disable: paymentIsTemplate, value: cardNumber,valueUpdate: 'afterkeydown'" class="big light text-center credit-input" placeholder="XXXX XXXX XXXX XXXX"/>
+                <input type="tel" max="16" min="16"
+                       data-bind="disable: paymentIsTemplate,
+                                  value: cardNumber,
+                                  valueUpdate: 'afterkeydown'"
+                       class="big light text-center credit-input" placeholder="XXXX XXXX XXXX XXXX"/>
 
                 <div class="text-center small instruction" data-bind="text: language().cardNumber">
                     <!--номер карты-->
                 </div>
             </fieldset>
-            <fieldset class="ui-alt-icon">
-                <select data-bind="disable: paymentIsTemplate,
-                                   options: cards,
-                                   optionsText: 'info',
-                                   optionsCaption: language().chooseCard,
-                                   selectedOptions: paymentCard,
-                                   value: paymentCard()"></select>
-            </fieldset>
-            <fieldset class="ui-grid-a">
-                <div class="ui-block-a"></div>
-                <div class="ui-block-b">
-                    <input type="tel" data-bind="value: paymentAmount, valueUpdate: 'afterkeydown'" class="big light text-right money-input" />
-                </div>
-            </fieldset>
-            <fieldset class="ui-grid-a">
-                <div class="ui-block-a"></div>
-                <div class="ui-block-b">
-                    <button data-theme="c" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
-                </div>
-            </fieldset>
+            <fieldset class="ui-alt-icon" data-bind="template: {name: 'paymentCardTemplate'}"></fieldset>
+            <fieldset data-bind="template: {name: 'paymentAmountTemplate'}"></fieldset>
+            <fieldset data-bind="template: {name: 'paymentConfirmButtonTemplate'}"></fieldset>
         </form>
     </main>
 </div>
-
-
-<!-- Payments Verify page -->
+<!----------------------------------
+     Payments OnBankAccount page
+----------------------------------->
+<div data-role="page" data-theme="a" id="paymentsOnBankAccount" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a href="#payments"  class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+        <h1 сlass="uppercase" data-bind="text: language().paymentOnBankAccount">
+            <!--Перевод по Украине-->
+        </h1>
+    </header>
+    <main data-role="main" class="ui-content">
+        <form class="paymentsOnBankAccountForm">
+            <fieldset class="ui-alt-icon" data-bind="template: {name: 'paymentCardTemplate'}"></fieldset>
+            <fieldset data-bind="template: {name: 'paymentAmountTemplate'}"></fieldset>
+            <fieldset>
+                <input type="text" placeholder="Назва/iм'я одержувача" class="recipientName"
+                        data-bind="disable: paymentIsTemplate, value: recipientName" />
+            </fieldset>
+            <fieldset>
+                <input type="tel" placeholder="Номер рахунку одержувача"
+                       data-bind="disable: paymentIsTemplate, value: recipientNumber"/>
+            </fieldset>
+            <fieldset data-role="controlgroup">
+                <input type="checkbox" name="remember" id="isRecipientAccountOpenedInBank"
+                       class="isRecipientAccountOpenedInBank"
+                       data-bind="disable: paymentIsTemplate, checked: isRecipientAccountOpenedInBank " />
+                <label for="isRecipientAccountOpenedInBank" data-bind="text: language().isAccountOpenedInBank">
+                    <!--Рахунок відкрито в IBank-->
+                </label>
+            </fieldset>
+            <fieldset data-bind="visible: !isRecipientAccountOpenedInBank()">
+                <input type="tel" placeholder="МФО барку одержувача" class="bankMFONumber"
+                        data-bind="disable: paymentIsTemplate, value: bankMFONumber"/>
+            </fieldset>
+            <fieldset>
+                <input type="tel" placeholder="ЕГРПОУ (ОКПО) одержувача" class="recepientAccountInBank"
+                       data-bind="disable: paymentIsTemplate, value: recepientAccountInBank"/>
+            </fieldset>
+            <fieldset>
+                <input type="text" placeholder="Призначення платежу" class="paymentDetails"
+                        data-bind="value: paymentDetails"/>
+            </fieldset>
+            <fieldset data-bind="template: {name: 'paymentConfirmButtonTemplate'}"></fieldset>
+        </form>
+    </main>
+</div>
+<!----------------------------------
+     Payments Verify page
+----------------------------------->
 <div data-role="page" data-theme="a" id="paymentsVerify" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
-    <header data-role="header" class="secondToolbar" data-theme="c">
-        <a data-rel="back" data-direction="reverse" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-2x fa-angle-left"></i></a>
-        <h1 data-bind="text: language().confirmation">
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a data-rel="back" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+        <h1 сlass="uppercase" data-bind="text: language().confirmation">
             <!--Подтверждение-->
         </h1>
     </header>
@@ -690,29 +746,21 @@
         </div>
     </main>
 </div>
-
-
-<!-- Payments Success page -->
+<!----------------------------------
+     Payments Success page
+----------------------------------->
 <div data-role="page" data-theme="a" id="paymentsSuccess" data-title="Платежи" data-bind="attr: {'data-title': language().payments}">
-    <header data-role="header" class="secondToolbar" data-theme="c">
-        <a data-rel="back" data-direction="reverse" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-2x fa-angle-left"></i></a>
-        <h1 data-bind="text: language().success">
-            <!--Успешно-->
-        </h1>
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
+        <a href="#payments" class="ui-btn ui-icon ui-btn-left ui-btn-icon-notext"><i class="fa fa-angle-left fa-2x"></i></a>
+        <h1 сlass="uppercase" data-bind="text: language().success"><!--Успешно--></h1>
     </header>
     <main data-role="main" class="ui-content">
         <div class="text">
-            <h3 class="uppercase"><span data-bind="text: language().success">
-                <!--Успешно-->
-            </span>!</h3>
-            <p data-bind="text: language().successPaymentMsg">
-            <!--Оплата произведена успашно. В течении нескольких минут средства будут зачислины. Чек вы сможете распечатать в любом отделении банка или через наш веб сайт.-->
-            </p>
-            <a data-role="button" data-theme="c" href="#payments"  >
+            <h3 class="uppercase"><span data-bind="text: language().success"><!--Успешно--></span>!</h3>
+            <p data-bind="text: language().successPaymentMsg"><!--Оплата произведена успашно. В течении нескольких минут средства будут зачислины. Чек вы сможете распечатать в любом отделении банка или через наш веб сайт.--></p>
+            <a data-role="button" data-theme="c" href="#payments" >
                 <span><i class="fa fa-1x fa-reply"></i></span>
-                <span data-bind="text: language().returnToPayments" ></span>
-                <!--<a href="#cards" data-rel="back" class="ui-btn-left ui-alt-icon ui-nodisc-icon ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"></a>-->
-                <!--ВЕРНУТЬСЯ К ПЛАТЕЖАМ-->
+                <span data-bind="text: language().returnToPayments"><!--ВЕРНУТЬСЯ К ПЛАТЕЖАМ--></span>
             </a>
             <a data-role="button" data-theme="c" data-bind="visible: !paymentIsTemplate(), click: $root.addToTemplate, " >
                 <span><i class="fa fa-1x fa-star-o" data-bind="css: {'fa-star': paymentIsTemplate(), 'fa-star-o': !paymentIsTemplate()}"></i></span>
@@ -721,30 +769,27 @@
         </div>
     </main>
 </div>
-
-
-<!-- Locations page -->
+<!----------------------------------
+     Locations page
+----------------------------------->
 <div data-role="page" data-theme="a" id="locations" data-title="Отделения" data-bind="attr: {'data-title': language().locations}">
-    <header data-role="header" data-tap-toggle="false" id="mainHeader" data-position="fixed" data-theme="a">
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
         <a href="#sidemenu" data-swipe="true" class="navpanel-toogle-button ui-icon ui-btn-left ui-btn" data-role="button" role="button"><i class="fa fa-bars fa-1x"></i></a>
         <a href="#locationsList" class="ui-btn ui-icon ui-btn-right ui-btn-icon-notext"><i class="fa fa-1x fa-list-ul"></i></a>
-        <h1 сlass="uppercase" data-bind="text: language().onMap">
-            <!--Заголовок header -->
-        </h1>
+        <h1 сlass="uppercase" data-bind="text: language().onMap"><!-- Location --></h1>
     </header>
     <main data-role="main" class="ui-content" id="locationsMapWrap">
         <div id="locationsMap"></div>
     </main>
 </div>
-
-<!-- Locations List page -->
+<!----------------------------------
+     Locations List page
+----------------------------------->
 <div data-role="page" data-theme="a" id="locationsList" data-title="Отделения" data-bind="attr: {'data-title': language().locations}">
-    <header data-role="header" data-tap-toggle="false" id="mainHeader" data-position="fixed" data-theme="a">
+    <header data-role="header" data-tap-toggle="false" class="mainHeader" data-position="fixed" data-theme="a">
         <a href="#sidemenu" data-swipe="true" class="navpanel-toogle-button ui-icon ui-btn-left ui-btn" data-role="button" role="button"><i class="fa fa-bars fa-1x"></i></a>
         <a href="#locations" class="ui-btn ui-icon ui-btn-right ui-btn-icon-notext"><i class="fa fa-1x fa-list-ul"></i></a>
-        <h1 сlass="uppercase" data-bind="text: language().onList">
-            <!--Заголовок header -->
-        </h1>
+        <h1 сlass="uppercase" data-bind="text: language().onList"><!--Заголовок header --></h1>
     </header>
     <main data-role="main" class="ui-content">
         <ul data-role="listview" data-bind="foreach: locations()">
@@ -752,31 +797,24 @@
         </ul>
     </main>
 </div>
-
-<!-- Contacts page -->
+<!----------------------------------
+     Contacts page
+----------------------------------->
 <div data-role="page" data-theme="a" id="contacts" data-title="Контакты" data-bind="attr: {'data-title': language().contacts}">
     <main data-role="main" class="ui-content">
-        <h3 data-bind="text: language().hotlineWLBank">
-            <!--Горячая линия WLBank-->
-        </h3>
+        <h3 data-bind="text: language().hotlineWLBank"><!--Горячая линия WLBank--></h3>
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <tbody>
             <tr>
-                <td data-bind="text: language().mobileBank">
-                    <!--Мобильный банк-->
-                </td>
+                <td data-bind="text: language().mobileBank"><!--Мобильный банк--></td>
                 <td>0 800 832 34 12</td>
             </tr>
             <tr>
-                <td data-bind="text: language().creditCards">
-                    <!--Кредитные карты-->
-                </td>
+                <td data-bind="text: language().creditCards"><!--Кредитные карты--></td>
                 <td>0 800 465 72 34</td>
             </tr>
             <tr>
-                <td data-bind="text: language().depositsAndAccounts">
-                    <!--Вклады и счета-->
-                </td>
+                <td data-bind="text: language().depositsAndAccounts"><!--Вклады и счета--></td>
                 <td>0 800 231 23 12</td>
             </tr>
             </tbody>
@@ -784,8 +822,9 @@
 
     </main>
 </div>
-
-<!-- Currency Exchange -->
+<!----------------------------------
+     Currency Exchange page
+----------------------------------->
 <div data-role="page" data-theme="a" id="currencyExchange" data-title="Курсы валют"
      data-bind="attr: {'data-title': language().currencyExchange}">
     <main data-role="main" class="ui-content">
@@ -820,14 +859,17 @@
         </p>
     </main>
 </div>
-
-<!-- News-->
+<!----------------------------------
+     News page
+----------------------------------->
 <div data-role="page" data-theme="a" id="news" data-bind="attr: {'data-title': language().newsTitle}">
     <main data-role="main" class="ui-content">
         <div class="newsList" data-bind="template: { name: 'newsList', data: {news:news(), inset: 'true'} }"></div>
     </main>
 </div>
-
+<!----------------------------------
+     News Details page
+----------------------------------->
 <div data-role="page" data-theme="a" id="newsPage" data-bind="attr: {'data-title': chosenNews().title || ' '}">
     <main data-role="main" class="ui-content">
         <div data-bind="with: chosenNews()">
@@ -839,17 +881,13 @@
         </div>
     </main>
 </div>
-
-<!-- Licences -->
+<!----------------------------------
+     Licences page
+----------------------------------->
 <div data-role="page" data-theme="a" id="licence" data-title="Лицензии WLBank" data-bind="attr: {'data-title': language().licenceTitle}">
     <main data-role="main" class="ui-content">
-        <!--<h3 data-bind="text: language().licenceTitle">-->
-        <!--&lt;!&ndash;Лицензии WLBank&ndash;&gt;-->
-        <!--</h3>-->
         <h1>Ut optime, secundum naturam affectum esse possit.</h1>
-
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scio enim esse quosdam, qui quavis lingua philosophari possint; Faceres tu quidem, Torquate, haec omnia; Nescio quo modo praetervolavit oratio. Mihi enim satis est, ipsis non satis. Duo Reges: constructio interrete. Sed haec in pueris; Quid est, quod ab ea absolvi et perfici debeat? Quis enim redargueret? Collige omnia, quae soletis: Praesidium amicorum. Tibi hoc incredibile, quod beatissimum. Vidit Homerus probari fabulam non posse, si cantiunculis tantus irretitus vir teneretur; Restatis igitur vos; </p>
-
         <dl>
             <dt><dfn>Si longus, levis;</dfn></dt>
             <dd>Urgent tamen et nihil remittunt.</dd>
@@ -862,18 +900,12 @@
             <dt><dfn>Id enim natura desiderat.</dfn></dt>
             <dd>Hunc ipsum Zenonis aiunt esse finem declarantem illud, quod a te dictum est, convenienter naturae vivere.</dd>
         </dl>
-
-
         <ul>
             <li>Piso igitur hoc modo, vir optimus tuique, ut scis, amantissimus.</li>
             <li>Omnis enim est natura diligens sui.</li>
         </ul>
-
-
         <h2>Aliter homines, aliter philosophos loqui putas oportere?</h2>
-
         <p>Sed tempus est, si videtur, et recta quidem ad me. Sed venio ad inconstantiae crimen, ne saepius dicas me aberrare; Quae cum essent dicta, finem fecimus et ambulandi et disputandi. Bonum negas esse divitias, praeposìtum esse dicis? Longum est enim ad omnia respondere, quae a te dicta sunt. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt. </p>
-
         <ol>
             <li>Quin etiam ferae, inquit Pacuvius, quíbus abest, ad praécavendum intéllegendi astútia, iniecto terrore mortis horrescunt.</li>
             <li>Sed ille, ut dixi, vitiose.</li>
@@ -882,30 +914,19 @@
             <li>Sic enim censent, oportunitatis esse beate vivere.</li>
             <li>Tum Piso: Quoniam igitur aliquid omnes, quid Lucius noster?</li>
         </ol>
-
-
         <p>Sed haec quidem liberius ab eo dicuntur et saepius. Odium autem et invidiam facile vitabis. Non ego tecum iam ita iocabor, ut isdem his de rebus, cum L. </p>
-
         <p>Istam voluptatem perpetuam quis potest praestare sapienti? Nam et complectitur verbis, quod vult, et dicit plane, quod intellegam; Sed quanta sit alias, nunc tantum possitne esse tanta. Nonne igitur tibi videntur, inquit, mala? </p>
-
         <h3>Quam si explicavisset, non tam haesitaret.</h3>
-
         <p>Tum Torquatus: Prorsus, inquit, assentior; Bonum liberi: misera orbitas. Negat esse eam, inquit, propter se expetendam. Vide igitur ne non debeas verbis nostris uti, sententiis tuis. Quantum Aristoxeni ingenium consumptum videmus in musicis? Igitur ne dolorem quidem. Collatio igitur ista te nihil iuvat. Quaerimus enim finem bonorum. </p>
-
-
     </main>
 </div>
-
-<!-- Privacy -->
+<!----------------------------------
+     Privacy page
+----------------------------------->
 <div data-role="page" data-theme="a" id="privacy" data-title="Политика конфиденциальности WLBank" data-bind="attr: {'data-title': language().privacyTitle}">
     <main data-role="main" class="ui-content">
-        <!--<h3 data-bind="text: language().privacyTitle">-->
-        <!--Политика конфиденциальности WLBank-->
-        <!--</h3>-->
         <h1>Ratio quidem vestra sic cogit.</h1>
-
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duo Reges: constructio interrete. Graece donan, Latine voluptatem vocant. Eodem modo is enim tibi nemo dabit, quod, expetendum sit, id esse laudabile. Quod quidem nobis non saepe contingit. Idemne, quod iucunde? Quamvis enim depravatae non sint, pravae tamen esse possunt. </p>
-
         <ul>
             <li>Aut unde est hoc contritum vetustate proverbium: quicum in tenebris?</li>
             <li>Ergo opifex plus sibi proponet ad formarum quam civis excellens ad factorum pulchritudinem?</li>
@@ -913,10 +934,7 @@
             <li>Tecum optime, deinde etiam cum mediocri amico.</li>
             <li>Ut proverbia non nulla veriora sint quam vestra dogmata.</li>
         </ul>
-
-
         <p>Respondent extrema primis, media utrisque, omnia omnibus. Qui autem de summo bono dissentit de tota philosophiae ratione dissentit. Itaque in rebus minime obscuris non multus est apud eos disserendi labor. Claudii libidini, qui tum erat summo ne imperio, dederetur. </p>
-
         <dl>
             <dt><dfn>Quo tandem modo?</dfn></dt>
             <dd>Negat esse eam, inquit, propter se expetendam.</dd>
@@ -927,14 +945,9 @@
             <dt><dfn>Quonam, inquit, modo?</dfn></dt>
             <dd>Maximas vero virtutes iacere omnis necesse est voluptate dominante.</dd>
         </dl>
-
-
         <p>Placet igitur tibi, Cato, cum res sumpseris non concessas, ex illis efficere, quod velis? Quodsi ipsam honestatem undique pertectam atque absolutam. Ut in geometria, prima si dederis, danda sunt omnia. Erat enim Polemonis. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Memini me adesse P. </p>
-
         <h2>Res enim fortasse verae, certe graves, non ita tractantur, ut debent, sed aliquanto minutius.</h2>
-
         <p>Sed quanta sit alias, nunc tantum possitne esse tanta. Quorum sine causa fieri nihil putandum est. Ita fit cum gravior, tum etiam splendidior oratio. Apparet statim, quae sint officia, quae actiones. Falli igitur possumus. Consequentia exquirere, quoad sit id, quod volumus, effectum. Quae cum essent dicta, finem fecimus et ambulandi et disputandi. </p>
-
         <ol>
             <li>Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus;</li>
             <li>Quae cum magnifice primo dici viderentur, considerata minus probabantur.</li>
@@ -943,15 +956,12 @@
             <li>Tu quidem reddes;</li>
             <li>Et non ex maxima parte de tota iudicabis?</li>
         </ol>
-
-
         <p>Illa argumenta propria videamus, cur omnia sint paria peccata. Sed ad haec, nisi molestum est, habeo quae velim. </p>
-
-
     </main>
 </div>
-
-<!-- Settings -->
+<!----------------------------------
+     Settings page
+----------------------------------->
 <div data-role="page" data-theme="a" id="settings" data-title="Настройки" data-bind="attr: {'data-title': language().language().settingsTitle}">
     <main data-role="main" class="ui-content">
         <ul data-role="listview" data-inset="true">

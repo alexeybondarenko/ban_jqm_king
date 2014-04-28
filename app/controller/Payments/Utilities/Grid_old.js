@@ -16,12 +16,17 @@ var PaymentsUtilitiesGrid = function () {
 
     var self = this;
 
-    self.companies = ko.computed(function() {
-        if(self.selectedCity() == undefined || self.selectedCity().id == undefined) return [];
+    self.companies = ko.computed({
+        read :function() {
 
-        var cityID = self.selectedCity().id;
-        return self.getCompaniesByServiceAndCityID("elec", cityID);
-    },this);
+        if(self.selectedCity() == undefined || self.selectedCity()[0] == undefined || self.selectedCity()[0].id == undefined) return [];
+        var cityID = self.selectedCity()[0].id;
+        var res = self.getCompaniesByServiceAndCityID("elec", cityID);
+
+        return res;
+        },
+        deferEvaluation : true
+    });
     /**
      * Redifinition Payments properties to save current payment as template
      */

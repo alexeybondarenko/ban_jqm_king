@@ -74,7 +74,7 @@ $right-panel-width: 35em;
     width: $left-panel-width;
     left: 0;
   }
-  .main, #mainHeader, #mainFooter {
+  .main, .mainHeader, #mainFooter {
     margin-left: $left-panel-width;
     width: auto !important;
   }

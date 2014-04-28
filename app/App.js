@@ -63,7 +63,7 @@ App = function() {
 };
 
 $(function() {
-    ko.applyBindings(new App(), $("#mainHeader")[0]);
+    ko.applyBindings(new App(), $(".mainHeader")[0]);
     ko.applyBindings(new Language(), $("#mainNavBar")[0]);
     ko.applyBindings(new App(), $("#sidemenu")[0]);
 });

@@ -17,11 +17,12 @@ var PaymentsUtilities = function () {
     var self = this;
 
     self.availableCities = new CitiesStore().data;
+    self.service = null;
 
     self.isVisibleAccountInfo = ko.computed(function () {
 
-        return this.selectedCity() != undefined &&
-               this.selectedCompany() != undefined;
+        return this.selectedCity() != undefined && this.selectedCity()[0] != undefined &&
+               this.selectedCompany() != undefined && this.selectedCompany()[0] != undefined;
 
     }, this);
 

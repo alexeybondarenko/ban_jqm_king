@@ -160,7 +160,7 @@ var Payments = function() {
          */
         for (name in fields) {
             if (self[name] != undefined) {
-                console.log(name, ":",fields[name]);
+//                console.log(name, ":",fields[name]);
                 self[name](fields[name]);
             }
         }
@@ -206,7 +206,7 @@ var Payments = function() {
      * @type {number}
      * @property selectedCity
      */
-    self.selectedCity = ko.observable();
+    self.selectedCity = ko.observableArray();
     self.selectedCity.subscribe(function(newVal) {
         console.info("New city was selected: ", newVal, this);
     });
@@ -215,7 +215,7 @@ var Payments = function() {
      * @type {Company}
      * @property selectedCompany
      */
-    self.selectedCompany = ko.observable();
+    self.selectedCompany = ko.observableArray();
     self.selectedCompany.subscribe(function(newVal) {
        console.info("New company was selected: ", newVal, this);
     }, this);

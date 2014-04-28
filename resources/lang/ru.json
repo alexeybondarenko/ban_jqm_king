@@ -70,6 +70,23 @@
     "debitCard": "Дебетовая карта",
     "logoutTitle": "Выйти",
 
-    "saveAsTemplate": "Сохранить в шаблоны"
+    "saveAsTemplate": "Сохранить в шаблоны",
+    "paymentOnBankAccount": "Перевод по Украине",
+    "utilities": "Коммунальные услуги",
+    "utilitiesGas": "Газ",
+    "utilitiesGrid": "Электроэнергия",
+    "selectCityCaption":"Выберите город...",
+    "selectCompanyCaption":"Выберите компанию...",
 
+    "templates": "Шаблоны",
+    "paymentSwift": "SWIFT перевод",
+    "addTemplateAfterPayment": "Добавить шаблон можно после совершения платежа",
+
+    "enterTemplatesName": "Введите имя шаблона",
+    "templateDeleteCaption": "Вы уверены, что хотите удалить шаблон?",
+
+    "personalAccountNumber": "лицевой счет",
+    "fio": "ФИО",
+
+    "isAccountOpenedInBank": "Счет открыто в IBank"
 }

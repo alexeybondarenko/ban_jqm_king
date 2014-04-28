@@ -69,6 +69,23 @@
     "debitCard": "Debit card",
     "logoutTitle": "Log Out",
 
-    "saveAsTemplate": "Save as template"
+    "saveAsTemplate": "Save as template",
+    "paymentOnBankAccount": "Transfers in Ukraine",
+    "utilities": "Utilities",
+    "utilitiesGrid": "Electric power",
+    "utilitiesGas": "Gas",
+    "selectCityCaption":"Select city ...",
+    "selectCompanyCaption":"Select company...",
 
+    "templates": "Templates",
+    "paymentSwift": "SWIFT payment",
+    "addTemplateAfterPayment": "Add template can after payment",
+
+    "enterTemplatesName": "Enter the name of the template",
+    "templateDeleteCaption": "Are you sure to delete template?",
+
+    "personalAccountNumber": "personal account number",
+    "fio": "name",
+
+    "isAccountOpenedInBank": "Is account opened in IBank"
 }

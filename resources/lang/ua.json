@@ -71,7 +71,25 @@
     "logoutTitle": "Вийти",
 
 
-    "saveAsTemplate": "Зберегти як шаблон"
+    "saveAsTemplate": "Зберегти як шаблон",
+    "paymentOnBankAccount": "Переказ по Україні",
 
+    "utilities": "Комунальні послуги",
+    "utilitiesGrid": "Електроенергія",
+    "utilitiesGas": "Газ",
+    "selectCityCaption":"Оберіть місто...",
+    "selectCompanyCaption":"Оберіть компанію...",
+
+    "templates": "Зразки",
+    "paymentSwift": "SWIFT-переказ",
+    "addTemplateAfterPayment": "Додати зразок можна після проведення платежу",
+
+    "enterTemplatesName": "Введіть назву зразка",
+    "templateDeleteCaption": "Ви впевненні, що хочете видалити зразок?",
+
+    "personalAccountNumber": "особовистий рахунок",
+    "fio": "ПІБ",
+
+    "isAccountOpenedInBank": "Рахунок відкрито в IBank"
 
 }

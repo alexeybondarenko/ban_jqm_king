@@ -1,11 +1,11 @@
 /**
- * Контролллер Коммунальных Платежей ЭЛЕКТРОЭНЕРГИЯ
+ * Контролллер Коммунальных Платежей ГАЗ
  * @author ALexey Bondarenko <alexeybondarenko@me.com>
  * @constructor
  */
 
 
-var PaymentsUtilitiesGrid = function () {
+var PaymentsUtilitiesGas = function () {
 
     /**
      * Singleton pattern part
@@ -17,21 +17,24 @@ var PaymentsUtilitiesGrid = function () {
     var self = this;
 
     self.companies = ko.computed(function() {
-        if(self.selectedCity() == undefined || self.selectedCity().id == undefined) return [];
 
-        var cityID = self.selectedCity().id;
-        return self.getCompaniesByServiceAndCityID("elec", cityID);
-    },this);
+        if(self.selectedCity() == undefined || self.selectedCity()[0] == undefined || self.selectedCity()[0].id == undefined) return [];
+        var cityID = self.selectedCity()[0].id;
+        var res = self.getCompaniesByServiceAndCityID("gas", cityID);
+
+        return res;
+    }, this);
+
     /**
      * Redifinition Payments properties to save current payment as template
      */
     var payments = new Payments();
-    payments.type = "utilitiesGrid";
-    payments.url = "#paymentsUtilitiesGrid";
+    payments.type = "utilitiesGas";
+    payments.url = "#paymentsUtilitiesGas";
     payments.templateFields = ko.computed(function() {
         return {
-            selectedCity: self.selectedCity(),
-            selectedCompany: self.selectedCompany(),
+            selectedCityID: self.selectedCity(),
+            selectedCompanyID: self.selectedCompany(),
             personalAccount: self.personalAccount(),
             recipientName: self.recipientName()
         }
@@ -39,4 +42,4 @@ var PaymentsUtilitiesGrid = function () {
 
 };
 
-PaymentsUtilitiesGrid.prototype = new PaymentsUtilities();
+PaymentsUtilitiesGas.prototype = new PaymentsUtilities();

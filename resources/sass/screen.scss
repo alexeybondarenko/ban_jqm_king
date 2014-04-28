@@ -112,9 +112,12 @@ body {
   color:$color3;
 }
 
-#mainHeader {
+.mainHeader {
   .fa.fa-2x {
     margin-top:-8px;
+  }
+  .ui-title {
+    margin:0 40px;
   }
 }
 .count {

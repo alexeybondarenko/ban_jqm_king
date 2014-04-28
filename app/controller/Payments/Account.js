@@ -1,11 +1,11 @@
 /**
- * Контролллер Пополнения мобильного телефона
+ * Контролллер Перевода между счетами
  * @author ALexey Bondarenko <alexeybondarenko@me.com>
  * @constructor
  */
 
 
-var PaymentsMobile = function () {
+var PaymentsAccount = function () {
 
     /**
      * Singleton pattern part
@@ -20,15 +20,14 @@ var PaymentsMobile = function () {
     /**
      * Redifinition Payments properties to save current payment as template
      */
-
     var payments = new Payments();
-    payments.type = "mobile";
-    payments.url = "#paymentsMobile";
+    payments.type = "account";
+    payments.url = "#paymentsAccount";
     payments.templateFields = ko.computed(function() {
         return {
-            phoneNumber: self.phoneNumber(),
             paymentAmount: self.paymentAmount(),
-            paymentCard: self.paymentCard()
+            paymentCard: self.paymentCard(),
+            receiveCard: self.receiveCard()
         }
     }, this);
 
@@ -37,17 +36,9 @@ var PaymentsMobile = function () {
         self.__proto__.reset();
         self.paymentAmount(null);
         self.paymentCard(null);
-        self.phoneNumber('');
-    };
+        self.receiveCard(null);
+    }
 
-    self.loadFields = function(fields) {
-        /*************************
-         * Redeclaration Example *
-         *************************/
-        self.__proto__.loadFields(fields);
-
-        // some new actions
-    };
 };
 
-PaymentsMobile.prototype = new Payments();
+PaymentsAccount.prototype = new Payments();
