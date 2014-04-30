@@ -143,42 +143,38 @@
         <fieldset>
             <select name="city"
                     class="text-left"
-                    data-bind="disable: paymentIsTemplate,
-                               options: availableCities,
-                               optionsText: 'name',
-                               value: selectedCity,
-                               optionsCaption: language().selectCityCaption
-                               "></select>
+                    data-bind="disable: paymentIsTemplate, value: selectedCity, options: cities, optionsText: 'name', optionsCaption: language().selectCityCaption"
+                    ></select>
+        </fieldset>
+        <fieldset data-bind="visibleByValue: selectedCity()">
             <select name="company"
                     class="text-left"
-                    data-bind="disable: paymentIsTemplate,
-                               options: companies,
-                               optionsText: 'name',
-                               value: selectedCompany,
-                               optionsCaption: language().selectCompanyCaption
-                               "></select>
+                    data-bind="disable: paymentIsTemplate, value: selectedCompany, options: companies, optionsText: 'name'"
+                    ></select>
         </fieldset>
-        <fieldset data-bind="visible: isVisibleAccountInfo">
+        <fieldset data-bind="visibleByValue: selectedCompany()">
             <input type="tel" name="account"
-                   data-bind="disable: paymentIsTemplate,
-                              value: personalAccount,
-                              attr: {'placeholder': 'лицевой счет'}"/>
-            <div class="text-center small instruction" data-bind="text: language().personalAccountNumber"><!--лицевой счет--></div>
+                   data-bind="disable: paymentIsTemplate, value: personalAccount, attr: {'placeholder': language().personalAccountNumber}"/>
+
+            <div class="text-center small instruction"
+                 data-bind="text: language().personalAccountNumber"><!--лицевой счет--></div>
             <input type="text" name="fio"
-                   data-bind="disable: paymentIsTemplate,
-                              value: recipientName,
-                              attr: {'placeholder': 'ФИО'}"/>
-            <div class="text-center small instruction" data-bind="text: language().fio"><!--ФИО--></div>
+                   data-bind="disable: paymentIsTemplate, value: recipientName, attr: {'placeholder': language().fio}"/>
+
+            <div class="text-center small instruction"
+                 data-bind="text: language().fio"><!--ФИО--></div>
             <div class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <input type="tel" data-bind="" class="big light text-right money-input" name="priceInput" id="priceInput" value="">
+                    <input type="tel" data-bind="" class="big light text-right money-input" name="priceInput"
+                           id="priceInput" value="">
                 </div>
             </div>
             <div class="ui-grid-a">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <button data-theme="c" type="submit" value="Потвердить" class="uppercase light" data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
+                    <button data-theme="c" type="submit" value="Потвердить" class="uppercase light"
+                            data-bind="click: $root.openVerifyPage, text: language().confirm"></button>
                 </div>
             </div>
         </fieldset>
@@ -574,7 +570,7 @@
         </h1>
     </header>
     <main data-role="main" class="ui-content">
-        <form class="paymentsUtilitiesGasForm" data-bind="template: { name : 'utilitiesForm'} "></form>
+        <form class="paymentsUtilitiesGasForm" data-bind="template: { name : 'utilitiesForm', data: $root} "></form>
     </main>
 </div>
 <!----------------------------------
@@ -586,7 +582,7 @@
         <h1 сlass="uppercase" data-bind="text: language().utilitiesGrid"><!--Электроэнергия --></h1>
     </header>
     <main data-role="main" class="ui-content">
-        <form class="paymentsUtilitiesGridForm" data-bind="template: { name : 'utilitiesForm'} "></form>
+        <form class="paymentsUtilitiesGridForm" data-bind="template: { name : 'utilitiesForm', data:$root} "></form>
     </main>
 </div>
 <!----------------------------------

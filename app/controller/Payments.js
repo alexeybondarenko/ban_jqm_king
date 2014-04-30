@@ -4,7 +4,6 @@
  * @constructor
  */
 
-
 var Payments = function() {
 
     /**
@@ -22,7 +21,6 @@ var Payments = function() {
     var cardsStore = new CardsStore();
     /**
      * Array of users cards
-     *
      * @type {ko.observableArray}
      */
     self.cards = cardsStore.data;
@@ -30,14 +28,11 @@ var Payments = function() {
     var paymentsStore = new PaymentsStore();
     /**
      * Array of payment templates
-     *
      * @type {ko.observableArray}
      */
     self.paymentTemplates = paymentsStore.data;
-
     /**
      * Is current payment template or not
-     *
      * @type {ko..observable(bool)}
      */
     self.paymentIsTemplate = ko.observable(false);
@@ -45,34 +40,26 @@ var Payments = function() {
     self.paymentTemplateDelete = function (template) {
 
         var conf = confirm(self.language().templateDeleteCaption);
-
         if (!conf) return false;
         self.paymentTemplates.remove(template);
-
     };
-
     /**
      * Save current payment as template
      * @method addToTemplate
      * @returns {boolean}
      */
-
     self.addToTemplate = function () {
 
         var title = prompt(self.language().enterTemplatesName);
         if (title == '') return false;
-
         /**
          * Collect state property of the payment
-         * @type {}
+         * @type {Array}
          */
-
         var fields = self.templateFields();
-
         // Save only ID of the obj with unique id. It is useful for memory saving
-        var objIDProps = ['paymentCard','receiveCard','selectedCity','selectedCompany'],
+        var objIDProps = ['paymentCard','receiveCard', 'selectedCity', 'selectedCompany'],
             i = objIDProps.length;
-
         while(i--) {
             (function(obj, propName){
                 var haveIDProp = (obj[propName] instanceof Array) ? obj[propName][0] : obj[propName];
@@ -82,24 +69,20 @@ var Payments = function() {
                 }
             })(fields, objIDProps[i]);
         }
-
         var pay = {
             title: title,
             url: self.url,
             type: self.type,
             fields: self.templateFields()
         };
-
         /**
          * Pushing new template to store
          */
+        console.log("Add new template ", pay);
         new PaymentsStore().data.push(pay);
-
         self.paymentIsTemplate(true);
-
         return true;
     };
-
     /**
      * Load saved template for payment
      * @param val - choosed tempate
@@ -109,17 +92,13 @@ var Payments = function() {
         $.mobile.changePage(val.url);
 
         self.paymentIsTemplate(true);
-
         self.type = val.type;
         self.url = val.url;
-        new App().title(val.title);
-
+//        new App().title(val.title);
         var controller = ko.dataFor($.mobile.activePage[0]);
-
-        (controller.loadFields != undefined) ? controller.loadFields(val.fields): self.loadFields(val.fields);
+        (controller.hasOwnProperty('loadFields')) ? controller.loadFields(val.fields): self.loadFields(val.fields);
 
     };
-
     /**
      * Loading saved in template fields into the fields on the payment screen
      * Default: values are loading in the field with the names seams with value's keys names
@@ -129,6 +108,7 @@ var Payments = function() {
     self.loadFields = function (fields) {
 
         console.log("Fields: ", fields);
+        console.dir(self);
         // Relationships beetween IDField and Store
         var IDandStores = {
             paymentCardID: CardsStore,
@@ -143,7 +123,6 @@ var Payments = function() {
             selectedCityID: 'selectedCity',
             selectedCompanyID: 'selectedCompany'
         };
-
         /**
          * Conversion ID field to object
          * paymentCardID -> paymentCard
@@ -154,14 +133,20 @@ var Payments = function() {
             if (fields[name] == undefined) continue;
             fields[IDandFields[name]] = new IDandStores[name]().getByID(name, fields);
         }
-
+        console.log("After stores: ", fields);
         /**
          * By default, all fields are loading into the fields with the same name, as the keys
          */
         for (name in fields) {
             if (self[name] != undefined) {
                 console.log(name, ":",fields[name]);
-                self[name](fields[name]);
+                if (typeof self[name] == 'function') {
+//                    console.log("Set val ",name, fields[name]);
+                    var obsProp = self[name];
+                    obsProp(fields[name]);
+                } else {
+                    self[name] = fields[name];
+                }
             }
         }
         self.paymentIsTemplate(true);
@@ -177,90 +162,84 @@ var Payments = function() {
      * @type {number}
      * @property paymentAmount
      */
-    self.paymentAmount = ko.observable();
+    self.paymentAmount = ko.observable(null);
     /**
      * Card - source of payment
      * @type {Card}
      *  @property paymentCard
      */
-    self.paymentCard = ko.observable();
+    self.paymentCard = ko.observable(null);
     /**
      * Card what will receive current transfer
      * @type {Card}
      * @property receiveCard
      */
-    self.receiveCard = ko.observable();
+    self.receiveCard = ko.observable(null);
     /**
      * Phone number field
      * @property phoneNumber
      */
-    self.phoneNumber = ko.observable();
+    self.phoneNumber = ko.observable(null);
     /**
      * Card number to bill
      * @type number
      * @property cardNumber
      */
-    self.cardNumber = ko.observable();
+    self.cardNumber = ko.observable(null);
     /**
-     * Selected city to search the companies
-     * @type {number}
+     * Selected city for current payment
      * @property selectedCity
+     * @type {City}
      */
-    self.selectedCity = ko.observable();
-    self.selectedCity.subscribe(function(newVal) {
-        console.info("New city was selected: ", newVal, this);
-    });
+    self.selectedCity = ko.observable(null);
     /**
-     * Selected company to pay
-     * @type {Company}
+     * Selected company, that provides the services
      * @property selectedCompany
+     * @type {Company}
      */
-    self.selectedCompany = ko.observable();
-    self.selectedCompany.subscribe(function(newVal) {
-       console.info("New company was selected: ", newVal, this);
-    }, this);
+    self.selectedCompany = ko.observable(null);
     /**
      * Number of the personal account
      * @type {number}
      * @property personalAccount
      */
-    self.personalAccount = ko.observable();
+    self.personalAccount = ko.observable(null);
     /**
      * Name of the bill recipient
      * @type {text}
      * @property recipientName
      */
-    self.recipientName = ko.observable();
+    self.recipientName = ko.observable(null);
     /**
      * Number of the bill recipient
      * @type {number}
      * @property recipientNumber
      */
-    self.recipientNumber = ko.observable();
+    self.recipientNumber = ko.observable(null);
     /**
      * Is recipient account Opened in current Bank
      * @type {bool}
      * @property isRecipientAccountOpenedInBank
      */
-    self.isRecipientAccountOpenedInBank = ko.observable();
+    self.isRecipientAccountOpenedInBank = ko.observable(null);
     /**
      * MFO Bank of the bill recipient
      * @type {number}
      * @property recipientNumber
      */
-    self.bankMFONumber = ko.observable();
+    self.bankMFONumber = ko.observable(null);
     /**
      * Account Number of the bill recipient in the Bank
      * @type {number}
      * @property recepientAccountInBank
      */
-    self.recepientAccountInBank = ko.observable();
+    self.recepientAccountInBank = ko.observable(null);
     /**
      * Details of the payment
      * @type {text}
      * @property paymentDetails
      */
-    self.paymentDetails = ko.observable();
+    self.paymentDetails = ko.observable(null);
 
 
     /****************
@@ -295,13 +274,11 @@ var Payments = function() {
         self.resendActive(false);
         setTimeout(function(){ self.resendActive(true); self.showResendMsg(false); }, 1*60*1000); //after 1 min ago
     };
-
     /**
      * Is active resend sms button on Payments Verify page
      * @type number
      */
     self.resendActive = ko.observable(true);
-
     /**
      * Msg on payments screen. Don't forget to reset value, when you close or open payments page.
      * @type {string}
@@ -332,7 +309,6 @@ var Payments = function() {
      * @type number
      */
     self.digit4 = ko.observable("");
-
     /**
      * Reset digits of code on verify page.
      * It's useful when you open verify page and you don't know the values, what had setten before.
@@ -344,7 +320,6 @@ var Payments = function() {
         self.digit3(null);
         self.digit4(null);
     };
-
     /**
      * Reset all controllers properties
      * @function
@@ -363,11 +338,13 @@ var Payments = function() {
         self.receiveCard(null);
         self.phoneNumber(null);
         self.cardNumber(null);
+
         self.selectedCity(null);
         self.selectedCompany(null);
         self.personalAccount(null);
         self.recipientName(null);
         self.recipientNumber(null);
+
         self.isRecipientAccountOpenedInBank(false);
         self.bankMFONumber(null);
         self.recepientAccountInBank(null);

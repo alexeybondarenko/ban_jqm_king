@@ -4,26 +4,14 @@
  * @constructor
  */
 
-
 var PaymentsUtilitiesGas = function () {
 
     /**
      * Singleton pattern part
      */
-    if (arguments.callee._singletonInstance)
+    if ( arguments.callee._singletonInstance )
         return arguments.callee._singletonInstance;
     arguments.callee._singletonInstance = this;
-
-    var self = this;
-
-    self.companies = ko.computed(function() {
-
-        if(self.selectedCity() == undefined || self.selectedCity().id == undefined) return [];
-        var cityID = self.selectedCity().id;
-        var res = self.getCompaniesByServiceAndCityID("gas", cityID);
-
-        return res;
-    }, this);
 
     /**
      * Redifinition Payments properties to save current payment as template
@@ -33,13 +21,12 @@ var PaymentsUtilitiesGas = function () {
     payments.url = "#paymentsUtilitiesGas";
     payments.templateFields = ko.computed(function() {
         return {
-            selectedCityID:     self.selectedCity(),
-            selectedCompanyID:  self.selectedCompany(),
-            personalAccount:    self.personalAccount(),
-            recipientName:      self.recipientName()
+            selectedCity:       this.selectedCity(),
+            selectedCompany:    this.selectedCompany(),
+            personalAccount:    this.personalAccount(),
+            recipientName:      this.recipientName(),
+            paymentAmount:      this.paymentAmount()
         }
     }, this);
-
 };
-
-PaymentsUtilitiesGas.prototype = new PaymentsUtilities();
+PaymentsUtilitiesGas.prototype = new PaymentsUtilities('gas');

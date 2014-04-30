@@ -13,6 +13,12 @@
             $(element).trigger("create");
         }
     };
+    ko.bindingHandlers.visibleByValue = {
+        update: function (element, valueAccessor) {
+            var value = ko.unwrap(valueAccessor());
+            $(element).toggle((value != undefined && value != null));
+        }
+    };
 
     ko.bindingHandlers.slideVisible = {
         init: function(element, valueAccessor) {
