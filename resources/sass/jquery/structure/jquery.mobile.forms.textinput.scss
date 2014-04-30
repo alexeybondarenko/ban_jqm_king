@@ -1,9 +1,23 @@
-.ui-input-text,
-.ui-input-search {
-	margin: .5em 0;
-	border-width: 1px;
-	border-style: solid;
+%input-wrap-style {
+  margin: .5em 0;
+  border-width: $global-input-border-width;
+  border-style: $global-input-border-style;
+  border-color: $global-input-border-color;
+  border-radius: $global-input-border-radius;
 }
+%input-style {
+  font-weight:  $global-input-font-weight;
+  font-size:    $global-input-font-size;
+//  border-radius: $global-input-border-radius
+}
+.ui-input-text,.ui-input-search {
+  @extend %input-wrap-style;
+
+  input {
+    @extend %input-style;
+  }
+}
+
 .ui-input-text input,
 .ui-input-search input,
 textarea.ui-input-text {

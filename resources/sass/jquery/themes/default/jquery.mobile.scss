@@ -1,7 +1,9 @@
 @import "_base";
 
+@import "../../../_colors";
 @import "jquery.mobile.icons";
 @import "jquery.mobile.theme";
+
 @import "../../structure/jquery.mobile.structure";
 
 .ui-listview {
@@ -10,9 +12,11 @@
     &:last-child {
       @extend .ui-last-child;
     }
-
     &:first-child {
       @extend .ui-first-child;
     }
   }
 }
+
+
+

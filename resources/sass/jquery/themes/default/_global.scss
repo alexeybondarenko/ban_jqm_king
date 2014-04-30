@@ -1,7 +1,8 @@
 $global-block-radius: .35em !default;
 $global-button-radius: .35em !default;
 
-$global-font-family: 'Open Sans', Helvetica, sans-serif !default;
+$global-font-family: Helvetica,'Myriad Pro',Verdana,  sans-serif !default;
+$global-font-size: 14px;
 
 $global-box-shadow-enable: false !default;
 $global-box-shadow-x: 0 !default;
@@ -41,6 +42,13 @@ $global-text-shadow-radius: 0 !default;
 $global-field-contain-border-color: #828282 !default;
 $global-field-contain-border-width: 1px !default;
 $global-field-contain-border-style: solid !default;
+
+$global-input-border-width: 1px !default;
+$global-input-border-style: solid !default;
+$global-input-border-color: inherit !default;
+$global-input-border-radius: 4px !default;
+$global-input-font-weight: 200 !default;
+$global-input-font-size: 1.2*$global-font-size !default;
 
 $global-btn-font-weight: bold !default;
 $global-btn-border-width: 1px !default;

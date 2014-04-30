@@ -2,12 +2,15 @@
   @if ($enable == true) {
     @include box-shadow($shadow);
   }
+  @else {
+    @include box-shadow(none !important);
+  }
 }
 @mixin global-text-shadow($shadow, $enable) {
   @if ($enable == true) {
     @include text-shadow($shadow);
   } @else {
-    @include text-shadow(0 !important);
+    @include text-shadow(none !important);
   }
 }
 
@@ -25,11 +28,12 @@ $bar_shadow_radius: $global-text-shadow-radius,
 $bar_shadow_color: lighten($bar_color,69%), //eee
 $bar_shadow_enable: $global-text-shadow-enable,
 $bar_font_weight: bold,
+$bar_font_size: 1.3em,
 
 $bar_height: $global-bar-height,
 
 $bar_btn_color: $bar_color,
-$bar_btn_height: $bar_height * .7,
+$bar_btn_height: -1,
 $bar_btn_width: $bar_btn_height,
 $bar_btn_font_weight: $global-btn-font-weight,
 $bar_btn_font_size: inherit,
@@ -37,6 +41,11 @@ $bar_btn_background_color: $bar_background_color,
 $bar_btn_border_color: adjust_lightness($bar_btn_background_color,-3%),
 $bar_btn_border_width: $global-btn-border-width,
 $bar_btn_border_style: $global-btn-border-style,
+
+$bar_btn_padding_left: $global-font-size,
+$bar_btn_padding_right:$bar_btn_padding_left,
+$bar_btn_padding_top: .7 *$global-font-size,
+$bar_btn_padding_bottom:$bar_btn_padding_top,
 
 $bar_btn_shadow_x: $global-text-shadow-x,
 $bar_btn_shadow_y: $global-text-shadow-y,
@@ -82,7 +91,7 @@ $bar_text_transform: none
     .ui-title {
 
       font-weight:  $bar_font_weight;
-//      font-size:    $bar_font_size !important;
+      font-size:    $bar_font_size !important;
       vertical-align: middle;
       padding:      $bar_title_padding_top_bottom 0;
       outline: 0;
@@ -91,16 +100,23 @@ $bar_text_transform: none
 
   .ui-bar-#{$var} {
     @extend %theme-#{$var}-bar;
-    border-width: $bar_border_width;
-    border-style: $bar_border_style;
+    border-width: $bar_border_width !important;
+    border-style: $bar_border_style !important;
     .ui-btn {
 
-      @if($bar_btn_height != 0) {
-        height:     $bar_btn_height;
+      @if($bar_btn_height != -1) {
+        height: $bar_btn_height - ($bar_btn_padding_bottom+$bar_btn_padding_top) ;
         vertical-align: middle;
         margin-top: 0 !important;
-
       }
+
+
+      padding: {
+          top:$bar_btn_padding_top;
+          right: $bar_btn_padding_right;
+          bottom: $bar_btn_padding_bottom;
+          left: $bar_btn_padding_left;
+      };
 
       color: $bar_btn_color !important;
       font-weight: $bar_btn_font_weight;
@@ -384,7 +400,7 @@ $btn_down_shadow_enable: $btn_shadow_enable
 @mixin theme-active(
 $var: 'a',
 $active_background_color: #3388cc,
-$active_border_color: #3388cc,
+$active_border_color: darken($active_background_color,20%),
 $active_color: #fff,
 $active_shadow_x: $global-text-shadow-x,
 $active_shadow_y: $global-text-shadow-y,
